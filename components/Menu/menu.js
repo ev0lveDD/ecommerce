@@ -16,7 +16,7 @@ export default function Menu() {
 
     return(
         <nav className="min-w-screen flex items-center justify-center bg-white">
-            <div className="flex justify-between items-center w-4/5 my-8">
+            <div className="flex justify-between items-center w-11/12 my-8">
                 <Image alt="Website Logo" width={50} height={50} src={vercelLogo} className="cursor-pointer z-50"/>
                 <button className="flex flex-col justify-center items-center md:hidden order-first z-50" onClick={handleClick}>
                     <span className={`bg-slate-200 block h-0.5 w-6 rounded-sm transition-all duration-300 ease-out  ${isOpen ? 'rotate-45 translate-y-1' : '-translate-y-0.5'}`}></span>
