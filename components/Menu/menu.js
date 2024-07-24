@@ -15,10 +15,10 @@ export default function Menu() {
     }
 
     return(
-        <nav className="min-w-screen flex items-center justify-center">
+        <nav className="min-w-screen flex items-center justify-center bg-white">
             <div className="flex justify-between items-center w-4/5 my-8">
-                <Image alt="Website Logo" width={50} height={50} src={vercelLogo} className="cursor-pointer"/>
-                <button className="flex flex-col justify-center items-center md:hidden order-last" onClick={handleClick}>
+                <Image alt="Website Logo" width={50} height={50} src={vercelLogo} className="cursor-pointer z-50"/>
+                <button className="flex flex-col justify-center items-center md:hidden order-first z-50" onClick={handleClick}>
                     <span className={`bg-slate-200 block h-0.5 w-6 rounded-sm transition-all duration-300 ease-out  ${isOpen ? 'rotate-45 translate-y-1' : '-translate-y-0.5'}`}></span>
                     <span className={`bg-slate-200 block h-0.5 w-6 rounded-sm my-0.5 transition-all duration-300 ease-out  ${isOpen ? 'opacity-0' : 'opacity-100'}`}></span>
                     <span className={`bg-slate-200 block h-0.5 w-6 rounded-sm transition-all duration-300 ease-out  ${isOpen ? '-rotate-45 -translate-y-1' : 'translate-y-0.5'}`}></span>
@@ -26,12 +26,12 @@ export default function Menu() {
 
                 {/* Mobile menu */}
                 {isOpen ? 
-                    <div className="flex content-center justify-center rounded-md border-2 border-slate-200 absolute m-auto left-0 right-0 top-0 bottom-0 w-4/5 h-96">
-                            <ul className={"flex flex-col justify-center items-center gap-6 md:hidden"}>
-                                <li className="text-sm cursor-pointer hover:text-gray-500">LINK 1</li>
-                                <li className="text-sm cursor-pointer hover:text-gray-500">LINK 2</li>
-                                <li className="text-sm cursor-pointer hover:text-gray-500">LINK 3</li>
-                                <li className="text-sm cursor-pointer hover:text-gray-500">LINK 4</li>
+                    <div className="flex content-center justify-center absolute m-auto left-0 right-0 top-20 w-full h-96 bg-white">
+                            <ul className="flex flex-col justify-center items-start gap-6 md:hidden w-4/5">
+                                <li className="text-md cursor-pointer hover:text-gray-500">Link 1</li>
+                                <li className="text-md cursor-pointer hover:text-gray-500">Link 2</li>
+                                <li className="text-md cursor-pointer hover:text-gray-500">Link 3</li>
+                                <li className="text-md cursor-pointer hover:text-gray-500">Link 4</li>
                             </ul>
                     </div>
                 : null}
@@ -39,10 +39,10 @@ export default function Menu() {
                 {/* Tablet and higher resolution menu */}
                 <div className="hidden md:flex">
                     <ul className="flex justify-center items-center gap-6">
-                        <li className="text-sm cursor-pointer hover:text-gray-500">LINK 1</li>
-                        <li className="text-sm cursor-pointer hover:text-gray-500">LINK 2</li>
-                        <li className="text-sm cursor-pointer hover:text-gray-500">LINK 3</li>
-                        <li className="text-sm cursor-pointer hover:text-gray-500">LINK 4</li>
+                        <li className="text-sm cursor-pointer hover:text-gray-500">Link 1</li>
+                        <li className="text-sm cursor-pointer hover:text-gray-500">Link 2</li>
+                        <li className="text-sm cursor-pointer hover:text-gray-500">Link 3</li>
+                        <li className="text-sm cursor-pointer hover:text-gray-500">Link 4</li>
                     </ul>
                 </div>
                 <ShoppingCart cartCounter={cartCounter}/>
