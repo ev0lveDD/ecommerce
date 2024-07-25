@@ -3,18 +3,20 @@
 import Image from "next/image";
 import { useState } from "react";
 
+import DetailsDropdownSection from "./DetailsDropdown Section/details-dropdown-section";
+import ColorPickInput from "./ColorPickInput/color-pick-input";
+
 import crewNeck1 from "@/public/crewneck1.avif";
 import crewNeck2 from "@/public/crewneck2.avif";
 import crewNeck3 from "@/public/crewneck3.avif";
 
-import downArrow from "@/public/down-arrow.svg"
-
 export default function ProductDetails() {
 
-    const buttonNotActive = "border border-2 border-black py-0.5 px-3 rounded rounded-lg text-sm hover:border-gray-800";
-    const buttonActive = "border border-2 border-black bg-black text-white py-0.3 px-3 rounded rounded-xl text-sm hover:bg-gray-800 hover:border-gray-800";
+    const buttonNotActive = "border border-2 border-black py-0.5 px-3 rounded rounded-md text-sm hover:border-gray-800 font-medium";
+    const buttonActive = "border border-2 border-black bg-black text-white py-0.3 px-3 rounded rounded-md text-sm hover:bg-gray-800 hover:border-gray-800 font-medium";
     
     const [selectedButton, setSelectedButton] = useState("");
+    const [colorPicked, setColorPicked] = useState("");
 
     return(
         <div className="bg-white min-w-screen flex items-center justify-center">
@@ -40,20 +42,17 @@ export default function ProductDetails() {
                     <p className="text-slate-600">
                         Hinting at the brands penchant for logomania, Balmain presents this sweatshirt as part of its SS23 offering. Crafted from cotton, the long-sleeved design is adorned with a contrasting logo print at the chest.
                     </p>
+                    
                     {/* Color Pick section */}
-                    <div>
+                    <div className="flex flex-col gap-4">
                         <p className="text-lg font-medium">Color</p>
-                        <div className="flex gap-2">
-                            <div >
-                                <input id="color-radio-1" type="radio" value="" name="color-radio" className="bg-green-600 text-green-600 border-2 border-green-600 focus:ring-green-600 focus:ring-2 "></input>
-                                <label></label>
-                            </div>
-                            <div>
-                                <input id="color-radio-2" type="radio" value="" name="color-radio"></input>
-                                <label></label>
-                            </div>
+                        <div className="flex gap-4">
+                            <ColorPickInput colorPickInputId="color-radio-1" colorName="white" colorPicked={colorPicked} setColorPicked={setColorPicked}/>
+                            <ColorPickInput colorPickInputId="color-radio-2" colorName="green" colorPicked={colorPicked} setColorPicked={setColorPicked}/>
+                            <ColorPickInput colorPickInputId="color-radio-3" colorName="slate" colorPicked={colorPicked} setColorPicked={setColorPicked}/>
                         </div>
                     </div>
+
                     {/* Size Pick section */}
                     <div className="flex flex-col gap-2">
                         <p className="text-lg font-medium">Size</p>
@@ -70,27 +69,8 @@ export default function ProductDetails() {
                         ADD TO CART
                     </button>
 
-                    <details className="py-4 border-b border-grey-lighter cursor-pointer">
-                        <summary className="flex items-center">CHARACTERISTICS
-                            <button className="ml-auto transition ease-in-out focus:rotate-180">
-                                <Image src={downArrow} height={10} width={10} alt="Down arrow"/>
-                            </button>
-                        </summary>
-                        <p className="py-4 text-sm">
-                            Hinting at the brands penchant for logomania, Balmain presents this sweatshirt as part of its SS23 offering. Crafted from cotton, the long-sleeved design is adorned with a contrasting logo print at the chest.
-                        </p>
-                    </details>
+                    <DetailsDropdownSection />
 
-                    <details className="py-4 border-b border-grey-lighter cursor-pointer">
-                        <summary className="flex items-center">PAYMENT & DELIVERY
-                            <button className="ml-auto transition ease-in-out focus:rotate-180">
-                                <Image src={downArrow} height={10} width={10} alt="Down arrow"/>
-                            </button>
-                        </summary>
-                        <p className="py-4 text-sm">
-                            Hinting at the brands penchant for logomania, Balmain presents this sweatshirt as part of its SS23 offering. Crafted from cotton, the long-sleeved design is adorned with a contrasting logo print at the chest.
-                        </p>
-                    </details>
                 </div>
             </div>
         </div>
