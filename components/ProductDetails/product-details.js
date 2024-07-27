@@ -12,7 +12,7 @@ import crewNeck3 from "@/public/crewneck3.avif";
 
 export default function ProductDetails() {
 
-    const buttonNotActive = "border border-2 border-black py-0.5 px-3 rounded rounded-md text-sm hover:border-gray-800 font-medium";
+    const buttonNotActive = "border border-2 border-black py-0.5 px-3 rounded rounded-md text-sm hover:border-gray-800 hover:bg-gray-200 font-medium";
     const buttonActive = "border border-2 border-black bg-black text-white py-0.3 px-3 rounded rounded-md text-sm hover:bg-gray-800 hover:border-gray-800 font-medium";
     
     const [selectedButton, setSelectedButton] = useState("");
