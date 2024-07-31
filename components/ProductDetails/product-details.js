@@ -21,9 +21,9 @@ export default function ProductDetails() {
 
     return(
         <div className="bg-white min-w-screen flex items-center justify-center">
-            <div className="w-11/12 grid grid-cols-2 gap-4">
+            <div className="w-11/12 grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div className="w-11/12 flex flex-col gap-4 items-center justify-start">
-                    <Image className="w-full h-1/3" alt="big item image" src={crewNeck1}/>
+                    <Image className="w-full h-1/3 animate-slidein" alt="big item image" src={crewNeck1}/>
                     <div className="w-full grid grid-cols-2 gap-4">
                         <Image className="w-full" alt="small item image 1" src={crewNeck3}/>
                         <Image className="w-full" alt="small item image 1" src={crewNeck2}/>
