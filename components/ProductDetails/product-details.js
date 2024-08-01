@@ -49,10 +49,10 @@ export default function ProductDetails() {
                     <div className="flex flex-col gap-4">
                         <p className="text-lg font-medium">Color</p>
                         <div className="flex gap-4">
-                            <ColorPickInput colorPickInputId="color-radio-1" colorName="white" colorPicked={colorPicked} setColorPicked={setColorPicked}/>
-                            <ColorPickInput colorPickInputId="color-radio-2" colorName="green" colorPicked={colorPicked} setColorPicked={setColorPicked}/>
-                            <ColorPickInput colorPickInputId="color-radio-3" colorName="red" colorPicked={colorPicked} setColorPicked={setColorPicked}/>
-                            <ColorPickInput colorPickInputId="color-radio-4" colorName="violet" colorPicked={colorPicked} setColorPicked={setColorPicked}/>
+                            <ColorPickInput colorPickInputId="color-radio-1" colorName="white" colorNameCSS="bg-white-200" colorPicked={colorPicked} setColorPicked={setColorPicked}/>
+                            <ColorPickInput colorPickInputId="color-radio-2" colorName="green" colorNameCSS="bg-green-200" colorPicked={colorPicked} setColorPicked={setColorPicked}/>
+                            <ColorPickInput colorPickInputId="color-radio-3" colorName="red" colorNameCSS="bg-red-200" colorPicked={colorPicked} setColorPicked={setColorPicked}/>
+                            <ColorPickInput colorPickInputId="color-radio-4" colorName="black" colorNameCSS="bg-black" colorPicked={colorPicked} setColorPicked={setColorPicked}/>
                         </div>
                     </div>
 
