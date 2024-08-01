@@ -13,8 +13,8 @@ import crewNeck4 from "@/public/crewneck4.avif";
 
 export default function ProductDetails() {
 
-    const buttonNotActive = "border border-2 border-black py-0.5 px-3 rounded rounded-md text-sm hover:border-gray-800 hover:bg-gray-200 font-medium";
-    const buttonActive = "border border-2 border-black bg-black text-white py-0.3 px-3 rounded rounded-md text-sm hover:bg-gray-800 hover:border-gray-800 font-medium";
+    const buttonNotActive = "flex item-center justify-center w-12 border border-black border-opacity-10 py-0.5 px-3 rounded rounded-md text-sm hover:border-gray-800 font-medium";
+    const buttonActive = "flex item-center justify-center w-12 border border-black bg-black text-white py-0.5 px-3 rounded rounded-md text-sm hover:bg-gray-800 hover:border-gray-800 font-medium";
     
     const [selectedButton, setSelectedButton] = useState("");
     const [colorPicked, setColorPicked] = useState("");
@@ -51,7 +51,8 @@ export default function ProductDetails() {
                         <div className="flex gap-4">
                             <ColorPickInput colorPickInputId="color-radio-1" colorName="white" colorPicked={colorPicked} setColorPicked={setColorPicked}/>
                             <ColorPickInput colorPickInputId="color-radio-2" colorName="green" colorPicked={colorPicked} setColorPicked={setColorPicked}/>
-                            <ColorPickInput colorPickInputId="color-radio-3" colorName="slate" colorPicked={colorPicked} setColorPicked={setColorPicked}/>
+                            <ColorPickInput colorPickInputId="color-radio-3" colorName="red" colorPicked={colorPicked} setColorPicked={setColorPicked}/>
+                            <ColorPickInput colorPickInputId="color-radio-4" colorName="violet" colorPicked={colorPicked} setColorPicked={setColorPicked}/>
                         </div>
                     </div>
 
