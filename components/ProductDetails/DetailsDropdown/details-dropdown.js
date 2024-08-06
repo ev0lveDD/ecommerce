@@ -12,7 +12,7 @@ export default function DetailsDropdown ({dropdownTitle, dropdownId, children}) 
         <details id={dropdownId} className="py-4 border-b border-grey-lighter cursor-pointer">
             <summary className="flex items-center" onClick={()=>setIsExpanded(!isExpanded)}>
                 <p className="font-medium">{dropdownTitle}</p>
-                <button className={`ml-auto transition ease-in-out ${isExpanded ? "rotate-180" : null}`}>
+                <button className={`ml-auto transition ease-in-out ${isExpanded ? "rotate-180" : null}`} onClick={()=>setIsExpanded(!isExpanded)}>
                     <Image src={downArrow} height={10} width={10} alt="Down arrow"/>
                 </button>
             </summary>
