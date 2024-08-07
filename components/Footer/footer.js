@@ -7,8 +7,8 @@ import youtubeIcon from "@/public/youtube-icon.svg";
 
 export default function Footer(){
     return(
-        <nav className="min-w-screen flex items-center justify-center bg-white">
-            <div className="flex flex-col gap-4 md:flex-row justify-between items-center w-11/12 my-8">
+        <nav className="min-w-screen flex items-center justify-center bg-white border-t border-grey-lighter">
+            <div className="flex flex-col gap-4 md:flex-row justify-between items-center w-11/12 my-4">
                 <p className="text-xs">Copyright © 2024 Balmain Inc. All rights reserved.</p>
                 <Image alt="Website Logo" width={65} height={50} src={balmainLogo} className="cursor-pointer z-50"/>
 

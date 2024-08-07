@@ -39,7 +39,7 @@ export default function ProductDetails() {
                     <Image className="w-full h-1/3" alt="big item image 2" src={crewNeck4}/>
                 </div>
                     {/* Mobile view */}
-                <div className="w-full h-96 flex md:hidden items-center justify-center">
+                <div className="w-full h-96 flex md:hidden items-center justify-center z-10">
                     <Swiper 
                     modules={[Pagination]} 
                     pagination={true}
