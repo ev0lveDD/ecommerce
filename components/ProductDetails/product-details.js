@@ -2,6 +2,11 @@
 
 import Image from "next/image";
 import { useState } from "react";
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Pagination } from 'swiper/modules';
+
+import 'swiper/css';
+import 'swiper/css/pagination';
 
 import DetailsDropdownSection from "./DetailsDropdown Section/details-dropdown-section";
 import ColorPickInput from "./ColorPickInput/color-pick-input";
@@ -22,14 +27,38 @@ export default function ProductDetails() {
     return(
         <div className="bg-white min-w-screen flex items-center justify-center">
             <div className="w-11/12 grid grid-cols-1 md:grid-cols-2 gap-4">
-                <div className="w-11/12 flex flex-col gap-4 items-center justify-start">
-                    <Image className="w-full h-1/3 animate-slidein" alt="big item image" src={crewNeck1}/>
+
+                {/* Product Image Section */}
+                    {/* Desktop view */}
+                <div className="w-11/12 hidden md:flex md:flex-col gap-4 items-center justify-start">
+                    <Image className="w-full h-1/3 animate-slidein" alt="big item image 1" src={crewNeck1}/>
                     <div className="w-full grid grid-cols-2 gap-4">
                         <Image className="w-full" alt="small item image 1" src={crewNeck3}/>
-                        <Image className="w-full" alt="small item image 1" src={crewNeck2}/>
+                        <Image className="w-full" alt="small item image 2" src={crewNeck2}/>
                     </div>
-                    <Image className="w-full h-1/3" alt="big item image" src={crewNeck4}/>
+                    <Image className="w-full h-1/3" alt="big item image 2" src={crewNeck4}/>
                 </div>
+                    {/* Mobile view */}
+                <div className="w-full h-96 flex md:hidden items-center justify-center">
+                    <Swiper 
+                    modules={[Pagination]} 
+                    pagination={true}
+                    className="mySwiper">
+                        <SwiperSlide>
+                            <Image className="w-full h-96" alt="item image 1" src={crewNeck1}/>
+                        </SwiperSlide>
+                        <SwiperSlide>
+                            <Image className="w-full h-96" alt="item image 2" src={crewNeck2}/>
+                        </SwiperSlide>
+                        <SwiperSlide>
+                            <Image className="w-full h-96" alt="item image 3" src={crewNeck3}/>
+                        </SwiperSlide>
+                        <SwiperSlide>
+                            <Image className="w-full h-96" alt="item image 4" src={crewNeck4}/>
+                        </SwiperSlide>
+                    </Swiper>
+                </div>
+
                 <div className="w-full flex flex-col gap-4 my-8">
                     {/* Header and price */}
                     <div className="flex flex-col gap-1">
