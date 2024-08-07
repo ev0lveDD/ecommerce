@@ -21,19 +21,17 @@ export default function ProductList() {
 
                 {/* Category Name and filtered items quantity / number */}
                 <div className="flex justify-start gap-4">
-                    <h1 className="text-6xl font-medium">
-                        MEN'S TOPS
-                    </h1>
+                    <h1 className="text-6xl font-medium">MEN`S TOPS</h1>
                     <p className="text-md font-medium">
                         8
                     </p>
                 </div>
 
                 {/* Filter buttons & sort button section */}
-                <div className="flex justify-between">
+                <div className="flex-col md:flex-row justify-between gap-4">
                     
                     {/* Filter buttons */}
-                    <div className="flex gap-4">
+                    <div className="flex-col md:flex-row gap-4">
                         <div className="border-r border-gray-600">
                             <button className="flex items-center justify-center gap-3 bg-black text-white py-2 px-4 rounded rounded-md text-xs hover:bg-gray-800 mr-4">
                                 FILTERS
@@ -43,7 +41,7 @@ export default function ProductList() {
                             </button>
                         </div>
 
-                        <div className="flex gap-4">
+                        <div className="flex-col md:flex-row gap-4">
                             <button className="flex items-center justify-between gap-3  text-xs border border-black py-2 px-6 rounded rounded-md hover:border-gray-400 font-medium">
                                 SIZE L
                                 <span>
