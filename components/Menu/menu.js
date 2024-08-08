@@ -28,16 +28,16 @@ export default function Menu() {
                 {isOpen ? 
                     <div className="flex content-center justify-center absolute m-auto left-0 right-0 top-20 w-full h-96 bg-white z-50">
                             <ul className="flex flex-col justify-center items-start gap-6 md:hidden w-4/5">
-                                <li className="text-md cursor-pointer group transition duration-300">Link 1
+                                <li className="text-md cursor-pointer group transition duration-300">MEN
                                     <span className="block max-w-0 group-hover:max-w-full transition-all duration-300 h-0.5 bg-black"></span>
                                 </li>
-                                <li className="text-md cursor-pointer group transition duration-300">Link 2
+                                <li className="text-md cursor-pointer group transition duration-300">WOMEN
                                     <span className="block max-w-0 group-hover:max-w-full transition-all duration-300 h-0.5 bg-black"></span>
                                 </li>
-                                <li className="text-md cursor-pointer group transition duration-300">Link 3
+                                <li className="text-md cursor-pointer group transition duration-300">KIDS
                                     <span className="block max-w-0 group-hover:max-w-full transition-all duration-300 h-0.5 bg-black"></span>
                                 </li>
-                                <li className="text-md cursor-pointer group transition duration-300">Link 4
+                                <li className="text-md cursor-pointer group transition duration-300">SALE
                                     <span className="block max-w-0 group-hover:max-w-full transition-all duration-300 h-0.5 bg-black"></span>
                                 </li>
                             </ul>
@@ -47,16 +47,16 @@ export default function Menu() {
                 {/* Tablet and higher resolution menu */}
                 <div className="hidden md:flex">
                     <ul className="flex justify-center items-center gap-6">
-                        <li className="text-sm cursor-pointer group transition duration-300">Link 1
+                        <li className="text-sm cursor-pointer group transition duration-300">MEN
                             <span className="block max-w-0 group-hover:max-w-full transition-all duration-300 h-0.5 bg-black"></span>
                         </li>
-                        <li className="text-sm cursor-pointer group transition duration-300">Link 2
+                        <li className="text-sm cursor-pointer group transition duration-300">WOMEN
                             <span className="block max-w-0 group-hover:max-w-full transition-all duration-300 h-0.5 bg-black"></span>
                         </li>
-                        <li className="text-sm cursor-pointer group transition duration-300">Link 3
+                        <li className="text-sm cursor-pointer group transition duration-300">KIDS
                             <span className="block max-w-0 group-hover:max-w-full transition-all duration-300 h-0.5 bg-black"></span>
                         </li>
-                        <li className="text-sm cursor-pointer group transition duration-300">Link 4
+                        <li className="text-sm cursor-pointer group transition duration-300">SALE
                             <span className="block max-w-0 group-hover:max-w-full transition-all duration-300 h-0.5 bg-black"></span>
                         </li>
                     </ul>
