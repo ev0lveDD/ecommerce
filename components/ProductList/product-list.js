@@ -33,7 +33,7 @@ export default function ProductList() {
 
                 {/* Category Name and filtered items quantity / number */}
                 <div className="flex justify-start gap-4">
-                    <h1 className="text-5xl md:text-6xl font-medium">MEN`S TOPS</h1>
+                    <h1 className="text-5xl md:text-6xl font-medium animate-slidein">MEN`S TOPS</h1>
                     <p className="text-sm md:text-md font-medium">
                         8
                     </p>
@@ -47,9 +47,9 @@ export default function ProductList() {
                         <div className="md:border-r border-gray-600">
                             <button className="flex items-center justify-center gap-3 bg-black text-white py-2 px-2 rounded rounded-md text-xs hover:bg-gray-800 md:mr-4 border border-black">
                                 FILTERS
-                            <div className="rounded rounded-full bg-white h-4 w-4 flex items-center justify-center">
-                                <p className="text-black font-bold text-[10px]">2</p>
-                            </div>
+                                <div className="rounded rounded-full bg-white h-4 w-4 flex items-center justify-center">
+                                    <p className="text-black font-bold text-[10px]">2</p>
+                                </div>
                             </button>
                         </div>
 
@@ -72,12 +72,12 @@ export default function ProductList() {
 
                     {/* Sort button */}
                     <div>
-                    <button className="flex items-center justify-center gap-3 text-xs border border-black py-1.5 px-2 rounded rounded-md hover:border-gray-400 font-medium">
-                        SORT BY
-                        <span className="text-sm">
-                            +
-                        </span>
-                    </button>
+                        <button className="flex items-center justify-center gap-3 text-xs border border-black py-1.5 px-2 rounded rounded-md hover:border-gray-400 font-medium">
+                            SORT BY
+                            <span className="text-sm">
+                                +
+                            </span>
+                        </button>
                     </div>
 
                 </div>
