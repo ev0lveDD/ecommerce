@@ -1,6 +1,7 @@
 import Image from "next/image";
 
 import ProductListItem from "./ProductListItem/product-list-item";
+import SortByButton from "./SortByButton/sort-by-button";
 
 import crewNeck1 from "@/public/crewneck1.avif";
 import crewNeck2 from "@/public/crewneck2.avif";
@@ -71,14 +72,7 @@ export default function ProductList() {
                     </div>
 
                     {/* Sort button */}
-                    <div>
-                        <button className="flex items-center justify-center gap-3 text-xs border border-black py-1.5 px-2 rounded rounded-md hover:border-gray-400 font-medium">
-                            SORT BY
-                            <span className="text-sm">
-                                +
-                            </span>
-                        </button>
-                    </div>
+                    <SortByButton />
 
                 </div>
 
