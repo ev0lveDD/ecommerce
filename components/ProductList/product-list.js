@@ -2,6 +2,7 @@ import Image from "next/image";
 
 import ProductListItem from "./ProductListItem/product-list-item";
 import SortByButton from "./SortByButton/sort-by-button";
+import FilterSection from "./FilterSection/filter-section";
 
 import crewNeck1 from "@/public/crewneck1.avif";
 import crewNeck2 from "@/public/crewneck2.avif";
@@ -17,6 +18,7 @@ import zippedHoodie1 from "@/public/mainLabZippedHoodie1.avif";
 import zippedHoodie2 from "@/public/mainLabZippedHoodie2.avif";
 import zippedHoodie3 from "@/public/mainLabZippedHoodie3.avif";
 import zippedHoodie4 from "@/public/mainLabZippedHoodie4.avif";
+
 
 export default function ProductList() {
     return(
@@ -44,32 +46,7 @@ export default function ProductList() {
                 <div className="flex justify-between gap-4">
                     
                     {/* Filter buttons */}
-                    <div className="flex flex-col md:flex-row gap-4">
-                        <div className="md:border-r border-gray-600">
-                            <button className="flex items-center justify-center gap-3 bg-black text-white py-2 px-2 rounded rounded-md text-xs hover:bg-gray-800 md:mr-4 border border-black">
-                                FILTERS
-                                <div className="rounded rounded-full bg-white h-4 w-4 flex items-center justify-center">
-                                    <p className="text-black font-bold text-[10px]">2</p>
-                                </div>
-                            </button>
-                        </div>
-
-                        <div className="flex flex-col md:flex-row gap-4">
-                            <button className="w-fit flex items-center justify-center gap-3 text-xs border border-black py-1.5 px-2 rounded rounded-md hover:border-gray-400 font-medium">
-                                SIZE L
-                                <span>
-                                    X
-                                </span>
-                            </button>
-
-                            <button className="w-fit flex items-center justify-center gap-3 text-xs border border-black py-1.5 px-2 rounded rounded-md hover:border-gray-400 font-medium">
-                                $300-$600
-                                <span>
-                                    X
-                                </span>
-                            </button>
-                        </div>
-                    </div>
+                    <FilterSection />
 
                     {/* Sort button */}
                     <SortByButton />
