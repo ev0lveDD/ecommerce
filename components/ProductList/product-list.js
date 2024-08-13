@@ -25,11 +25,14 @@ import zippedHoodie4 from "@/public/mainLabZippedHoodie4.avif";
 
 export default function ProductList() {
     const [filterOpen, setFilterOpen] = useState(false);
+    const [filterColorPicked, setFilterColorPicked] = useState("");
+    const [filterSizePicked, setFilterSizePicked] = useState("");
+
     return(
         <div className="bg-white min-w-screen flex flex-col md:flex-row items-start justify-center my-4">
             
             {/* Filter Menu section */}
-            <FilterMenu filterOpen={filterOpen} setFilterOpen={setFilterOpen}/>
+            <FilterMenu filterOpen={filterOpen} setFilterOpen={setFilterOpen} filterColorPicked={filterColorPicked} setFilterColorPicked={setFilterColorPicked} filterSizePicked={filterSizePicked} setFilterSizePicked={setFilterSizePicked}/>
 
             <div className={`w-full ${filterOpen ? "md:w-3/4" : null} flex flex-col items-center justify-center my-4`}>
                 <div className="w-11/12 flex my-4 flex-col gap-8">
