@@ -1,5 +1,8 @@
+'use client';
+import { useState } from "react";
 import Image from "next/image";
 
+import FilterMenu from "./FilterMenu/filter-menu";
 import ProductListItem from "./ProductListItem/product-list-item";
 import SortByButton from "./SortByButton/sort-by-button";
 import FilterSection from "./FilterSection/filter-section";
@@ -21,93 +24,102 @@ import zippedHoodie4 from "@/public/mainLabZippedHoodie4.avif";
 
 
 export default function ProductList() {
+    const [filterOpen, setFilterOpen] = useState(false);
     return(
-        <div className="bg-white min-w-screen flex flex-col items-center justify-center my-4">
-            <div className="w-11/12 flex my-4 flex-col gap-8">
+        <div className="bg-white min-w-screen flex flex-col md:flex-row items-start justify-center my-4">
+            
+            {/* Filter Menu section */}
+            <FilterMenu filterOpen={filterOpen} setFilterOpen={setFilterOpen}/>
 
-                {/* Breadcrumbs section */}
-                <div className="flex gap-2">
-                    <p className="text-xs font-medium text-gray-400">MEN</p>
-                    <p className="text-xs font-medium text-gray-400">/</p>
-                    <p className="text-xs font-medium text-gray-400">CLOTHES</p>
-                    <p className="text-xs font-medium text-gray-400">/</p>
-                    <p className="text-xs font-medium">TOPS</p>
+            <div className={`w-full ${filterOpen ? "md:w-3/4" : null} flex flex-col items-center justify-center my-4`}>
+                <div className="w-11/12 flex my-4 flex-col gap-8">
+
+                    {/* Breadcrumbs section */}
+                    <div className="flex gap-2">
+                        <p className="text-xs font-medium text-gray-400">MEN</p>
+                        <p className="text-xs font-medium text-gray-400">/</p>
+                        <p className="text-xs font-medium text-gray-400">CLOTHES</p>
+                        <p className="text-xs font-medium text-gray-400">/</p>
+                        <p className="text-xs font-medium">TOPS</p>
+                    </div>
+
+                    {/* Category Name and filtered items quantity / number */}
+                    <div className="flex justify-start gap-4">
+                        <h1 className="text-5xl md:text-6xl font-medium animate-slidein">MEN`S TOPS</h1>
+                        <p className="text-sm md:text-md font-medium">
+                            8
+                        </p>
+                    </div>
+
+                    {/* Filter buttons & sort button section */}
+                    <div className="flex justify-between gap-4">
+                        
+                        {/* Filter buttons */}
+                        <FilterSection filterOpen={filterOpen} setFilterOpen={setFilterOpen}/>
+
+                        {/* Sort button */}
+                        <SortByButton />
+
+                    </div>
+
                 </div>
 
-                {/* Category Name and filtered items quantity / number */}
-                <div className="flex justify-start gap-4">
-                    <h1 className="text-5xl md:text-6xl font-medium animate-slidein">MEN`S TOPS</h1>
-                    <p className="text-sm md:text-md font-medium">
-                        8
-                    </p>
-                </div>
 
-                {/* Filter buttons & sort button section */}
-                <div className="flex justify-between gap-4">
-                    
-                    {/* Filter buttons */}
-                    <FilterSection />
+                {/* Product List items */}
+                <div className={`w-11/12 grid grid-cols-2 ${filterOpen ? "md:grid-cols-4" : "md:grid-cols-5"} gap-x-6 gap-y-8 my-4`}>
 
-                    {/* Sort button */}
-                    <SortByButton />
+                    <ProductListItem 
+                    image1={crewNeck1} 
+                    image2={crewNeck2}
+                    itemName={"BALMAIN LOGO-PRINT CREW-NECK SWEATSHIRT"}
+                    itemPrice={595}/>
+
+                    <ProductListItem 
+                    image1={pierreHoodie1} 
+                    image2={pierreHoodie2}
+                    itemName={"BALMAIN LOGO-PRINT CREW-NECK SWEATSHIRT"}
+                    itemPrice={595}/>
+
+                    <ProductListItem 
+                    image1={zippedHoodie1} 
+                    image2={zippedHoodie2}
+                    itemName={"BALMAIN LOGO-PRINT CREW-NECK SWEATSHIRT"}
+                    itemPrice={595}/>
+
+                    <ProductListItem 
+                    image1={crewNeck3} 
+                    image2={crewNeck4}
+                    itemName={"BALMAIN LOGO-PRINT CREW-NECK SWEATSHIRT"}
+                    itemPrice={595}/>
+
+                    <ProductListItem 
+                    image1={pierreHoodie3} 
+                    image2={pierreHoodie4}
+                    itemName={"BALMAIN LOGO-PRINT CREW-NECK SWEATSHIRT"}
+                    itemPrice={595}/>
+
+                    <ProductListItem 
+                    image1={zippedHoodie3} 
+                    image2={zippedHoodie4}
+                    itemName={"BALMAIN LOGO-PRINT CREW-NECK SWEATSHIRT"}
+                    itemPrice={595}/>
+
+                    <ProductListItem 
+                    image1={crewNeck4} 
+                    image2={crewNeck1}
+                    itemName={"BALMAIN LOGO-PRINT CREW-NECK SWEATSHIRT"}
+                    itemPrice={595}/>
+
+                    <ProductListItem 
+                    image1={pierreHoodie2} 
+                    image2={pierreHoodie4}
+                    itemName={"BALMAIN LOGO-PRINT CREW-NECK SWEATSHIRT"}
+                    itemPrice={595}/>
 
                 </div>
 
             </div>
 
-
-            {/* Product List items */}
-            <div className="w-11/12 grid grid-cols-2 md:grid-cols-5 gap-x-6 gap-y-8 my-4">
-
-                <ProductListItem 
-                image1={crewNeck1} 
-                image2={crewNeck2}
-                itemName={"BALMAIN LOGO-PRINT CREW-NECK SWEATSHIRT"}
-                itemPrice={595}/>
-
-                <ProductListItem 
-                image1={pierreHoodie1} 
-                image2={pierreHoodie2}
-                itemName={"BALMAIN LOGO-PRINT CREW-NECK SWEATSHIRT"}
-                itemPrice={595}/>
-                
-                <ProductListItem 
-                image1={zippedHoodie1} 
-                image2={zippedHoodie2}
-                itemName={"BALMAIN LOGO-PRINT CREW-NECK SWEATSHIRT"}
-                itemPrice={595}/>
-
-                <ProductListItem 
-                image1={crewNeck3} 
-                image2={crewNeck4}
-                itemName={"BALMAIN LOGO-PRINT CREW-NECK SWEATSHIRT"}
-                itemPrice={595}/>
-
-                <ProductListItem 
-                image1={pierreHoodie3} 
-                image2={pierreHoodie4}
-                itemName={"BALMAIN LOGO-PRINT CREW-NECK SWEATSHIRT"}
-                itemPrice={595}/>
-
-                <ProductListItem 
-                image1={zippedHoodie3} 
-                image2={zippedHoodie4}
-                itemName={"BALMAIN LOGO-PRINT CREW-NECK SWEATSHIRT"}
-                itemPrice={595}/>
-
-                <ProductListItem 
-                image1={crewNeck4} 
-                image2={crewNeck1}
-                itemName={"BALMAIN LOGO-PRINT CREW-NECK SWEATSHIRT"}
-                itemPrice={595}/>
-
-                <ProductListItem 
-                image1={pierreHoodie2} 
-                image2={pierreHoodie4}
-                itemName={"BALMAIN LOGO-PRINT CREW-NECK SWEATSHIRT"}
-                itemPrice={595}/>
-
-            </div>
         </div>
     );
 }
