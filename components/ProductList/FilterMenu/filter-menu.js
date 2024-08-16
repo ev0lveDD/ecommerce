@@ -58,6 +58,10 @@ export default function FilterMenu({filterOpen, setFilterOpen, filterColorPicked
                     <FilterCheckboxButton filterFieldName={"Tops"} filterFieldId={"apparel-filter-tops"}/>
                     <FilterCheckboxButton filterFieldName={"Tracksuits"} filterFieldId={"apparel-filter-tracksuits"}/>
                 </FilterDetailsDropdown>
+
+                <button className="w-full my-6 flex items-center justify-center bg-black text-white py-2 px-2 rounded rounded-md text-xs hover:bg-gray-800 md:mr-4 border border-black">
+                APPLY FILTERS
+                </button>
             </div>
         </div>
     );
