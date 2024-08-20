@@ -9,10 +9,10 @@ import Image from "next/image";
 export default function PopularStylesSection() {
     return(
         
-        <div className="w-4/5 flex items-center justify-center">
-            <div className="w-full grid grid-cols-4 grid-rows-2 gap-4 items-start">
-                <div className="col-span-2 row-span-2 flex items-center justify-start cursor-pointer">
-                    <Image src={style1} alt="First Popular Style"/>
+        <div className="w-9/12 flex items-center justify-center">
+            <div className="w-full h-[420px] grid grid-cols-4 grid-rows-2 gap-4 items-start">
+                <div className="col-span-2 row-span-2 w-full h-full cursor-pointer">
+                    <Image src={style1} alt="First Popular Style" className="m-0 p-0 w-full h-full object-cover object-top"/>
                 </div>
 
                 <div className="col-start-3 w-full h-full cursor-pointer">

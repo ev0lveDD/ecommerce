@@ -5,11 +5,11 @@ import collectionBackground from "@/public/cbackground.png"
 export default function CollectionSection() {
     return(
 
-        <div className="bg-collection-background bg-cover w-full h-[500px] flex items-center justify-center">
-            <div className="w-2/4 flex flex-col items-start justify-center gap-4">
+        <div className="bg-collection-background bg-contain w-full h-[512px] flex items-center justify-center">
+            <div className="w-4/12 flex flex-col items-start justify-center gap-4">
                 <p className="hiden">X</p>
             </div>
-            <div className="w-1/4 flex flex-col items-start justify-center gap-4">
+            <div className="w-1/4 flex flex-col items-start justify-center gap-4 ml-14">
                 <p className="text-white font-bold text-5xl">ZARA</p>
                 <p className="text-white text-sm">
                     Lustrous Yet Understated. The New Evening Wear Collection Exclusively Offered At The
