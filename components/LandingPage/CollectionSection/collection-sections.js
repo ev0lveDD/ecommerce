@@ -5,7 +5,7 @@ import collectionBackground from "@/public/cbackground.png"
 export default function CollectionSection() {
     return(
 
-        <div className="bg-collection-background bg-contain w-full h-[512px] flex items-center justify-center">
+        <div className="bg-collection-background bg-cover w-full h-[512px] flex items-center justify-center">
             <div className="w-4/12 flex flex-col items-start justify-center gap-4">
                 <p className="hiden">X</p>
             </div>

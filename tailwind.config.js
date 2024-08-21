@@ -17,10 +17,15 @@ module.exports = {
         slidein: {
           '0%': { transform: 'translate(20vw,0)' , opacity: 0},
           '100%': { transform: 'translate(0,0)', opacity: 1 },
+        },
+        appear: {
+          '0%': { opacity: 0},
+          '100%': { opacity: 1 },
         }
       },
       animation: {
-        slidein: 'slidein 1.2s ease-in-out',
+        slidein: 'slidein 0.8s ease-in-out',
+        appear: 'appear 0.4s ease-in-out'
       }
     },
   },

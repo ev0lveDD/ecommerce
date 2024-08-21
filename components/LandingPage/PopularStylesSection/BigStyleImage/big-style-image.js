@@ -11,8 +11,8 @@ export default function BigStyleImage({imgSource, isOnSale}) {
     const onMouseLeave = () => setStyleIsHovering(false);
 
     return(
-        <div className="col-span-2 row-span-2 w-full h-full cursor-pointer relative" onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave}>
-            <Image src={imgSource} alt="First Popular Style" className="m-0 p-0 w-full h-full object-cover object-top"/>
+        <div className="col-span-2 row-span-2 w-full h-full cursor-pointer relative overflow-hidden" onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave}>
+            <Image src={imgSource} alt="First Popular Style" className="m-0 p-0 object-contain object-top"/>
 
             {styleIsHovering ? 
                 <div className="bg-gray-800 h-8 w-full absolute left-0 bottom-0 flex items-center justify-between p-2">
