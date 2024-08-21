@@ -9,7 +9,7 @@ export default function CollectionSection() {
             <div className="w-4/12 flex flex-col items-start justify-center gap-4">
                 <p className="hiden">X</p>
             </div>
-            <div className="w-1/4 flex flex-col items-start justify-center gap-4 ml-14">
+            <div className="w-1/4 flex flex-col items-start justify-center gap-8 ml-14">
                 <p className="text-white font-bold text-5xl">ZARA</p>
                 <p className="text-white text-sm">
                     Lustrous Yet Understated. The New Evening Wear Collection Exclusively Offered At The
