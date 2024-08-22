@@ -8,7 +8,7 @@ import Image from "next/image";
 
 export default function BrandsSection() {
     return(
-        <div className="w-9/12 flex items-center justify-between my-4">
+        <div className="w-11/12 md:w-9/12 grid grid-cols-2 md:grid-cols-5 gap-6 items-center justify-between my-4">
             <Image src={brand1} alt="First brand logo" height={130} width={130} className="cursor-pointer"/>
             <Image src={brand2} alt="Second brand logo" height={130} width={130} className="cursor-pointer"/>
             <Image src={brand3} alt="Third brand logo" height={130} width={130} className="cursor-pointer"/>

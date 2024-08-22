@@ -12,7 +12,7 @@ export default function SmallStyleImage({imgSource, altDescription, gridPosition
 
     return(
         <div className={`${gridPosition} w-full h-full cursor-pointer relative`} onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave}>
-        <Image src={imgSource} alt={altDescription} className="m-0 p-0 object-contain" fill/>
+        <Image src={imgSource} alt={altDescription} className="m-0 p-0 w-full h-full"/>
 
             {styleIsHovering ? 
                 <div className="bg-gray-800 h-8 w-full absolute left-0 bottom-0 flex items-center justify-between p-2">
