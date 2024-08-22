@@ -35,10 +35,10 @@ export default function Footer(){
                 <div className="h-full flex flex-col gap-4 my-4 justify-start w-full md:w-auto">
                     <p className="text-sm font-bold">NAVIGATION</p>
                     <ul className="flex flex-col gap-2 md:gap-1">
-                        <li><p className="text-sm text-gray-400 hover:text-gray-600 cursor-pointer">MEN</p></li>
-                        <li><p className="text-sm text-gray-400 hover:text-gray-600 cursor-pointer">WOMEN</p></li>
-                        <li><p className="text-sm text-gray-400 hover:text-gray-600 cursor-pointer">KIDS</p></li>
-                        <li><p className="text-sm text-gray-400 hover:text-gray-600 cursor-pointer">SALE</p></li>
+                        <li><p className="text-xs text-gray-400 hover:text-gray-600 cursor-pointer">MEN</p></li>
+                        <li><p className="text-xs text-gray-400 hover:text-gray-600 cursor-pointer">WOMEN</p></li>
+                        <li><p className="text-xs text-gray-400 hover:text-gray-600 cursor-pointer">KIDS</p></li>
+                        <li><p className="text-xs text-gray-400 hover:text-gray-600 cursor-pointer">SALE</p></li>
                     </ul>
                 </div>
 

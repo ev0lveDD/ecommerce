@@ -75,49 +75,57 @@ export default function ProductList() {
                     image1={crewNeck1} 
                     image2={crewNeck2}
                     itemName={"BALMAIN LOGO-PRINT CREW-NECK SWEATSHIRT"}
-                    itemPrice={595}/>
+                    itemPrice={595}
+                    isOnSale={false}/>
 
                     <ProductListItem 
                     image1={pierreHoodie1} 
                     image2={pierreHoodie2}
                     itemName={"BALMAIN LOGO-PRINT CREW-NECK SWEATSHIRT"}
-                    itemPrice={595}/>
+                    itemPrice={595}
+                    isOnSale={false}/>
 
                     <ProductListItem 
                     image1={zippedHoodie1} 
                     image2={zippedHoodie2}
                     itemName={"BALMAIN LOGO-PRINT CREW-NECK SWEATSHIRT"}
-                    itemPrice={595}/>
+                    itemPrice={595}
+                    isOnSale={false}/>
 
                     <ProductListItem 
                     image1={crewNeck3} 
                     image2={crewNeck4}
                     itemName={"BALMAIN LOGO-PRINT CREW-NECK SWEATSHIRT"}
-                    itemPrice={595}/>
+                    itemPrice={595}
+                    isOnSale={false}/>
 
                     <ProductListItem 
                     image1={pierreHoodie3} 
                     image2={pierreHoodie4}
                     itemName={"BALMAIN LOGO-PRINT CREW-NECK SWEATSHIRT"}
-                    itemPrice={595}/>
+                    itemPrice={595}
+                    isOnSale={false}/>
 
                     <ProductListItem 
                     image1={zippedHoodie3} 
                     image2={zippedHoodie4}
                     itemName={"BALMAIN LOGO-PRINT CREW-NECK SWEATSHIRT"}
-                    itemPrice={595}/>
+                    itemPrice={595}
+                    isOnSale={false}/>
 
                     <ProductListItem 
                     image1={crewNeck4} 
                     image2={crewNeck1}
                     itemName={"BALMAIN LOGO-PRINT CREW-NECK SWEATSHIRT"}
-                    itemPrice={595}/>
+                    itemPrice={595}
+                    isOnSale={false}/>
 
                     <ProductListItem 
                     image1={pierreHoodie2} 
                     image2={pierreHoodie4}
                     itemName={"BALMAIN LOGO-PRINT CREW-NECK SWEATSHIRT"}
-                    itemPrice={595}/>
+                    itemPrice={595}
+                    isOnSale={false}/>
 
                 </div>
 
