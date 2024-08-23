@@ -11,7 +11,7 @@ import SmallStyleImage from "./SmallStyleImage/small-style-image";
 export default function PopularStylesSection() {
     return(
         
-        <div className="w-11/12 md:w-9/12 flex items-center justify-center relative">
+        <div className="w-11/12 md:w-9/12 flex items-center justify-center relative my-8">
 
             <div className="w-full max-h-1/3 grid grid-cols-2 grid-rows-4 md:grid-cols-4 md:grid-rows-2 gap-4 items-start">
                 <BigStyleImage imgSource={style1} isOnSale={true}/>
