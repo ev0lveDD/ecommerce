@@ -15,7 +15,7 @@ export default function CollectionSection() {
                     Lustrous Yet Understated. The New Evening Wear Collection Exclusively Offered At The
                     Reopened Giorgio Armani Boutique in Los Angeles.
                 </p>
-                <button className="bg-white text-black py-3 px-3 rounded rounded-md text-sm hover:bg-gray-200 hober:text-gray-700">
+                <button className="bg-white text-black font-medium py-3 px-3 rounded rounded-md text-sm hover:bg-gray-200 hover:text-gray-700">
                     SEE COLLECTION
                 </button>
             </div>
