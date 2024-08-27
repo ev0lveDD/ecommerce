@@ -15,15 +15,24 @@ export default function HeaderSection() {
             <Swiper 
             modules={[Pagination]} 
             pagination={true}
-            className="mySwiper max-h-full">
+            className="mySwiper">
                 <SwiperSlide>
-                    <Image className="w-full h-[620px] object-cover object-top" alt="header image 1" src={header1}/>
+                    <div className="bg-header-background-1 bg-cover bg-top w-full h-[540px] flex flex-col items-center md:items-start justify-end md:justify-end gap-6">
+                        <h1 className="text-white font-bold text-4xl ml-16">Balmain Spring Collection</h1>
+                        <p className="text-white font-medium text-xl mb-12 ml-16">Find out our best spring collection. Offering our best quality product in a Balmain spring Collection.</p>
+                    </div>
                 </SwiperSlide>
                 <SwiperSlide>
-                    <Image className="w-full h-[620px] object-cover object-top" alt="header image 2" src={header2}/>
+                    <div className="bg-header-background-2 bg-cover bg-top w-full h-[540px] flex flex-col items-center md:items-start justify-end md:justify-end gap-6">
+                        <h1 className="text-white font-bold text-4xl ml-16">Balmain Spring Collection</h1>
+                        <p className="text-white font-medium text-xl mb-12 ml-16">Find out our best spring collection. Offering our best quality product in a Balmain spring Collection.</p>
+                    </div>
                 </SwiperSlide>
                 <SwiperSlide>
-                    <Image className="w-full h-[620px] object-cover object-top" alt="header image 3" src={header3}/>
+                    <div className="bg-header-background-3 bg-cover bg-top w-full h-[540px] flex flex-col items-center md:items-start justify-end md:justify-end gap-6">
+                        <h1 className="text-white font-bold text-4xl ml-16">Balmain Spring Collection</h1>
+                        <p className="text-white font-medium text-xl mb-12 ml-16">Find out our best spring collection. Offering our best quality product in a Balmain spring Collection.</p>
+                    </div>
                 </SwiperSlide>
             </Swiper>
         </div>

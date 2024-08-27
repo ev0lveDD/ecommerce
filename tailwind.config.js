@@ -10,6 +10,9 @@ module.exports = {
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "collection-background" : "url('../public/cbackground.png')",
+        "header-background-1" : "url('../public/header_images/header1.jpg')",
+        "header-background-2" : "url('../public/header_images/header2.jpg')",
+        "header-background-3" : "url('../public/header_images/header3.jpg')",
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
