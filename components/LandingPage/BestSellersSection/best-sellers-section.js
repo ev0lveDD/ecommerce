@@ -11,22 +11,14 @@ import pierreHoodie2 from "@/public/perrebalmainhoodie2.avif";
 
 import zippedHoodie1 from "@/public/mainLabZippedHoodie1.avif";
 import zippedHoodie2 from "@/public/mainLabZippedHoodie2.avif";
+import BestSellersMenu from "./BestSellersMenu/best-sellers-menu";
+import SectionHeadline from "../SectionHeadline/section-headline";
 
 export default function BestSellersSection() {
     return(
         <div className="w-11/12 md:w-9/12 flex flex-col items-center justify-center gap-8 my-8">
-            <h1 className="font-bold text-3xl text-center">Best Sellers</h1>
-            <div className="w-full flex items-center justify-between">
-                <ul className="flex items-center justify-center gap-4 md:gap-8">
-                    <li><p className="text-[11px] text-black font-bold cursor-pointer">All Products</p></li>
-                    <li><p className="text-[11px] text-gray-400 hover:text-gray-600 cursor-pointer font-bold">T-Shirt</p></li>
-                    <li><p className="text-[11px] text-gray-400 hover:text-gray-600 cursor-pointer font-bold">Hoodies</p></li>
-                    <li><p className="text-[11px] text-gray-400 hover:text-gray-600 cursor-pointer font-bold">Jacket</p></li>
-                </ul>
-                <button className="bg-black text-white py-0.5 px-2 rounded rounded-sm text-[11px] hover:bg-gray-800 border border-black">
-                    Show All
-                </button>
-            </div>
+            <SectionHeadline text={"Best Sellers"}/>
+            <BestSellersMenu />
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
                     <ProductListItem 
                     image1={crewNeck1} 
