@@ -2,23 +2,24 @@
 
 import Image from "next/image";
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Pagination } from 'swiper/modules';
+import { Autoplay, Pagination } from 'swiper/modules';
 
 
-import header1 from "@/public/header_images/header1.jpg";
-import header2 from "@/public/header_images/header2.jpg";
-import header3 from "@/public/header_images/header3.jpg";
+import 'swiper/css';
+import 'swiper/css/autoplay';
+import 'swiper/css/pagination';
 
 export default function HeaderSection() {
     return(
         <div className="w-full h-1/3 flex items-center justify-center z-10">
             <Swiper 
-            modules={[Pagination]} 
-            pagination={true}
+            autoplay={true}
+            modules={[Autoplay, Pagination]} 
+            pagination={{clickable: true}}
             className="mySwiper">
                 <SwiperSlide>
                     <div className="bg-header-background-1 bg-cover bg-top w-full h-[540px] flex items-center justify-center">
-                        <div className="bg-black/30 w-full h-full flex items-center justify-center md:justify-star">
+                        <div className="bg-black/30 w-full h-full flex items-center justify-center md:justify-start">
                             <div className="w-11/12 md:w-1/3 ml-0 md:ml-24 h-full flex flex-col items-start md:items-start justify-end md:justify-end gap-6">
                                 <h1 className="text-white font-bold text-3xl md:text-4xl ">BALMAIN SPRING COLLECTION</h1>
                                 <p className="text-white font-medium text-sm md:text-xl">FIND OUR OUR BEST SPRING COLLECTION. OFFERING OUR BEST QUALITY PRODUCT IN A BALMAIN SPRING COLLECTION.</p>
@@ -44,7 +45,7 @@ export default function HeaderSection() {
                 </SwiperSlide>
                 <SwiperSlide>
                     <div className="bg-header-background-3 bg-cover bg-top w-full h-[540px] flex items-center justify-center">
-                        <div className="bg-black/30 w-full h-full flex items-center justify-center md:justify-star">
+                        <div className="bg-black/30 w-full h-full flex items-center justify-center md:justify-start">
                             <div className="w-11/12 md:w-1/3 ml-0 md:ml-24 h-full flex flex-col items-start md:items-start justify-end md:justify-end gap-6">
                                 <h1 className="text-white font-bold text-3xl md:text-4xl ">WOMENS FALL WINTER 2024 COLLECTION</h1>
                                 <p className="text-white font-medium text-sm md:text-xl">TAILORING EXPERTISE MEETING CRAFTSMANSHIP, HONORING JOY, LOVE & FREEDOM</p>
