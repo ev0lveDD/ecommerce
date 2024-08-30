@@ -1,0 +1,31 @@
+[
+    {
+        "numericCode": 9001,
+        "cartItemImage": "https://ecsmedia.pl/c/nike-bluza-sportowa-meska-m-nsw-club-hoodie-fz-bb-bv2654-010-czarny-rozmiar-l-w-iext60637084.jpg",
+        "cartItemName": "BALMAIN LOGO-PRINT CREW-NECK SWEATSHIRT",
+        "cartItemPrice": 595,
+        "cartItemVariant": "SWEATSHIRT",
+        "cartItemSize": "XL",
+        "cartItemColor": "GREEN"
+    },
+    {
+        "numericCode": 9002,
+        "cartItemImage": "https://ecsmedia.pl/c/nike-bluza-sportowa-meska-m-nsw-club-hoodie-fz-bb-bv2654-010-czarny-rozmiar-l-w-iext60637084.jpg",
+        "cartItemName": "BALMAIN HOODIE",
+        "cartItemPrice": 190,
+        "cartItemVariant": "HOODIE",
+        "cartItemSize": "XL",
+        "cartItemColor": "BLACK"
+    },
+    {
+        "numericCode": 9003,
+        "cartItemImage": "https://ecsmedia.pl/c/nike-bluza-sportowa-meska-m-nsw-club-hoodie-fz-bb-bv2654-010-czarny-rozmiar-l-w-iext60637084.jpg",
+        "cartItemName": "BALMAIN LOGO-PRINT HOODIE",
+        "cartItemPrice": 300,
+        "cartItemVariant": "HOODIE",
+        "cartItemSize": "XL",
+        "cartItemColor": "NAVY"
+    }
+]
+
+
