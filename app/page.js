@@ -11,12 +11,17 @@ export default function Home() {
       <LandingPage />
       */}
 
+
+      {/* 
       <ShoppingCartDetails />
+      */}
+
 
       {/* 
       <ProductList />
       */}
 
+      <ProductDetails />
       {/* Product Details  
       <ProductDetails />
       */}
