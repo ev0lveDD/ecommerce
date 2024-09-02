@@ -22,9 +22,6 @@ export default function ShoppingCartDetails() {
         setSubtotalValue(sum);
     }
 
-    useEffect(() => {
-        checkFinalValue()
-    }, []);
 
     var shoppingList = [
         {
@@ -84,6 +81,7 @@ export default function ShoppingCartDetails() {
                         })
                     }
                     <button onClick={() => console.log(shoppingList)}>SHOW ME</button>
+                    <button onClick={checkFinalValue}>SUM UP</button>
                 </div>
                 <SummarySection subtotalValue={subtotalValue} taxValue={taxValue}/>
             </div>

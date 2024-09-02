@@ -1,7 +1,7 @@
 'use client';
 
 import Image from "next/image";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 
 export default function ShoppingCartItem({dataOfItem, cartItemImage, cartItemName, cartItemQuantity, cartItemPrice, cartItemVariant, cartItemSize, cartItemColor, checkFinalValue}) {
@@ -21,6 +21,7 @@ export default function ShoppingCartItem({dataOfItem, cartItemImage, cartItemNam
         null;
     };
     }
+
 
     return(
         <div className="w-full h-48 flex items-start justify-between border-b border-grey-lighter gap-4">
