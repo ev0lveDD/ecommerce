@@ -25,7 +25,7 @@ export default function ShoppingCartItem({dataOfItem, cartItemImage, cartItemNam
 
     return(
         <div className="w-full h-48 flex items-start justify-between border-b border-grey-lighter gap-4">
-            <Image className="h-40 w-52 my-4 object-cover object-fill" alt="Item image" src={cartItemImage} height={40} width={40}/>
+            <Image className="h-40 w-52 my-4" alt="Item image" src={cartItemImage}/>
             <div className="w-full min-h-40 flex flex-col items-start justify-between gap-4 my-4">
                 <div className="flex flex-col gap-3 w-full">
                     <div className="w-full h-full flex items-start justify-between">
