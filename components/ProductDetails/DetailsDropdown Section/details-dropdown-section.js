@@ -1,4 +1,4 @@
-import DetailsDropdown from "../DetailsDropdown/details-dropdown";
+import DetailsDropdown from "./DetailsDropdown/details-dropdown";
 import CharacteristicsRow from "./CharacteristicsRow/characteristics-row";
 
 export default function DetailsDropdownSection() {
