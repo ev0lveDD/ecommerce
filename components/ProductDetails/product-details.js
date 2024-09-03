@@ -1,27 +1,22 @@
 'use client';
 
-import Image from "next/image";
 import { useState } from "react";
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { Pagination } from 'swiper/modules';
 
 import 'swiper/css';
 import 'swiper/css/pagination';
 
 import DetailsDropdownSection from "./DetailsDropdown Section/details-dropdown-section";
-import ColorPickInput from "./ColorPickInput/color-pick-input";
 import ShareSection from "./ShareSection/share-section";
 
-import crewNeck1 from "@/public/crewneck1.avif";
-import crewNeck2 from "@/public/crewneck2.avif";
-import crewNeck3 from "@/public/crewneck3.avif";
-import crewNeck4 from "@/public/crewneck4.avif";
 import CompleteLookSection from "./CompleteLookSection/complete-look-section";
+import ColorPickSection from "./ColorPickSection/color-pick-section";
+import SizePickSection from "./SizePickSection/size-pick-section";
+import HeaderAndPrice from "./HeaderAndPrice/header-and-price";
+import ProductImageSection from "./ProductImageSection/product-image-section";
+import ProductDescription from "./ProductDescription/product-description";
+import AddToCartButton from "./AddToCartButton/add-to-cart-button";
 
 export default function ProductDetails() {
-
-    const buttonNotActive = "flex item-center justify-center w-12 border border-black border-opacity-10 py-0.5 px-3 rounded rounded-md text-sm hover:border-gray-800 font-medium";
-    const buttonActive = "flex item-center justify-center w-12 border border-black bg-black text-white py-0.5 px-3 rounded rounded-md text-sm hover:bg-gray-800 hover:border-gray-800 font-medium";
     
     const [selectedButton, setSelectedButton] = useState("");
     const [colorPicked, setColorPicked] = useState("");
@@ -31,82 +26,35 @@ export default function ProductDetails() {
             <div className="w-11/12 grid grid-cols-1 md:grid-cols-2 gap-4">
 
                 {/* Product Image Section */}
-                    {/* Desktop view */}
-                <div className="w-11/12 hidden md:flex md:flex-col gap-4 items-center justify-start h-fit">
-                    <Image className="w-full h-1/3 animate-slidein" alt="big item image 1" src={crewNeck1}/>
-                    <div className="w-full grid grid-cols-2 gap-4">
-                        <Image className="w-full" alt="small item image 1" src={crewNeck3}/>
-                        <Image className="w-full" alt="small item image 2" src={crewNeck2}/>
-                    </div>
-                    <Image className="w-full h-1/3" alt="big item image 2" src={crewNeck4}/>
-                </div>
-                    {/* Mobile view */}
-                <div className="w-full h-96 flex md:hidden items-center justify-center z-10">
-                    <Swiper 
-                    modules={[Pagination]} 
-                    pagination={true}
-                    className="mySwiper">
-                        <SwiperSlide>
-                            <Image className="w-full h-96" alt="item image 1" src={crewNeck1}/>
-                        </SwiperSlide>
-                        <SwiperSlide>
-                            <Image className="w-full h-96" alt="item image 2" src={crewNeck2}/>
-                        </SwiperSlide>
-                        <SwiperSlide>
-                            <Image className="w-full h-96" alt="item image 3" src={crewNeck3}/>
-                        </SwiperSlide>
-                        <SwiperSlide>
-                            <Image className="w-full h-96" alt="item image 4" src={crewNeck4}/>
-                        </SwiperSlide>
-                    </Swiper>
-                </div>
+                <ProductImageSection />
 
                 <div className="w-full flex flex-col gap-4 my-8">
                     {/* Header and price */}
-                    <div className="flex flex-col gap-1">
-                        <h1 className="text-2xl font-medium">
-                            BALMAIN LOGO-PRINT CREW-NECK SWEATSHIRT
-                        </h1>
-                        <p className="text-lg font-medium text-red-500">
-                            $595.00
-                        </p>
-                    </div>
+                    <HeaderAndPrice />
+
                     {/* Description */}
-                    <p className="text-slate-600">
-                        Hinting at the brands penchant for logomania, Balmain presents this sweatshirt as part of its SS23 offering. Crafted from cotton, the long-sleeved design is adorned with a contrasting logo print at the chest.
-                    </p>
+                    <ProductDescription 
+                        itemDescription={"Hinting at the brands penchant for logomania, Balmain presents this sweatshirt as part of its SS23 offering. Crafted from cotton, the long-sleeved design is adorned with a contrasting logo print at the chest."}
+                    />
                     
                     {/* Color Pick section */}
-                    <div className="flex flex-col gap-4">
-                        <p className="text-lg font-medium">Color</p>
-                        <div className="flex gap-4">
-                            <ColorPickInput colorPickInputId="color-radio-1" colorName="white" colorNameCSS="bg-white-200" colorPicked={colorPicked} setColorPicked={setColorPicked}/>
-                            <ColorPickInput colorPickInputId="color-radio-2" colorName="gray" colorNameCSS="bg-gray-200" colorPicked={colorPicked} setColorPicked={setColorPicked}/>
-                            <ColorPickInput colorPickInputId="color-radio-3" colorName="black" colorNameCSS="bg-black" colorPicked={colorPicked} setColorPicked={setColorPicked}/>
-                            <ColorPickInput colorPickInputId="color-radio-4" colorName="green" colorNameCSS="bg-green-800" colorPicked={colorPicked} setColorPicked={setColorPicked}/>
-                        </div>
-                    </div>
+                    <ColorPickSection colorPicked={colorPicked} setColorPicked={setColorPicked}/>
 
                     {/* Size Pick section */}
-                    <div className="flex flex-col gap-2">
-                        <p className="text-lg font-medium">Size</p>
-                        <div className="flex gap-4">
-                            <button className={selectedButton === "XS" ? buttonActive : buttonNotActive} onClick={()=>setSelectedButton("XS")}>XS</button>
-                            <button className={selectedButton === "S" ? buttonActive : buttonNotActive} onClick={()=>setSelectedButton("S")}>S</button>
-                            <button className={selectedButton === "M" ? buttonActive : buttonNotActive} onClick={()=>setSelectedButton("M")}>M</button>
-                            <button className={selectedButton === "L" ? buttonActive : buttonNotActive} onClick={()=>setSelectedButton("L")}>L</button>
-                            <button className={selectedButton === "XL" ? buttonActive : buttonNotActive} onClick={()=>setSelectedButton("XL")}>XL</button>
-                        </div>
-                    </div>
+                    <SizePickSection selectedButton={selectedButton} setSelectedButton={setSelectedButton}/>
 
-                    <button className="bg-black text-white py-4 px-3 rounded rounded-md text-sm hover:bg-gray-800">
-                        ADD TO CART
-                    </button>
+                    {/* Add to cart button */}
+                    <AddToCartButton />
 
+                    {/* Product details dropdown */}
                     <DetailsDropdownSection />
+
+                    {/* Share product section */}
                     <ShareSection />
                 </div>
             </div>
+
+            {/* Complete Look Section */}
             <CompleteLookSection />
         </div>
     );

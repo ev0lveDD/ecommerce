@@ -17,7 +17,7 @@ export default function ShareSection() {
                     <Image alt="Instagram icon" width={36} height={36} src={instagramIcon} className=""/>
                 </div>
                 <div className="flex items-center justify-center rounded-full cursor-pointer z-50">
-                    <Image alt="Twitter icon" width={32}height={32} src={twitterIcon} className=""/>
+                    <Image alt="Twitter icon" width={31}height={31} src={twitterIcon} className=""/>
                 </div> 
                 <div className="flex items-center justify-center rounded-full cursor-pointer z-50">
                     <Image alt="Messenger icon" width={36}height={36} src={messengerIcon} className=""/>

@@ -22,7 +22,7 @@ export default function DetailsDropdownSection() {
 
             <DetailsDropdown dropdownTitle="RETURNS" dropdownId="itemddReturns">
                 <p className="py-4 text-sm">
-                    Hinting at the brands penchant for logomania, Balmain presents this sweatshirt as part of its SS23 offering. Crafted from cotton, the long-sleeved design is adorned with a contrasting logo print at the chest.
+                    Free standard delivery. Ordered products can be returned free of charge within 30 days.
                 </p>
             </DetailsDropdown>
 

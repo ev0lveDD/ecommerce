@@ -1,5 +1,5 @@
 import FilterDetailsDropdown from "./FilterDetailsDropdown/filter-details-dropdown";
-import ColorPickInput from "@/components/ProductDetails/ColorPickInput/color-pick-input";
+import ColorPickInput from "@/components/ProductDetails/ColorPickSection/ColorPickInput/color-pick-input";
 import FilterSizeButton from "./FilterSizeButton/filter-size-button";
 import FilterPriceButton from "./FilterCheckboxButton/filter-checkbox-button";
 import FilterCheckboxButton from "./FilterCheckboxButton/filter-checkbox-button";
