@@ -17,6 +17,6 @@ export default function DetailsDropdown ({dropdownTitle, dropdownId, children}) 
                 </span>
             </summary>
             {children}
-      </details>
+        </details>
     );
 }

@@ -7,6 +7,9 @@ module.exports = {
   ],
   theme: {
     extend: {
+      transitionProperty : {
+        'height': 'height'
+      },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "collection-background" : "url('../public/cbackground.png')",
@@ -18,17 +21,22 @@ module.exports = {
       },
       keyframes: {
         slidein: {
-          '0%': { transform: 'translate(20vw,0)' , opacity: 0},
-          '100%': { transform: 'translate(0,0)', opacity: 1 },
+          '0%': { transform: 'translateX(50px)' , opacity: 0},
+          '100%': { transform: 'translateX(0)', opacity: 1 },
         },
         appear: {
           '0%': { opacity: 0},
           '100%': { opacity: 1 },
+        },
+        rollOut: {
+          '0%': { transition: 'height(0)' },
+          '100%': { transition: 'height(100%)' },
         }
       },
       animation: {
         slidein: 'slidein 0.8s ease-in-out',
-        appear: 'appear 0.4s ease-in-out'
+        appear: 'appear 0.4s ease-in-out',
+        rollOut: 'rollOut 0.8s ease-in-out'
       }
     },
   },

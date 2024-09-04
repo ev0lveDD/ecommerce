@@ -21,6 +21,8 @@ import zippedHoodie1 from "@/public/mainLabZippedHoodie1.avif";
 import zippedHoodie2 from "@/public/mainLabZippedHoodie2.avif";
 import zippedHoodie3 from "@/public/mainLabZippedHoodie3.avif";
 import zippedHoodie4 from "@/public/mainLabZippedHoodie4.avif";
+import BreadcrumbsSection from "./BreadcrumbsSection/breadcrumbs-section";
+import ProductListHeader from "./ProductListHeader/product-list-header";
 
 
 export default function ProductList() {
@@ -38,21 +40,10 @@ export default function ProductList() {
                 <div className="w-11/12 flex my-4 flex-col gap-8">
 
                     {/* Breadcrumbs section */}
-                    <div className="flex gap-2">
-                        <p className="text-xs font-medium text-gray-400 cursor-pointer hover:text-gray-600">MEN</p>
-                        <p className="text-xs font-medium text-gray-400">/</p>
-                        <p className="text-xs font-medium text-gray-400 cursor-pointer hover:text-gray-600">CLOTHES</p>
-                        <p className="text-xs font-medium text-gray-400">/</p>
-                        <p className="text-xs font-medium cursor-pointer hover:text-gray-800">TOPS</p>
-                    </div>
+                    <BreadcrumbsSection />
 
                     {/* Category Name and filtered items quantity / number */}
-                    <div className="flex justify-start gap-4">
-                        <h1 className="text-5xl md:text-6xl font-medium animate-slidein">MEN`S TOPS</h1>
-                        <p className="text-sm md:text-md font-medium">
-                            8
-                        </p>
-                    </div>
+                    <ProductListHeader categoryName={"MEN`S TOPS"} filteredItemsQuantity={8}/>
 
                     {/* Filter buttons & sort button section */}
                     <div className="flex justify-between gap-4">

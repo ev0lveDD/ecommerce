@@ -12,7 +12,7 @@ import crewNeck4 from "@/public/crewneck4.avif";
 
 export default function MobileView () {
     return(
-        <div className="w-full h-96 flex md:hidden items-center justify-center z-10">
+        <div className="w-full flex md:hidden items-center justify-center z-10">
             <Swiper 
                 modules={[Pagination]} 
                 pagination={true}
