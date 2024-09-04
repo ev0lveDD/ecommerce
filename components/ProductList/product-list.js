@@ -21,9 +21,11 @@ import zippedHoodie1 from "@/public/mainLabZippedHoodie1.avif";
 import zippedHoodie2 from "@/public/mainLabZippedHoodie2.avif";
 import zippedHoodie3 from "@/public/mainLabZippedHoodie3.avif";
 import zippedHoodie4 from "@/public/mainLabZippedHoodie4.avif";
+
 import BreadcrumbsSection from "./BreadcrumbsSection/breadcrumbs-section";
 import ProductListHeader from "./ProductListHeader/product-list-header";
 
+import checkData from "@/app/checkData.json";
 
 export default function ProductList() {
     const [filterOpen, setFilterOpen] = useState(false);
@@ -62,61 +64,19 @@ export default function ProductList() {
                 {/* Product List items */}
                 <div className={`w-11/12 grid grid-cols-2 ${filterOpen ? "md:grid-cols-4" : "md:grid-cols-5"} gap-x-6 gap-y-8 my-4`}>
 
-                    <ProductListItem 
-                    image1={crewNeck1} 
-                    image2={crewNeck2}
-                    itemName={"BALMAIN LOGO-PRINT CREW-NECK SWEATSHIRT"}
-                    itemPrice={595}
-                    isOnSale={false}/>
-
-                    <ProductListItem 
-                    image1={pierreHoodie1} 
-                    image2={pierreHoodie2}
-                    itemName={"BALMAIN LOGO-PRINT CREW-NECK SWEATSHIRT"}
-                    itemPrice={595}
-                    isOnSale={false}/>
-
-                    <ProductListItem 
-                    image1={zippedHoodie1} 
-                    image2={zippedHoodie2}
-                    itemName={"BALMAIN LOGO-PRINT CREW-NECK SWEATSHIRT"}
-                    itemPrice={595}
-                    isOnSale={false}/>
-
-                    <ProductListItem 
-                    image1={crewNeck3} 
-                    image2={crewNeck4}
-                    itemName={"BALMAIN LOGO-PRINT CREW-NECK SWEATSHIRT"}
-                    itemPrice={595}
-                    isOnSale={false}/>
-
-                    <ProductListItem 
-                    image1={pierreHoodie3} 
-                    image2={pierreHoodie4}
-                    itemName={"BALMAIN LOGO-PRINT CREW-NECK SWEATSHIRT"}
-                    itemPrice={595}
-                    isOnSale={false}/>
-
-                    <ProductListItem 
-                    image1={zippedHoodie3} 
-                    image2={zippedHoodie4}
-                    itemName={"BALMAIN LOGO-PRINT CREW-NECK SWEATSHIRT"}
-                    itemPrice={595}
-                    isOnSale={false}/>
-
-                    <ProductListItem 
-                    image1={crewNeck4} 
-                    image2={crewNeck1}
-                    itemName={"BALMAIN LOGO-PRINT CREW-NECK SWEATSHIRT"}
-                    itemPrice={595}
-                    isOnSale={false}/>
-
-                    <ProductListItem 
-                    image1={pierreHoodie2} 
-                    image2={pierreHoodie4}
-                    itemName={"BALMAIN LOGO-PRINT CREW-NECK SWEATSHIRT"}
-                    itemPrice={595}
-                    isOnSale={false}/>
+                    {
+checkData.map(function(singleData) {
+    return(
+        <ProductListItem
+        key={singleData.itemId}
+        itemImage1={singleData.itemImage1} 
+        itemImage2={singleData.itemImage2}
+        itemName={singleData.itemName}
+        itemPrice={singleData.itemPrice}
+        isOnSale={singleData.isOnSale}/>
+    )
+})
+                    }
 
                 </div>
 
