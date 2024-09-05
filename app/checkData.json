@@ -1,8 +1,8 @@
 [
     {
         "itemId": 9001,
-        "itemImage1": "@/public/crewneck1.avif",
-        "itemImage2": "@/public/crewneck2.avif",
+        "itemImage1": "/crewneck1.avif",
+        "itemImage2": "/crewneck2.avif",
         "itemName": "BALMAIN LOGO-PRINT CREW-NECK",
         "itemPrice": 550,
         "itemApparelStyle": "HOODIE",
@@ -10,8 +10,8 @@
     },
     {
         "itemId": 9002,
-        "itemImage1": "/../../../public/perrebalmainhoodie1.avif",
-        "itemImage2": "/../../../public/perrebalmainhoodie2.avif",
+        "itemImage1": "/perrebalmainhoodie1.avif",
+        "itemImage2": "/perrebalmainhoodie2.avif",
         "itemName": "BALMAIN LOGO-PRINT HOODIE",
         "itemPrice": 300,
         "itemApparelStyle": "HOODIE",
@@ -19,8 +19,8 @@
     },
     {
         "itemId": 9003,
-        "itemImage1": "/../../../public/mainLabZippedHoodie1.avif",
-        "itemImage2": "/../../../public/mainLabZippedHoodie2.avif",
+        "itemImage1": "/mainLabZippedHoodie1.avif",
+        "itemImage2": "/mainLabZippedHoodie2.avif",
         "itemName": "BALMAIN LOGO-PRINT HOODIE",
         "itemPrice": 200,
         "itemApparelStyle": "HOODIE",
@@ -28,8 +28,8 @@
     },
     {
         "itemId": 9004,
-        "itemImage1": "/../../../public/crewneck3.avif",
-        "itemImage2": "/../../../public/crewneck4.avif",
+        "itemImage1": "/crewneck3.avif",
+        "itemImage2": "/crewneck4.avif",
         "itemName": "BALMAIN LOGO-PRINT HOODIE",
         "itemPrice": 400,
         "itemApparelStyle": "HOODIE",
@@ -37,8 +37,8 @@
     },
     {
         "itemId": 9005,
-        "itemImage1": "/../../../public/perrebalmainhoodie3.avif",
-        "itemImage2": "/../../../public/perrebalmainhoodie4.avif",
+        "itemImage1": "/perrebalmainhoodie3.avif",
+        "itemImage2": "/perrebalmainhoodie4.avif",
         "itemName": "BALMAIN LOGO-PRINT HOODIE",
         "itemPrice": 150,
         "itemApparelStyle": "HOODIE",
@@ -46,8 +46,8 @@
     },
     {
         "itemId": 9006,
-        "itemImage1": "/../../../public/mainLabZippedHoodie3.avif",
-        "itemImage2": "/../../../public/mainLabZippedHoodie4.avif",
+        "itemImage1": "/mainLabZippedHoodie3.avif",
+        "itemImage2": "/mainLabZippedHoodie4.avif",
         "itemName": "BALMAIN LOGO-PRINT HOODIE",
         "itemPrice": 100,
         "itemApparelStyle": "HOODIE",
@@ -55,8 +55,8 @@
     },
     {
         "itemId": 9007,
-        "itemImage1": "/../../../public/crewneck4.avif",
-        "itemImage2": "/../../../public/crewneck1.avif",
+        "itemImage1": "/crewneck4.avif",
+        "itemImage2": "/crewneck1.avif",
         "itemName": "BALMAIN LOGO-PRINT HOODIE",
         "itemPrice": 300,
         "itemApparelStyle": "HOODIE",
@@ -64,8 +64,8 @@
     },
     {
         "itemId": 9008,
-        "itemImage1": "/../../../public/perrebalmainhoodie2.avif",
-        "itemImage2": "/../../../public/perrebalmainhoodie4.avif",
+        "itemImage1": "/perrebalmainhoodie2.avif",
+        "itemImage2": "/perrebalmainhoodie4.avif",
         "itemName": "BALMAIN LOGO-PRINT HOODIE",
         "itemPrice": 600,
         "itemApparelStyle": "HOODIE",
