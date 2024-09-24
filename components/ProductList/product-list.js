@@ -1,26 +1,10 @@
 'use client';
 import { useState } from "react";
-import Image from "next/image";
 
 import FilterMenu from "./FilterMenu/filter-menu";
 import ProductListItem from "./ProductListItem/product-list-item";
 import SortByButton from "./SortByButton/sort-by-button";
 import FilterSection from "./FilterSection/filter-section";
-
-import crewNeck1 from "@/public/crewneck1.avif";
-import crewNeck2 from "@/public/crewneck2.avif";
-import crewNeck3 from "@/public/crewneck3.avif";
-import crewNeck4 from "@/public/crewneck4.avif";
-
-import pierreHoodie1 from "@/public/perrebalmainhoodie1.avif";
-import pierreHoodie2 from "@/public/perrebalmainhoodie2.avif";
-import pierreHoodie3 from "@/public/perrebalmainhoodie3.avif";
-import pierreHoodie4 from "@/public/perrebalmainhoodie4.avif";
-
-import zippedHoodie1 from "@/public/mainLabZippedHoodie1.avif";
-import zippedHoodie2 from "@/public/mainLabZippedHoodie2.avif";
-import zippedHoodie3 from "@/public/mainLabZippedHoodie3.avif";
-import zippedHoodie4 from "@/public/mainLabZippedHoodie4.avif";
 
 import BreadcrumbsSection from "./BreadcrumbsSection/breadcrumbs-section";
 import ProductListHeader from "./ProductListHeader/product-list-header";
@@ -65,17 +49,17 @@ export default function ProductList() {
                 <div className={`w-11/12 grid grid-cols-2 ${filterOpen ? "md:grid-cols-4" : "md:grid-cols-5"} gap-x-6 gap-y-8 my-4`}>
 
                     {
-checkData.map(function(singleData) {
-    return(
-        <ProductListItem
-        key={singleData.itemId}
-        itemImage1={singleData.itemImage1} 
-        itemImage2={singleData.itemImage2}
-        itemName={singleData.itemName}
-        itemPrice={singleData.itemPrice}
-        isOnSale={singleData.isOnSale}/>
-    )
-})
+                        checkData.map(function(singleData) {
+                            return(
+                                <ProductListItem
+                                key={singleData.itemId}
+                                itemImage1={singleData.itemImage1} 
+                                itemImage2={singleData.itemImage2}
+                                itemName={singleData.itemName}
+                                itemPrice={singleData.itemPrice}
+                                isOnSale={singleData.isOnSale}/>
+                            )
+                        })
                     }
 
                 </div>

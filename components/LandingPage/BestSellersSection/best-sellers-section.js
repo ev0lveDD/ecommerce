@@ -21,29 +21,29 @@ export default function BestSellersSection() {
             <BestSellersMenu />
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
                     <ProductListItem 
-                    image1={crewNeck1} 
-                    image2={crewNeck2}
+                    itemImage1={crewNeck1} 
+                    itemImage2={crewNeck2}
                     itemName={"BALMAIN LOGO-PRINT CREW-NECK SWEATSHIRT"}
                     itemPrice={390}
                     isOnSale={false}/>
 
                     <ProductListItem 
-                    image1={pierreHoodie1} 
-                    image2={pierreHoodie2}
+                    itemImage1={pierreHoodie1} 
+                    itemImage2={pierreHoodie2}
                     itemName={"BALMAIN LOGO-PRINT CREW-NECK SWEATSHIRT"}
                     itemPrice={595}
                     isOnSale={false}/>
 
                     <ProductListItem 
-                    image1={zippedHoodie1} 
-                    image2={zippedHoodie2}
+                    itemImage1={zippedHoodie1} 
+                    itemImage2={zippedHoodie2}
                     itemName={"BALMAIN LOGO-PRINT CREW-NECK SWEATSHIRT"}
                     itemPrice={210}
                     isOnSale={true}/>
 
                     <ProductListItem 
-                    image1={crewNeck3} 
-                    image2={crewNeck4}
+                    itemImage1={crewNeck3} 
+                    itemImage2={crewNeck4}
                     itemName={"BALMAIN LOGO-PRINT CREW-NECK SWEATSHIRT"}
                     itemPrice={199}
                     isOnSale={true}/>

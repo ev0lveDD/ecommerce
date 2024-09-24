@@ -21,7 +21,7 @@ export default function Home() {
       <ProductList />
       */}
 
-      <ProductList />
+      <LandingPage />
       
       {/* Product Details  
       <ProductDetails />
