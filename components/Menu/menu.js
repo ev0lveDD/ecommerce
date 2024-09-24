@@ -31,20 +31,29 @@ export default function Menu() {
                 {isOpen ? 
                     <div className="flex content-center justify-center absolute m-auto left-0 right-0 top-20 w-full h-96 bg-white z-50">
                             <ul className="flex flex-col justify-center items-start gap-6 md:hidden w-4/5">
-                                <Link href={'/MenProductList'}>
+                                <Link href={'/MenProductList'} onClick={handleClick}>
                                     <li className="text-md cursor-pointer group transition duration-300">MEN
                                         <span className="block max-w-0 group-hover:max-w-full transition-all duration-300 h-0.5 bg-black"></span>
                                     </li>
                                 </Link>
-                                <li className="text-md cursor-pointer group transition duration-300">WOMEN
-                                    <span className="block max-w-0 group-hover:max-w-full transition-all duration-300 h-0.5 bg-black"></span>
-                                </li>
-                                <li className="text-md cursor-pointer group transition duration-300">KIDS
-                                    <span className="block max-w-0 group-hover:max-w-full transition-all duration-300 h-0.5 bg-black"></span>
-                                </li>
-                                <li className="text-md cursor-pointer group transition duration-300">SALE
-                                    <span className="block max-w-0 group-hover:max-w-full transition-all duration-300 h-0.5 bg-black"></span>
-                                </li>
+
+                                <Link href={'/MenProductList'} onClick={handleClick}>
+                                    <li className="text-md cursor-pointer group transition duration-300">WOMEN
+                                        <span className="block max-w-0 group-hover:max-w-full transition-all duration-300 h-0.5 bg-black"></span>
+                                    </li>
+                                </Link>
+
+                                <Link href={'/MenProductList'} onClick={handleClick}>
+                                    <li className="text-md cursor-pointer group transition duration-300">KIDS
+                                        <span className="block max-w-0 group-hover:max-w-full transition-all duration-300 h-0.5 bg-black"></span>
+                                    </li>
+                                </Link>
+
+                                <Link href={'/MenProductList'} onClick={handleClick}>
+                                    <li className="text-md cursor-pointer group transition duration-300">SALE
+                                        <span className="block max-w-0 group-hover:max-w-full transition-all duration-300 h-0.5 bg-black"></span>
+                                    </li>
+                                </Link>
                             </ul>
                     </div>
                 : null}
@@ -57,18 +66,30 @@ export default function Menu() {
                                 <span className="block max-w-0 group-hover:max-w-full transition-all duration-300 h-0.5 bg-black"></span>
                             </li>
                         </Link>
-                        <li className="text-sm cursor-pointer group transition duration-300">WOMEN
-                            <span className="block max-w-0 group-hover:max-w-full transition-all duration-300 h-0.5 bg-black"></span>
-                        </li>
-                        <li className="text-sm cursor-pointer group transition duration-300">KIDS
-                            <span className="block max-w-0 group-hover:max-w-full transition-all duration-300 h-0.5 bg-black"></span>
-                        </li>
-                        <li className="text-sm cursor-pointer group transition duration-300">SALE
-                            <span className="block max-w-0 group-hover:max-w-full transition-all duration-300 h-0.5 bg-black"></span>
-                        </li>
+
+                        <Link href={'/MenProductList'}>
+                            <li className="text-sm cursor-pointer group transition duration-300">WOMEN
+                                <span className="block max-w-0 group-hover:max-w-full transition-all duration-300 h-0.5 bg-black"></span>
+                            </li>
+                        </Link>
+
+                        <Link href={'/MenProductList'}>
+                            <li className="text-sm cursor-pointer group transition duration-300">KIDS
+                                <span className="block max-w-0 group-hover:max-w-full transition-all duration-300 h-0.5 bg-black"></span>
+                            </li>
+                        </Link>
+
+                        <Link href={'/MenProductList'}>
+                            <li className="text-sm cursor-pointer group transition duration-300">SALE
+                                <span className="block max-w-0 group-hover:max-w-full transition-all duration-300 h-0.5 bg-black"></span>
+                            </li>
+                        </Link>
                     </ul>
                 </div>
-                <ShoppingCart cartCounter={cartCounter}/>
+
+                <Link href={'/UserShoppingCart'}>
+                    <ShoppingCart cartCounter={cartCounter}/>
+                </Link>
             </div>
         </nav>
     )
