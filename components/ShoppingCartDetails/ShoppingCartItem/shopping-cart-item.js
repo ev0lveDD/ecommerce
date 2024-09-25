@@ -50,18 +50,18 @@ export default function ShoppingCartItem({dataOfItem, cartItemImage, cartItemNam
                 </div>
                 <div className="w-full h-full flex items-start justify-between">
                     <button className="bg-transparent text-white rounded rounded-full p-0 m-0 text-xs flex items-center justify-center">
-                        <Image src={deleteIcon} alt="Delete icon" className="w-7 h-7"/>
+                        <Image src={deleteIcon} alt="Delete icon" className="w-5 h-5"/>
                     </button>
                     <div className="flex items-center justify-center gap-2">
 
                         {itemQuantity===1 ? 
-                            <button disabled className="bg-white text-gray-300 font-black text-md py-1 px-2.5 rounded rounded-full border border-2 border-gray-300 text-xs hover:text-gray-500 hover:border-gray-500" onClick={subtractQuantity}>-</button> 
+                            <button disabled className="bg-white text-gray-300 font-black p-0.5 text-md rounded rounded-full border border-2 border-gray-300 text-xs hover:text-gray-500 hover:border-gray-500 flex items-center justify-center" onClick={subtractQuantity}><p className="w-4 h-4">-</p></button> 
                         :
-                            <button className="bg-white text-black font-black text-md py-1 px-2.5 rounded rounded-full border border-2 border-black text-xs hover:text-gray-600 hover:border-gray-600" onClick={subtractQuantity}>-</button>
+                            <button className="bg-white text-black font-black text-md p-0.5 rounded rounded-full border border-2 border-black text-xs hover:text-gray-600 hover:border-gray-600 flex items-center justify-center" onClick={subtractQuantity}><p className="w-4 h-4">-</p></button>
                         }
 
                         <p className="text-black font-bold text-md">{itemQuantity}</p>
-                        <button className="bg-white text-black font-black text-md py-1 px-2 rounded rounded-full border border-2 border-black text-xs hover:text-gray-600 hover:border-gray-600" onClick={addQuantity}>+</button>
+                        <button className="bg-white text-black font-black p-0.5 text-md rounded rounded-full border border-2 border-black text-xs hover:text-gray-600 hover:border-gray-600 flex items-center justify-center" onClick={addQuantity}><p className="w-4 h-4">+</p></button>
                         <button onClick={() => console.log(dataOfItem.cartItemQuantity)}>CHECK</button>
                     </div>
                 </div>
