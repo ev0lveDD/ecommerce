@@ -23,7 +23,7 @@ export default function ShoppingCartDetails() {
     }
 
 
-    var shoppingList = [
+    const [shoppingList, setShoppingList] = useState([
         {
             numericCode: 9001,
             cartItemImage: image1,
@@ -54,7 +54,12 @@ export default function ShoppingCartDetails() {
             cartItemSize: "XL",
             cartItemColor: "NAVY"
         }
-    ];
+    ]);
+
+    function deleteItem(value) {
+        var newList = shoppingList.filter(item => item.numericCode !== value);
+        setShoppingList(newList);
+    }
 
 
     return(
@@ -76,6 +81,7 @@ export default function ShoppingCartDetails() {
                                     cartItemColor={singleData.cartItemColor}
                                     dataOfItem={singleData}
                                     checkFinalValue={checkFinalValue}
+                                    deleteItem={deleteItem}
                                 />
                             )
                         })

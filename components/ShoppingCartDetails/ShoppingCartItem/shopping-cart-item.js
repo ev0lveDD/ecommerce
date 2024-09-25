@@ -5,7 +5,7 @@ import { useState, useEffect } from "react";
 
 import deleteIcon from "@/public/delete-icon.svg";
 
-export default function ShoppingCartItem({dataOfItem, cartItemImage, cartItemName, cartItemQuantity, cartItemPrice, cartItemVariant, cartItemSize, cartItemColor, checkFinalValue}) {
+export default function ShoppingCartItem({dataOfItem, cartItemImage, cartItemName, cartItemQuantity, cartItemPrice, cartItemVariant, cartItemSize, cartItemColor, checkFinalValue, deleteItem}) {
 
     const [itemQuantity, setItemQuantity] = useState(cartItemQuantity);
     const [itemTotalValue, setItemTotalValue] = useState(0);
@@ -50,7 +50,7 @@ export default function ShoppingCartItem({dataOfItem, cartItemImage, cartItemNam
                 </div>
                 <div className="w-full h-full flex items-start justify-between">
                     <button className="bg-transparent text-white rounded rounded-full p-0 m-0 text-xs flex items-center justify-center">
-                        <Image src={deleteIcon} alt="Delete icon" className="w-5 h-5"/>
+                        <Image src={deleteIcon} alt="Delete icon" className="w-5 h-5" onClick={() => deleteItem(dataOfItem.numericCode)}/>
                     </button>
                     <div className="flex items-center justify-center gap-2">
 
