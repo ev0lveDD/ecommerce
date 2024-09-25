@@ -1,6 +1,6 @@
 export default function SummarySection({ subtotalValue, taxValue }) {
     return(
-        <div className="w-full md:w-1/3 flex flex-col items-start justify-center gap-4 my-8">
+        <div className="w-full md:w-2/5 flex flex-col items-start justify-center gap-4 my-8">
             <h1 className="text-3xl font-medium">SUMMARY</h1>
             <div className="w-full flex flex-col items-start justify-center gap-4 my-4">
                 <div className="w-full flex items-center justify-between">
