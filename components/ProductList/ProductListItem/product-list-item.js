@@ -16,10 +16,10 @@ export default function ProductListItem({itemImage1, itemImage2, itemName, itemP
         <Link href={'/MenProductDetails'}>
             <div className="flex flex-col gap-2 justify-center items-start cursor-pointer relative" onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave}>
                 {isHovering ? 
-                <div className="w-full h-80 relative">
+                <div className="w-full h-64 md:h-72 relative">
                     <Image className="w-full h-full" alt="product image" src={itemImage1} fill={true}/>
                 </div> : 
-                <div className="w-full h-80 relative">
+                <div className="w-full h-64 md:h-72 relative">
                     <Image className="w-full h-full" alt="product image" src={itemImage2} fill={true}/>
                 </div>
                 }

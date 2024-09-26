@@ -14,6 +14,10 @@ export default function ShoppingCartDetails() {
     const [subtotalValue, setSubtotalValue] = useState(0);
     const taxValue = 21;
 
+    useEffect(() => {
+        checkFinalValue();
+    },);
+
     function checkFinalValue() {
         var sum = 0;
         for (var i = 0; i < shoppingList.length; i++) {
@@ -86,8 +90,6 @@ export default function ShoppingCartDetails() {
                             )
                         })
                     }
-                    <button onClick={() => console.log(shoppingList)}>SHOW ME</button>
-                    <button onClick={checkFinalValue}>SUM UP</button>
                 </div>
                 <SummarySection subtotalValue={subtotalValue} taxValue={taxValue}/>
             </div>
