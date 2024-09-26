@@ -31,7 +31,9 @@
         "itemImage": "https://ecsmedia.pl/c/nike-bluza-sportowa-meska-m-nsw-club-hoodie-fz-bb-bv2654-010-czarny-rozmiar-l-w-iext60637084.jpg",
         "itemName": "BALMAIN LOGO-PRINT HOODIE",
         "itemPrice": 300,
-        "itemApparelStyle": "HOODIE"
+        "itemApparelStyle": "HOODIE",
+        "cartItemSize": "XL",
+        "cartItemColor": "NAVY"
     }
 ]
 

@@ -14,7 +14,7 @@ export default function FilterSection({filterOpen, setFilterOpen}) {
         {/* Filter indicators section */}
         <div className="flex flex-col md:flex-row gap-4">
             <button className="w-fit flex items-center justify-center gap-3 text-xs border border-black py-1.5 px-2 rounded rounded-md hover:border-gray-400 font-medium">
-                SIZE L
+                SIZE: L
                 <span>
                     X
                 </span>

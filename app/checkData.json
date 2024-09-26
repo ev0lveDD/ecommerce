@@ -6,6 +6,9 @@
         "itemName": "BALMAIN LOGO-PRINT CREW-NECK",
         "itemPrice": 550,
         "itemApparelStyle": "HOODIE",
+        "itemSize": ["XS", "S", "M", "L", "XL", "XXL", "3XL", "4XL"],
+        "itemColor": "GREEN",
+        "itemDesignedFor": "MEN",
         "isOnSale": false
     },
     {
@@ -15,6 +18,9 @@
         "itemName": "BALMAIN LOGO-PRINT HOODIE",
         "itemPrice": 300,
         "itemApparelStyle": "HOODIE",
+        "itemSize": ["XS", "S", "M", "L", "XL", "XXL", "3XL", "4XL"],
+        "itemColor": "NAVY",
+        "itemDesignedFor": "MEN",
         "isOnSale": true
     },
     {
@@ -24,6 +30,9 @@
         "itemName": "BALMAIN LOGO-PRINT HOODIE",
         "itemPrice": 200,
         "itemApparelStyle": "HOODIE",
+        "itemSize": ["XS", "S", "M", "L", "XL", "XXL", "3XL", "4XL"],
+        "itemColor": "BLACK",
+        "itemDesignedFor": "MEN",
         "isOnSale": false
     },
     {
@@ -33,6 +42,9 @@
         "itemName": "BALMAIN LOGO-PRINT HOODIE",
         "itemPrice": 400,
         "itemApparelStyle": "HOODIE",
+        "itemSize": ["XS", "S", "M", "L", "XL", "XXL", "3XL", "4XL"],
+        "itemColor": "GREEN",
+        "itemDesignedFor": "MEN",
         "isOnSale": false
     },
     {
@@ -42,6 +54,9 @@
         "itemName": "BALMAIN LOGO-PRINT HOODIE",
         "itemPrice": 150,
         "itemApparelStyle": "HOODIE",
+        "itemSize": ["XS", "S", "M", "L", "XL", "XXL", "3XL", "4XL"],
+        "itemColor": "NAVY",
+        "itemDesignedFor": "MEN",
         "isOnSale": false
     },
     {
@@ -51,6 +66,9 @@
         "itemName": "BALMAIN LOGO-PRINT HOODIE",
         "itemPrice": 100,
         "itemApparelStyle": "HOODIE",
+        "itemSize": ["XS", "S", "M", "L", "XL", "XXL", "3XL", "4XL"],
+        "itemColor": "BLACK",
+        "itemDesignedFor": "MEN",
         "isOnSale": false
     },
     {
@@ -60,6 +78,9 @@
         "itemName": "BALMAIN LOGO-PRINT HOODIE",
         "itemPrice": 300,
         "itemApparelStyle": "HOODIE",
+        "itemSize": ["XS", "S", "M", "L", "XL", "XXL", "3XL", "4XL"],
+        "itemColor": "GREEN",
+        "itemDesignedFor": "MEN",
         "isOnSale": false
     },
     {
@@ -69,6 +90,9 @@
         "itemName": "BALMAIN LOGO-PRINT HOODIE",
         "itemPrice": 600,
         "itemApparelStyle": "HOODIE",
+        "itemSize": ["XS", "S", "M", "L", "XL", "XXL", "3XL", "4XL"],
+        "itemColor": "NAVY",
+        "itemDesignedFor": "MEN",
         "isOnSale": true
     }
 ]
