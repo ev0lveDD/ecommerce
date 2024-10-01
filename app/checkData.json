@@ -94,6 +94,54 @@
         "itemColor": "NAVY",
         "itemDesignedFor": "MEN",
         "isOnSale": true
+    },
+    {
+        "itemId": 9009,
+        "itemImage1": "/two-tone-wool-cashmire-jacket.avif",
+        "itemImage2": "/two-tone-wool-cashmire-jacket2.avif",
+        "itemName": "Two-tone wool and cashmere varsity jacket",
+        "itemPrice": 300,
+        "itemApparelStyle": "JACKET",
+        "itemSize": ["XS", "S", "M", "L", "XL", "XXL", "3XL", "4XL"],
+        "itemColor": "BLACK",
+        "itemDesignedFor": "MEN",
+        "isOnSale": false
+    },
+    {
+        "itemId": 9010,
+        "itemImage1": "/long-down-nylon-jacket-with-label.avif",
+        "itemImage2": "/long-down-nylon-jacket-with-label2.avif",
+        "itemName": "Long down nylon jacket with Balmain label",
+        "itemPrice": 400,
+        "itemApparelStyle": "JACKET",
+        "itemSize": ["XS", "S", "M", "L", "XL", "XXL", "3XL", "4XL"],
+        "itemColor": "BLACK",
+        "itemDesignedFor": "MEN",
+        "isOnSale": false
+    },
+    {
+        "itemId": 9011,
+        "itemImage1": "/balmain-signature-hoodie.avif",
+        "itemImage2": "/balmain-signature-hoodie2.avif",
+        "itemName": "Balmain Signature hoodie",
+        "itemPrice": 100,
+        "itemApparelStyle": "HOODIE",
+        "itemSize": ["XS", "S", "M", "L", "XL", "XXL", "3XL", "4XL"],
+        "itemColor": "BLACK",
+        "itemDesignedFor": "MEN",
+        "isOnSale": false
+    },
+    {
+        "itemId": 9012,
+        "itemImage1": "/double-crepe-wool-cargo-trousers.avif",
+        "itemImage2": "/double-crepe-wool-cargo-trousers2.avif",
+        "itemName": "Double crepe wool cargo trousers",
+        "itemPrice": 140,
+        "itemApparelStyle": "TROUSERS",
+        "itemSize": ["XS", "S", "M", "L", "XL", "XXL", "3XL", "4XL"],
+        "itemColor": "GREY",
+        "itemDesignedFor": "MEN",
+        "isOnSale": false
     }
 ]
 
