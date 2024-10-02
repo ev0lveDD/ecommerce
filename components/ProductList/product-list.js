@@ -29,7 +29,7 @@ export default function ProductList() {
                     <BreadcrumbsSection />
 
                     {/* Category Name and filtered items quantity / number */}
-                    <ProductListHeader categoryName={"MEN`S TOPS"} filteredItemsQuantity={8}/>
+                    <ProductListHeader categoryName={"MEN`S TOPS"} filteredItemsQuantity={24}/>
 
                     {/* Filter buttons & sort button section */}
                     <div className="flex justify-between gap-4">
