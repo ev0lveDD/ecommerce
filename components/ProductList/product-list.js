@@ -57,7 +57,9 @@ export default function ProductList() {
                                 itemImage2={singleData.itemImage2}
                                 itemName={singleData.itemName}
                                 itemPrice={singleData.itemPrice}
-                                isOnSale={singleData.isOnSale}/>
+                                isOnSale={singleData.isOnSale}
+                                path={singleData.itemId}
+                                singleData={singleData}/>
                             )
                         })
                     }

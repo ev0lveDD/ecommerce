@@ -6,14 +6,14 @@ import Link from "next/link";
 
 import imagee1 from "@/public/perrebalmainhoodie1.avif";
 
-export default function ProductListItem({itemImage1, itemImage2, itemName, itemPrice, isOnSale}) {
+export default function ProductListItem({itemImage1, itemImage2, itemName, itemPrice, isOnSale, path}) {
 
     const [isHovering, setIsHovering] = useState(false);
     const onMouseEnter = () => setIsHovering(true);
     const onMouseLeave = () => setIsHovering(false);
 
     return(
-        <Link href={'/MenProductDetails'}>
+        <Link href={`/MenProductList/${path}`}>
             <div className="flex flex-col gap-2 justify-center items-start cursor-pointer relative" onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave}>
                 {isHovering ? 
                 <div className="w-full h-64 md:h-72 relative">

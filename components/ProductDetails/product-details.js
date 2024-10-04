@@ -16,21 +16,26 @@ import ProductImageSection from "./ProductImageSection/product-image-section";
 import ProductDescription from "./ProductDescription/product-description";
 import AddToCartButton from "./AddToCartButton/add-to-cart-button";
 
-export default function ProductDetails() {
+import checkData from "@/app/checkData.json";
+
+export default function ProductDetails({productId}) {
     
     const [selectedButton, setSelectedButton] = useState("");
     const [colorPicked, setColorPicked] = useState("");
+
+    const dataReceived = checkData.filter((data) => data.itemId == productId);
+    const singleData = dataReceived[0];
 
     return(
         <div className="bg-white min-w-screen flex flex-col items-center justify-center">
             <div className="w-11/12 grid grid-cols-1 md:grid-cols-2 gap-4">
 
                 {/* Product Image Section */}
-                <ProductImageSection />
+                <ProductImageSection singleData={singleData}/>
 
                 <div className="w-full flex flex-col gap-4 my-8">
                     {/* Header and price */}
-                    <HeaderAndPrice />
+                    <HeaderAndPrice singleData={singleData}/>
 
                     {/* Description */}
                     <ProductDescription 
@@ -56,6 +61,7 @@ export default function ProductDetails() {
 
             {/* Complete Look Section */}
             <CompleteLookSection />
+            <button onClick={() => console.log(singleData)}>CHECK DATA</button>
         </div>
     );
 }

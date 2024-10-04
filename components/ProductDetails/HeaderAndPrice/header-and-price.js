@@ -1,11 +1,11 @@
-export default function HeaderAndPrice() {
+export default function HeaderAndPrice({singleData}) {
     return(
         <div className="flex flex-col gap-1">
             <h1 className="text-2xl font-medium">
-                BALMAIN LOGO-PRINT CREW-NECK SWEATSHIRT
+                {singleData.itemName}
             </h1>
             <p className="text-lg font-medium text-red-500">
-                $595.00
+                ${singleData.itemPrice}.00
             </p>
         </div>
     );
