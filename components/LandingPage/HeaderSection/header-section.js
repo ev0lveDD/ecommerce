@@ -18,7 +18,7 @@ export default function HeaderSection() {
                 pagination={{clickable: true}}
                 className="mySwiper">
                     <SwiperSlide>
-                        <div className="bg-header-background-1 bg-cover bg-top bg-no-repeat w-full h-[540px] md:h-[560px] lg:h-[620px] flex items-center justify-center">
+                        <div className="bg-header-background-1 bg-cover bg-top bg-no-repeat w-full h-[540px] md:h-[560px] lg:h-[820px] flex items-center justify-center">
                             <div className="bg-black/30 w-full h-full flex items-center justify-center md:justify-start">
                                 <div className="w-11/12 md:w-1/3 ml-0 md:ml-24 h-full flex flex-col items-start md:items-start justify-end md:justify-end gap-6">
                                     <h1 className="text-white font-bold text-3xl md:text-4xl ">BALMAIN SPRING COLLECTION</h1>
@@ -31,7 +31,7 @@ export default function HeaderSection() {
                         </div>
                     </SwiperSlide>
                     <SwiperSlide>
-                        <div className="bg-header-background-2 bg-cover bg-top bg-no-repeat w-full h-[540px] md:h-[560px] lg:h-[620px] flex items-center justify-center">
+                        <div className="bg-header-background-2 bg-cover bg-top bg-no-repeat w-full h-[540px] md:h-[560px] lg:h-[820px] flex items-center justify-center">
                             <div className="bg-black/30 w-full h-full flex items-center justify-center md:justify-start">
                                 <div className="w-11/12 md:w-1/3 ml-0 md:ml-24 h-full flex flex-col items-start md:items-start justify-end md:justify-end gap-6">
                                     <h1 className="text-white font-bold text-3xl md:text-4xl ">COLLECTIONS</h1>
@@ -44,7 +44,7 @@ export default function HeaderSection() {
                         </div>
                     </SwiperSlide>
                     <SwiperSlide>
-                        <div className="bg-header-background-3 bg-cover bg-top bg-no-repeat w-full h-[540px] md:h-[560px] lg:h-[620px] flex items-center justify-center">
+                        <div className="bg-header-background-3 bg-cover bg-top lg:bg-center bg-no-repeat w-full h-[540px] md:h-[560px] lg:h-[820px] flex items-center justify-center">
                             <div className="bg-black/30 w-full h-full flex items-center justify-center md:justify-start">
                                 <div className="w-11/12 md:w-1/3 ml-0 md:ml-24 h-full flex flex-col items-start md:items-start justify-end md:justify-end gap-6">
                                     <h1 className="text-white font-bold text-3xl md:text-4xl ">WOMENS FALL WINTER 2024 COLLECTION</h1>
