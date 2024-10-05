@@ -18,16 +18,16 @@ export default function MobileView ({singleData}) {
                 pagination={true}
                 className="mySwiper">
                 <SwiperSlide>
-                    <Image className="w-full h-96" alt="item image 1" src={singleData.itemImage1} width={450} height={450}/>
+                    <Image className="w-full" alt="item image 1" src={singleData.itemImage1} width={450} height={540}/>
                 </SwiperSlide>
                 <SwiperSlide>
-                    <Image className="w-full h-96" alt="item image 2" src={singleData.itemImage2} width={450} height={450}/>
+                    <Image className="w-full" alt="item image 2" src={singleData.itemImage2} width={450} height={540}/>
                 </SwiperSlide>
                 <SwiperSlide>
-                    <Image className="w-full h-96" alt="item image 3" src={singleData.itemImage3} width={450} height={450}/>
+                    <Image className="w-full" alt="item image 3" src={singleData.itemImage3} width={450} height={540}/>
                 </SwiperSlide>
                 <SwiperSlide>
-                    <Image className="w-full h-96" alt="item image 4" src={singleData.itemImage4} width={450} height={450}/>
+                    <Image className="w-full" alt="item image 4" src={singleData.itemImage4} width={450} height={540}/>
                 </SwiperSlide>
             </Swiper>
         </div>

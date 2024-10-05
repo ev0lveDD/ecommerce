@@ -15,6 +15,7 @@ export default function ProductList() {
     const [filterOpen, setFilterOpen] = useState(false);
     const [filterColorPicked, setFilterColorPicked] = useState("");
     const [filterSizePicked, setFilterSizePicked] = useState("");
+    const [mappedItemsCount, setMappedItemsCount] = useState(checkData.length);
 
     return(
         <div className="bg-white min-w-screen flex flex-col md:flex-row items-start justify-center my-4">
@@ -29,7 +30,7 @@ export default function ProductList() {
                     <BreadcrumbsSection />
 
                     {/* Category Name and filtered items quantity / number */}
-                    <ProductListHeader categoryName={"MEN`S TOPS"} filteredItemsQuantity={24}/>
+                    <ProductListHeader categoryName={"MEN`S TOPS"} filteredItemsQuantity={mappedItemsCount}/>
 
                     {/* Filter buttons & sort button section */}
                     <div className="flex justify-between gap-4">

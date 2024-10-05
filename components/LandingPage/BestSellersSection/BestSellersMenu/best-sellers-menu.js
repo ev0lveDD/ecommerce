@@ -1,6 +1,6 @@
 export default function BestSellersMenu() {
     return(
-        <div className="w-full flex items-center justify-between">
+        <div className="w-full lg:w-4/5 flex items-center justify-between">
             <ul className="flex items-center justify-center gap-4 md:gap-8">
                 <li><p className="text-[11px] text-black font-bold cursor-pointer">All Products</p></li>
                 <li><p className="text-[11px] text-gray-400 hover:text-gray-600 cursor-pointer font-bold">T-Shirt</p></li>
