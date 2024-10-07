@@ -21,10 +21,10 @@ export default function FilterMenu({filterOpen, setFilterOpen, filterColorPicked
 
                 <FilterDetailsDropdown dropdownId={"ColorFilterDropdown"} dropdownTitle={"COLOR"}>
                     <div className="flex gap-4 my-4">
-                        <ColorPickInput colorPickInputId="color-radio-filter-1" colorName="white" colorNameCSS="bg-white-200" colorPicked={filterColorPicked} setColorPicked={setFilterColorPicked}/>
-                        <ColorPickInput colorPickInputId="color-radio-filter-2" colorName="gray" colorNameCSS="bg-gray-200" colorPicked={filterColorPicked} setColorPicked={setFilterColorPicked}/>
-                        <ColorPickInput colorPickInputId="color-radio-filter-3" colorName="black" colorNameCSS="bg-black" colorPicked={filterColorPicked} setColorPicked={setFilterColorPicked}/>
-                        <ColorPickInput colorPickInputId="color-radio-filter-4" colorName="green" colorNameCSS="bg-green-800" colorPicked={filterColorPicked} setColorPicked={setFilterColorPicked}/>
+                        <ColorPickInput colorPickInputId="color-radio-filter-1" colorName="WHITE" colorNameCSS="bg-white-200" colorPicked={filterColorPicked} setColorPicked={setFilterColorPicked}/>
+                        <ColorPickInput colorPickInputId="color-radio-filter-2" colorName="GRAY" colorNameCSS="bg-gray-200" colorPicked={filterColorPicked} setColorPicked={setFilterColorPicked}/>
+                        <ColorPickInput colorPickInputId="color-radio-filter-3" colorName="BLACK" colorNameCSS="bg-black" colorPicked={filterColorPicked} setColorPicked={setFilterColorPicked}/>
+                        <ColorPickInput colorPickInputId="color-radio-filter-4" colorName="GREEN" colorNameCSS="bg-green-800" colorPicked={filterColorPicked} setColorPicked={setFilterColorPicked}/>
                     </div>
                 </FilterDetailsDropdown>
 

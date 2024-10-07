@@ -16,9 +16,10 @@ export default function ProductList({categoryGiven}) {
     const [filterColorPicked, setFilterColorPicked] = useState("");
     const [filterSizePicked, setFilterSizePicked] = useState("");
     
-    const categoryDB = categoryGiven != "SALE" ? checkData.filter((data) => data.itemDesignedFor === categoryGiven) : checkData.filter((data) => data.isOnSale === true);
+    var categoryDB = categoryGiven != "SALE" ? checkData.filter((data) => data.itemDesignedFor === categoryGiven) : checkData.filter((data) => data.isOnSale === true);
     const [mappedItemsCount, setMappedItemsCount] = useState(categoryDB.length);
 
+    const filteredDB = filterColorPicked ? categoryDB.filter((data) => data.itemColor === filterColorPicked) : categoryDB;
     return(
         <div className="bg-white min-w-screen flex flex-col md:flex-row items-start justify-center my-4">
             
@@ -52,7 +53,7 @@ export default function ProductList({categoryGiven}) {
                 <div className={`w-11/12 grid grid-cols-2 ${filterOpen ? "md:grid-cols-4" : "md:grid-cols-5"} gap-x-6 gap-y-8 my-4`}>
 
                     {
-                        categoryDB.map(function(singleData) {
+                        filteredDB.map(function(singleData) {
                             return(
                                 <ProductListItem
                                 key={singleData.itemId}
@@ -69,7 +70,7 @@ export default function ProductList({categoryGiven}) {
                     }
 
                 </div>
-                <button onClick={() => console.log(categoryDB)}>CHECK DATA</button>
+                <button onClick={() => console.log(filteredDB)}>CHECK DATA</button>
 
             </div>
 
