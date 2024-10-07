@@ -61,13 +61,13 @@ export default function Menu() {
                             </li>
                         </Link>
 
-                        <Link href={'/MenProductList'}>
+                        <Link href={'/WomenProductList'}>
                             <li className="text-sm cursor-pointer group transition duration-300">WOMEN
                                 <span className="block max-w-0 group-hover:max-w-full transition-all duration-300 h-0.5 bg-black"></span>
                             </li>
                         </Link>
 
-                        <Link href={'/MenProductList'}>
+                        <Link href={'/SaleProductList'}>
                             <li className="text-sm cursor-pointer group transition duration-300">SALE
                                 <span className="block max-w-0 group-hover:max-w-full transition-all duration-300 h-0.5 bg-black"></span>
                             </li>

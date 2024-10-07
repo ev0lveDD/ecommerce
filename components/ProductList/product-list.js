@@ -11,11 +11,13 @@ import ProductListHeader from "./ProductListHeader/product-list-header";
 
 import checkData from "@/app/checkData.json";
 
-export default function ProductList() {
+export default function ProductList({categoryGiven}) {
     const [filterOpen, setFilterOpen] = useState(false);
     const [filterColorPicked, setFilterColorPicked] = useState("");
     const [filterSizePicked, setFilterSizePicked] = useState("");
-    const [mappedItemsCount, setMappedItemsCount] = useState(checkData.length);
+    
+    const categoryDB = categoryGiven != "SALE" ? checkData.filter((data) => data.itemDesignedFor === categoryGiven) : checkData.filter((data) => data.isOnSale === true);
+    const [mappedItemsCount, setMappedItemsCount] = useState(categoryDB.length);
 
     return(
         <div className="bg-white min-w-screen flex flex-col md:flex-row items-start justify-center my-4">
@@ -30,7 +32,7 @@ export default function ProductList() {
                     <BreadcrumbsSection />
 
                     {/* Category Name and filtered items quantity / number */}
-                    <ProductListHeader categoryName={"MEN`S TOPS"} filteredItemsQuantity={mappedItemsCount}/>
+                    <ProductListHeader categoryName={categoryGiven === "MEN" ? "MEN`S CLOTHES" : categoryGiven === "WOMEN" ? "WOMEN`S CLOTHES" : categoryGiven === "SALE" ? "CLOTHES ON SALE" : null} filteredItemsQuantity={mappedItemsCount}/>
 
                     {/* Filter buttons & sort button section */}
                     <div className="flex justify-between gap-4">
@@ -50,7 +52,7 @@ export default function ProductList() {
                 <div className={`w-11/12 grid grid-cols-2 ${filterOpen ? "md:grid-cols-4" : "md:grid-cols-5"} gap-x-6 gap-y-8 my-4`}>
 
                     {
-                        checkData.map(function(singleData) {
+                        categoryDB.map(function(singleData) {
                             return(
                                 <ProductListItem
                                 key={singleData.itemId}
@@ -59,6 +61,7 @@ export default function ProductList() {
                                 itemName={singleData.itemName}
                                 itemPrice={singleData.itemPrice}
                                 isOnSale={singleData.isOnSale}
+                                categoryPath={categoryGiven === "MEN" ? "MenProductList" : categoryGiven === "WOMEN" ? "WomenProductList" : categoryGiven === "SALE" ? "SaleProductList" : null}
                                 path={singleData.itemId}
                                 singleData={singleData}/>
                             )
@@ -66,6 +69,7 @@ export default function ProductList() {
                     }
 
                 </div>
+                <button onClick={() => console.log(categoryDB)}>CHECK DATA</button>
 
             </div>
 

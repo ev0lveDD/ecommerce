@@ -61,7 +61,6 @@ export default function ProductDetails({productId}) {
 
             {/* Complete Look Section */}
             <CompleteLookSection />
-            <button onClick={() => console.log(checkData.length)}>CHECK DATA</button>
         </div>
     );
 }

@@ -5,6 +5,8 @@ import facebookIcon from "@/public/facebook.svg";
 import instagramIcon from "@/public/instagram.svg";
 import twitterIcon from "@/public/twitter.svg";
 
+import Link from "next/link";
+
 export default function Footer(){
     return(
         <nav className="min-w-screen flex items-center justify-center bg-white border-t border-grey-lighter">
@@ -35,10 +37,15 @@ export default function Footer(){
                 <div className="h-full flex flex-col gap-4 my-4 justify-start w-full md:w-auto">
                     <p className="text-sm font-bold">NAVIGATION</p>
                     <ul className="flex flex-col gap-2 md:gap-1">
-                        <li><p className="text-xs text-gray-400 font-medium hover:text-gray-600 cursor-pointer">MEN</p></li>
-                        <li><p className="text-xs text-gray-400 font-medium hover:text-gray-600 cursor-pointer">WOMEN</p></li>
-                        <li><p className="text-xs text-gray-400 font-medium hover:text-gray-600 cursor-pointer">KIDS</p></li>
-                        <li><p className="text-xs text-gray-400 font-medium hover:text-gray-600 cursor-pointer">SALE</p></li>
+                        <Link href={'/MenProductList'}>
+                            <li><p className="text-xs text-gray-400 font-medium hover:text-gray-600 cursor-pointer">MEN</p></li>
+                        </Link>
+                        <Link href={'/WomenProductList'}>
+                            <li><p className="text-xs text-gray-400 font-medium hover:text-gray-600 cursor-pointer">WOMEN</p></li>
+                        </Link>
+                        <Link href={'/SaleProductList'}>
+                            <li><p className="text-xs text-gray-400 font-medium hover:text-gray-600 cursor-pointer">SALE</p></li>
+                        </Link>
                     </ul>
                 </div>
 

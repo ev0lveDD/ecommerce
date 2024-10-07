@@ -17,6 +17,7 @@ export default function BestSellersSection() {
                     itemName={checkData[0].itemName}
                     itemPrice={checkData[0].itemPrice}
                     isOnSale={checkData[0].isOnSale}
+                    categoryPath={checkData[0].itemDesignedFor === "MEN" ? "MenProductList" : checkData[0].itemDesignedFor === "WOMEN" ? "WomenProductList" : checkData[0].itemDesignedFor === "SALE" ? "SaleProductList" : null}
                     path={checkData[0].itemId}
                     singleData={checkData[0]}
                     />
@@ -27,6 +28,7 @@ export default function BestSellersSection() {
                     itemName={checkData[1].itemName}
                     itemPrice={checkData[1].itemPrice}
                     isOnSale={checkData[1].isOnSale}
+                    categoryPath={checkData[1].itemDesignedFor === "MEN" ? "MenProductList" : checkData[1].itemDesignedFor === "WOMEN" ? "WomenProductList" : checkData[1].itemDesignedFor === "SALE" ? "SaleProductList" : null}
                     path={checkData[1].itemId}
                     singleData={checkData[1]}/>
 
@@ -36,6 +38,7 @@ export default function BestSellersSection() {
                     itemName={checkData[2].itemName}
                     itemPrice={checkData[2].itemPrice}
                     isOnSale={checkData[2].isOnSale}
+                    categoryPath={checkData[2].itemDesignedFor === "MEN" ? "MenProductList" : checkData[2].itemDesignedFor === "WOMEN" ? "WomenProductList" : checkData[2].itemDesignedFor === "SALE" ? "SaleProductList" : null}
                     path={checkData[2].itemId}
                     singleData={checkData[2]}/>
 
@@ -45,6 +48,7 @@ export default function BestSellersSection() {
                     itemName={checkData[3].itemName}
                     itemPrice={checkData[3].itemPrice}
                     isOnSale={checkData[3].isOnSale}
+                    categoryPath={checkData[3].itemDesignedFor === "MEN" ? "MenProductList" : checkData[3].itemDesignedFor === "WOMEN" ? "WomenProductList" : checkData[3].itemDesignedFor === "SALE" ? "SaleProductList" : null}
                     path={checkData[3].itemId}
                     singleData={checkData[3]}/>
             </div>
