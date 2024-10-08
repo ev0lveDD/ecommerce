@@ -15,7 +15,16 @@ export default function ProductList({categoryGiven}) {
     const [filterOpen, setFilterOpen] = useState(false);
     const [filterColorPicked, setFilterColorPicked] = useState("");
     const [filterSizePicked, setFilterSizePicked] = useState("");
+    const [filterPricePicked, setFilterPricePicked] = useState("");
+    const [filterApparelStylePicked, setFilterApparelStylePicked] = useState("");
     
+    var filterList = {
+        itemColor: filterColorPicked,
+        itemSize: filterSizePicked,
+        itemPrice: filterPricePicked,
+        itemApparelStyle: filterApparelStylePicked
+    }
+
     var categoryDB = categoryGiven != "SALE" ? checkData.filter((data) => data.itemDesignedFor === categoryGiven) : checkData.filter((data) => data.isOnSale === true);
     const [mappedItemsCount, setMappedItemsCount] = useState(categoryDB.length);
 

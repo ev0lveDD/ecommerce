@@ -51,12 +51,11 @@ export default function FilterMenu({filterOpen, setFilterOpen, filterColorPicked
                 <FilterDetailsDropdown dropdownId={"ApparelStyleFilterDropdown"} dropdownTitle={"APPAREL STYLE"}>
                     <FilterCheckboxButton filterFieldName={"Hoodies"} filterFieldId={"apparel-filter-hoodies"}/>
                     <FilterCheckboxButton filterFieldName={"Jackets"} filterFieldId={"apparel-filter-jackets"}/>
-                    <FilterCheckboxButton filterFieldName={"Pants"} filterFieldId={"apparel-filter-pants"}/>
                     <FilterCheckboxButton filterFieldName={"Polos"} filterFieldId={"apparel-filter-polos"}/>
                     <FilterCheckboxButton filterFieldName={"Shorts"} filterFieldId={"apparel-filter-shorts"}/>
                     <FilterCheckboxButton filterFieldName={"Sweatshirts"} filterFieldId={"apparel-filter-sweatshirts"}/>
                     <FilterCheckboxButton filterFieldName={"Tops"} filterFieldId={"apparel-filter-tops"}/>
-                    <FilterCheckboxButton filterFieldName={"Tracksuits"} filterFieldId={"apparel-filter-tracksuits"}/>
+                    <FilterCheckboxButton filterFieldName={"Trousers"} filterFieldId={"apparel-filter-pants"}/>
                 </FilterDetailsDropdown>
 
                 <button className="w-full my-6 flex items-center justify-center bg-black text-white py-2 px-2 rounded rounded-md text-xs hover:bg-gray-800 md:mr-4 border border-black">
