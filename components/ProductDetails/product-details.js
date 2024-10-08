@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 import 'swiper/css';
 import 'swiper/css/pagination';
@@ -22,9 +22,17 @@ export default function ProductDetails({productId}) {
     
     const [selectedButton, setSelectedButton] = useState("");
     const [colorPicked, setColorPicked] = useState("");
+    const [hookCheckData, setHookCheckData] = useState("");
 
     const dataReceived = checkData.filter((data) => data.itemId == productId);
     const singleData = dataReceived[0];
+
+    useEffect(() => {
+        const localData = localStorage.getItem('localShoppingCart');
+        if (localData !== null) {
+            setHookCheckData(JSON.parse(localData))
+        }
+    }, []);
 
     return(
         <div className="bg-white min-w-screen flex flex-col items-center justify-center">
@@ -49,7 +57,7 @@ export default function ProductDetails({productId}) {
                     <SizePickSection selectedButton={selectedButton} setSelectedButton={setSelectedButton}/>
 
                     {/* Add to cart button */}
-                    <AddToCartButton />
+                    <AddToCartButton singleData={singleData}/>
 
                     {/* Product details dropdown */}
                     <DetailsDropdownSection />
@@ -61,6 +69,8 @@ export default function ProductDetails({productId}) {
 
             {/* Complete Look Section */}
             <CompleteLookSection />
+            <button onClick={() => console.log(localStorage.getItem('localShoppingCart'))}>CHECK</button>
+            <button onClick={() => console.log(hookCheckData)}>CHECK HOOK</button>
         </div>
     );
 }

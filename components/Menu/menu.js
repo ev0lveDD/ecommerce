@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 import balmainLogo from "@/public/Balmain_logo.svg"
 import ShoppingCart from "./ShoppingCart/shopping-cart";
@@ -10,10 +10,20 @@ import ShoppingCart from "./ShoppingCart/shopping-cart";
 export default function Menu() {
 
     const [cartCounter, setCartCounter] = useState(0);
+    const [itemsInShoppingCart, setItemsInShoppingCart] = useState("");
     const [isOpen, setIsOpen] = useState(false);
     function handleClick(){
         setIsOpen(!isOpen);
     }
+
+    useEffect(() => {
+        const localData = localStorage.getItem('localShoppingCart');
+        if (localData !== null) {
+            setItemsInShoppingCart(JSON.parse(localData));
+            setCartCounter((JSON.parse(localData)).length)
+        }
+    }, []);
+
 
     return(
         <nav className="min-w-screen flex items-center justify-center bg-white border-b border-grey-lighter">
