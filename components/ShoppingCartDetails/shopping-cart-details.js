@@ -3,7 +3,7 @@
 import ShoppingCartItem from "./ShoppingCartItem/shopping-cart-item";
 import SummarySection from "./SummarySection/summary-section";
 import { useState, useEffect } from "react";
-import data from "@/app/data.json"
+import data from "@/app/data.json";
 
 export default function ShoppingCartDetails() {
 
@@ -11,7 +11,9 @@ export default function ShoppingCartDetails() {
     const taxValue = 21;
 
     useEffect(() => {
-        checkFinalValue();
+        if (shoppingList != null) {
+            checkFinalValue();
+        }
     },);
 
     function checkFinalValue() {
@@ -24,9 +26,11 @@ export default function ShoppingCartDetails() {
 
 
     const [shoppingList, setShoppingList] = useState(() => {
-        const localData = localStorage.getItem('localShoppingCart');
-        if (localData !== null) {
-            return(JSON.parse(localData));
+        if(typeof window !== 'undefined') {
+            const localData = localStorage.getItem('localShoppingCart');
+            if (localData !== null) {
+                return(JSON.parse(localData));
+            }
         }
     });
 
@@ -43,24 +47,17 @@ export default function ShoppingCartDetails() {
         setShoppingList(newList);
     }
 
-    function updateLocalStorage() {
-        localStorage.clear();
-        localStorage.removeItem('localShoppingCart');
-        var storageArray = JSON.parse(localStorage.getItem('localShoppingCart') || '[]')
-        storageArray.push(shoppingList);
-        localStorage.setItem('localShoppingCart', JSON.stringify(storageArray));
-    }
-
 
     return(
         <div className="bg-white min-w-screen flex items-center justify-center">
             <div className="w-11/12 flex flex-col md:flex-row items-start justify-center gap-16 my-4">
                 <div className="w-full md:w-3/5 my-4 flex flex-col items-start justify-center gap-4">
                     <h1 className="text-3xl font-medium">YOUR CART</h1>
-                    {
-                        shoppingList.map(function(singleData) {
+                    { shoppingList != null ?
+                        shoppingList.map(function(singleData, index) {
                             return(
                                 <ShoppingCartItem 
+                                    index={index}
                                     key={singleData.itemId}
                                     itemImage1={singleData.itemImage1} 
                                     itemName={singleData.itemName}
@@ -75,9 +72,10 @@ export default function ShoppingCartDetails() {
                                 />
                             )
                         })
+                    : <p className="text-xl font-medium">YOUR SHOPPING CART IS EMPTY</p>
                     }
                 </div>
-                <SummarySection subtotalValue={subtotalValue} taxValue={taxValue} updateLocalStorage={updateLocalStorage}/>
+                <SummarySection subtotalValue={subtotalValue} taxValue={taxValue} />
             </div>
         </div>
     );

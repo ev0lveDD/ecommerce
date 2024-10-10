@@ -5,7 +5,7 @@ import { useState, useEffect } from "react";
 
 import deleteIcon from "@/public/delete-icon.svg";
 
-export default function ShoppingCartItem({dataOfItem, itemImage1, itemName, cartItemQuantity, itemPrice, itemApparelStyle, itemSize, itemColor, checkFinalValue, deleteItem}) {
+export default function ShoppingCartItem({index, dataOfItem, itemImage1, itemName, cartItemQuantity, itemPrice, itemApparelStyle, itemSize, itemColor, checkFinalValue, deleteItem}) {
 
     const [itemQuantity, setItemQuantity] = useState(cartItemQuantity);
     const [itemTotalValue, setItemTotalValue] = useState(0);
@@ -29,8 +29,15 @@ export default function ShoppingCartItem({dataOfItem, itemImage1, itemName, cart
         setItemQuantity(dataOfItem.cartItemQuantity-=1);
         checkFinalValue();
         deleteItem(dataOfItem.itemId);
+        deleteItemFromLocalStorage();
     }
 
+
+    function deleteItemFromLocalStorage () {
+        var storageArray = JSON.parse(localStorage.getItem('localShoppingCart'));
+        storageArray.splice(index, 1);
+        localStorage.setItem('localShoppingCart', JSON.stringify(storageArray));
+    }
 
     return(
         <div className="w-full h-48 flex items-start justify-between border-b border-grey-lighter gap-4">

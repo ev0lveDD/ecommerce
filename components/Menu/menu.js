@@ -10,9 +10,11 @@ import ShoppingCart from "./ShoppingCart/shopping-cart";
 export default function Menu() {
 
     const [cartCounter, setCartCounter] = useState(() => {
-        const localData = localStorage.getItem('localShoppingCart');
-        if (localData !== null) {
-            return((JSON.parse(localData)).length);
+        if(typeof window !== 'undefined') {
+            const localData = localStorage.getItem('localShoppingCart');
+            if (localData !== null) {
+                return((JSON.parse(localData)).length);
+            }
         }
     });
 
