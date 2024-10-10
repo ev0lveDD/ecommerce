@@ -5,10 +5,6 @@ import SummarySection from "./SummarySection/summary-section";
 import { useState, useEffect } from "react";
 import data from "@/app/data.json"
 
-import image1 from "@/public/crewneck1.avif"
-import image2 from "@/public/mainLabZippedHoodie2.avif";
-import image3 from "@/public/perrebalmainhoodie1.avif";
-
 export default function ShoppingCartDetails() {
 
     const [subtotalValue, setSubtotalValue] = useState(0);
@@ -21,48 +17,38 @@ export default function ShoppingCartDetails() {
     function checkFinalValue() {
         var sum = 0;
         for (var i = 0; i < shoppingList.length; i++) {
-            sum = sum + shoppingList[i].cartItemPrice*shoppingList[i].cartItemQuantity;
+            sum = sum + shoppingList[i].itemPrice*shoppingList[i].cartItemQuantity;
         }
         setSubtotalValue(sum);
     }
 
 
-    const [shoppingList, setShoppingList] = useState([
-        {
-            numericCode: 9001,
-            cartItemImage: image1,
-            cartItemName: "BALMAIN LOGO-PRINT CREW-NECK SWEATSHIRT",
-            cartItemPrice: 595,
-            cartItemQuantity: 1,
-            cartItemVariant: "SWEATSHIRT",
-            cartItemSize: "XL",
-            cartItemColor: "GREEN"
-        },
-        {
-            numericCode: 9002,
-            cartItemImage: image2,
-            cartItemName: "BALMAIN HOODIE",
-            cartItemPrice: 190,
-            cartItemQuantity: 2,
-            cartItemVariant: "HOODIE",
-            cartItemSize: "XL",
-            cartItemColor: "BLACK"
-        },
-        {
-            numericCode: 9003,
-            cartItemImage: image3,
-            cartItemName: "BALMAIN LOGO-PRINT HOODIE",
-            cartItemPrice: 300,
-            cartItemQuantity: 1,
-            cartItemVariant: "HOODIE",
-            cartItemSize: "XL",
-            cartItemColor: "NAVY"
+    const [shoppingList, setShoppingList] = useState(() => {
+        const localData = localStorage.getItem('localShoppingCart');
+        if (localData !== null) {
+            return(JSON.parse(localData));
         }
-    ]);
+    });
+
+    useEffect(() => {
+        const localData = localStorage.getItem('localShoppingCart');
+        if (localData !== null) {
+            setShoppingList(JSON.parse(localData));
+        }
+    }, []);
+
 
     function deleteItem(value) {
-        var newList = shoppingList.filter(item => item.numericCode !== value);
+        var newList = shoppingList.filter(item => item.itemId !== value);
         setShoppingList(newList);
+    }
+
+    function updateLocalStorage() {
+        localStorage.clear();
+        localStorage.removeItem('localShoppingCart');
+        var storageArray = JSON.parse(localStorage.getItem('localShoppingCart') || '[]')
+        storageArray.push(shoppingList);
+        localStorage.setItem('localShoppingCart', JSON.stringify(storageArray));
     }
 
 
@@ -75,14 +61,14 @@ export default function ShoppingCartDetails() {
                         shoppingList.map(function(singleData) {
                             return(
                                 <ShoppingCartItem 
-                                    key={singleData.numericCode}
-                                    cartItemImage={singleData.cartItemImage} 
-                                    cartItemName={singleData.cartItemName}
+                                    key={singleData.itemId}
+                                    itemImage1={singleData.itemImage1} 
+                                    itemName={singleData.itemName}
                                     cartItemQuantity={singleData.cartItemQuantity}
-                                    cartItemPrice={singleData.cartItemPrice}
-                                    cartItemVariant={singleData.cartItemVariant}
-                                    cartItemSize={singleData.cartItemSize}
-                                    cartItemColor={singleData.cartItemColor}
+                                    itemPrice={singleData.itemPrice}
+                                    itemApparelStyle={singleData.itemApparelStyle}
+                                    itemSize={singleData.itemSize}
+                                    itemColor={singleData.itemColor}
                                     dataOfItem={singleData}
                                     checkFinalValue={checkFinalValue}
                                     deleteItem={deleteItem}
@@ -91,7 +77,7 @@ export default function ShoppingCartDetails() {
                         })
                     }
                 </div>
-                <SummarySection subtotalValue={subtotalValue} taxValue={taxValue}/>
+                <SummarySection subtotalValue={subtotalValue} taxValue={taxValue} updateLocalStorage={updateLocalStorage}/>
             </div>
         </div>
     );

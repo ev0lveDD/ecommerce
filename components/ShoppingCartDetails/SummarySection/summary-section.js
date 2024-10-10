@@ -1,4 +1,4 @@
-export default function SummarySection({ subtotalValue, taxValue }) {
+export default function SummarySection({ subtotalValue, taxValue, updateLocalStorage }) {
     return(
         <div className="w-full md:w-2/5 flex flex-col items-start justify-center gap-4 my-8">
             <h1 className="text-3xl font-medium">SUMMARY</h1>
@@ -21,9 +21,10 @@ export default function SummarySection({ subtotalValue, taxValue }) {
                     <p className="text-md font-bold">TOTAL</p>
                     <p className="text-md font-bold">${subtotalValue+taxValue},00</p>
                 </div>
-                <button className="bg-black w-full text-white py-3 px-3 rounded rounded-md text-sm hover:bg-gray-800">
+                <button onClick={() => updateLocalStorage()} className="bg-black w-full text-white py-3 px-3 rounded rounded-md text-sm hover:bg-gray-800">
                     CHECKOUT NOW
                 </button>
+                <button onClick={() => console.log(localStorage.getItem('localShoppingCart'))}>CHECK</button>
             </div>
         </div>
     );

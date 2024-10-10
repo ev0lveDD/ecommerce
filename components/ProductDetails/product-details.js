@@ -20,7 +20,7 @@ import checkData from "@/app/checkData.json";
 
 export default function ProductDetails({productId}) {
     
-    const [selectedButton, setSelectedButton] = useState("");
+    const [sizePicked, setSizePicked] = useState("");
     const [colorPicked, setColorPicked] = useState("");
     const [hookCheckData, setHookCheckData] = useState("");
 
@@ -54,10 +54,10 @@ export default function ProductDetails({productId}) {
                     <ColorPickSection colorPicked={colorPicked} setColorPicked={setColorPicked}/>
 
                     {/* Size Pick section */}
-                    <SizePickSection selectedButton={selectedButton} setSelectedButton={setSelectedButton}/>
+                    <SizePickSection sizePicked={sizePicked} setSizePicked={setSizePicked}/>
 
                     {/* Add to cart button */}
-                    <AddToCartButton singleData={singleData}/>
+                    <AddToCartButton singleData={singleData} colorPicked={colorPicked} sizePicked={sizePicked}/>
 
                     {/* Product details dropdown */}
                     <DetailsDropdownSection />

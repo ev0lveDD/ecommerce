@@ -5,7 +5,7 @@ import { useState, useEffect } from "react";
 
 import deleteIcon from "@/public/delete-icon.svg";
 
-export default function ShoppingCartItem({dataOfItem, cartItemImage, cartItemName, cartItemQuantity, cartItemPrice, cartItemVariant, cartItemSize, cartItemColor, checkFinalValue, deleteItem}) {
+export default function ShoppingCartItem({dataOfItem, itemImage1, itemName, cartItemQuantity, itemPrice, itemApparelStyle, itemSize, itemColor, checkFinalValue, deleteItem}) {
 
     const [itemQuantity, setItemQuantity] = useState(cartItemQuantity);
     const [itemTotalValue, setItemTotalValue] = useState(0);
@@ -28,31 +28,33 @@ export default function ShoppingCartItem({dataOfItem, cartItemImage, cartItemNam
     function deleteItemAndCount () {
         setItemQuantity(dataOfItem.cartItemQuantity-=1);
         checkFinalValue();
-        deleteItem(dataOfItem.numericCode);
+        deleteItem(dataOfItem.itemId);
     }
 
 
     return(
         <div className="w-full h-48 flex items-start justify-between border-b border-grey-lighter gap-4">
-            <Image className="h-40 w-52 my-4" alt="Item image" src={cartItemImage}/>
+            <div className="w-64 h-52 relative">
+                    <Image className="w-full h-full" alt="product image" src={itemImage1} fill={true}/>
+                </div> 
             <div className="w-full min-h-40 flex flex-col items-start justify-between gap-4 my-4">
                 <div className="flex flex-col gap-3 w-full">
                     <div className="w-full h-full flex items-start justify-between">
-                        <p className="font-bold text-sm">{cartItemName}</p>
-                        <p className="font-bold text-sm">${cartItemPrice},00</p>
+                        <p className="font-bold text-sm">{itemName}</p>
+                        <p className="font-bold text-sm">${itemPrice},00</p>
                     </div>
                     <div className="flex flex-col items-start justify-center gap-1">
                         <div className="flex items-start justify-center gap-1">
                             <p className="text-gray-400 font-semibold text-xs">Variant: </p>
-                            <p className="text-gray-400 font-semibold text-xs">{cartItemVariant}</p>
+                            <p className="text-gray-400 font-semibold text-xs">{itemApparelStyle}</p>
                         </div>
                         <div className="flex items-start justify-center gap-1">
                             <p className="text-gray-400 font-semibold text-xs">Size: </p>
-                            <p className="text-gray-400 font-semibold text-xs">{cartItemSize}</p>
+                            <p className="text-gray-400 font-semibold text-xs">{itemSize}</p>
                         </div>
                         <div className="flex items-start justify-center gap-1">
                             <p className="text-gray-400 font-semibold text-xs">Color:</p>
-                            <p className="text-gray-400 font-semibold text-xs">{cartItemColor}</p>
+                            <p className="text-gray-400 font-semibold text-xs">{itemColor}</p>
                         </div>
                     </div>
                 </div>
