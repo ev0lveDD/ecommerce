@@ -1,6 +1,4 @@
-import Image from "next/image";
-
-import collectionBackground from "@/public/cbackground.png"
+import Link from "next/link";
 
 export default function CollectionSection() {
     return(
@@ -15,9 +13,11 @@ export default function CollectionSection() {
                     Lustrous Yet Understated. The New Evening Wear Collection Exclusively Offered At The
                     Reopened Giorgio Armani Boutique in Los Angeles.
                 </p>
-                <button className="bg-white text-black font-medium py-3 px-3 rounded rounded-md text-sm hover:bg-gray-200 hover:text-gray-700">
-                    SEE COLLECTION
-                </button>
+                <Link href={'/WomenProductList'}>
+                    <button className="bg-white text-black font-medium py-3 px-3 rounded rounded-md text-sm hover:bg-gray-200 hover:text-gray-700">
+                        SEE COLLECTION
+                    </button>
+                </Link>
             </div>
         </div>
     );
