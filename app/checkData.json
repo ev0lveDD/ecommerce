@@ -8,7 +8,7 @@
         "itemName": "Balmain Paris flocked sweatshirt",
         "itemPrice": 350,
         "itemApparelStyle": "SWEATSHIRT",
-        "itemSize": ["XS", "S", "M", "L", "XL", "XXL", "3XL", "4XL"],
+        "itemSize": ["S", "M", "L", "XL", "XXL", "3XL", "4XL"],
         "itemColor": "GREEN",
         "itemDesignedFor": "MEN",
         "isOnSale": false
@@ -22,7 +22,7 @@
         "itemName": "Pierre Balmain hoodie",
         "itemPrice": 300,
         "itemApparelStyle": "HOODIE",
-        "itemSize": ["XS", "S", "M", "L", "XL", "XXL", "3XL", "4XL"],
+        "itemSize": ["S", "M", "L", "XL", "XXL", "3XL", "4XL"],
         "itemColor": "NAVY",
         "itemDesignedFor": "MEN",
         "isOnSale": true
@@ -36,7 +36,7 @@
         "itemName": "Main-Lab zipped hoodie",
         "itemPrice": 200,
         "itemApparelStyle": "HOODIE",
-        "itemSize": ["XS", "S", "M", "L", "XL", "XXL", "3XL", "4XL"],
+        "itemSize": ["S", "M", "L", "XL", "XXL", "3XL", "4XL"],
         "itemColor": "BLACK",
         "itemDesignedFor": "MEN",
         "isOnSale": false
@@ -50,7 +50,7 @@
         "itemName": "Two-tone wool and cashmere varsity jacket",
         "itemPrice": 300,
         "itemApparelStyle": "JACKET",
-        "itemSize": ["XS", "S", "M", "L", "XL", "XXL", "3XL", "4XL"],
+        "itemSize": ["S", "M", "L", "XL", "XXL", "3XL", "4XL"],
         "itemColor": "BLACK",
         "itemDesignedFor": "MEN",
         "isOnSale": false
@@ -64,7 +64,7 @@
         "itemName": "Long down nylon jacket with Balmain label",
         "itemPrice": 400,
         "itemApparelStyle": "JACKET",
-        "itemSize": ["XS", "S", "M", "L", "XL", "XXL", "3XL", "4XL"],
+        "itemSize": ["S", "M", "L", "XL", "XXL", "3XL", "4XL"],
         "itemColor": "BLACK",
         "itemDesignedFor": "MEN",
         "isOnSale": false
@@ -78,7 +78,7 @@
         "itemName": "Balmain Signature hoodie",
         "itemPrice": 100,
         "itemApparelStyle": "HOODIE",
-        "itemSize": ["XS", "S", "M", "L", "XL", "XXL", "3XL", "4XL"],
+        "itemSize": ["S", "M", "L", "XL", "XXL", "3XL", "4XL"],
         "itemColor": "BLACK",
         "itemDesignedFor": "MEN",
         "isOnSale": false
@@ -92,7 +92,7 @@
         "itemName": "Double crepe wool cargo trousers",
         "itemPrice": 140,
         "itemApparelStyle": "TROUSERS",
-        "itemSize": ["XS", "S", "M", "L", "XL", "XXL", "3XL", "4XL"],
+        "itemSize": ["S", "M", "L", "XL", "XXL", "3XL", "4XL"],
         "itemColor": "GREY",
         "itemDesignedFor": "MEN",
         "isOnSale": false
@@ -120,7 +120,7 @@
         "itemName": "PB Labyrinth wool polo shirt",
         "itemPrice": 45,
         "itemApparelStyle": "POLOS",
-        "itemSize": ["XS", "S", "M", "L", "XL", "XXL", "3XL", "4XL"],
+        "itemSize": ["S", "M", "L", "XL", "XXL", "3XL", "4XL"],
         "itemColor": "BEIGE",
         "itemDesignedFor": "MEN",
         "isOnSale": false
@@ -134,7 +134,7 @@
         "itemName": "PB Labyrinth jacquard trousers",
         "itemPrice": 100,
         "itemApparelStyle": "TROUSERS",
-        "itemSize": ["XS", "S", "M", "L", "XL", "XXL", "3XL", "4XL"],
+        "itemSize": ["S", "M", "L", "XL", "XXL", "3XL", "4XL"],
         "itemColor": "NAVY",
         "itemDesignedFor": "MEN",
         "isOnSale": false
@@ -148,7 +148,7 @@
         "itemName": "Wool polo shirt with Balmain Signature embroidery",
         "itemPrice": 80,
         "itemApparelStyle": "POLOS",
-        "itemSize": ["XS", "S", "M", "L", "XL", "XXL", "3XL", "4XL"],
+        "itemSize": ["S", "M", "L", "XL", "XXL", "3XL", "4XL"],
         "itemColor": "BLACK",
         "itemDesignedFor": "MEN",
         "isOnSale": false
@@ -162,7 +162,7 @@
         "itemName": "Reversible varsity-style puffer jacket with hood",
         "itemPrice": 340,
         "itemApparelStyle": "JACKET",
-        "itemSize": ["XS", "S", "M", "L", "XL", "XXL", "3XL", "4XL"],
+        "itemSize": ["S", "M", "L", "XL", "XXL", "3XL", "4XL"],
         "itemColor": "BLACK",
         "itemDesignedFor": "MEN",
         "isOnSale": false
@@ -176,7 +176,7 @@
         "itemName": "PB Labyrinth jacquard nylon puffer jacket",
         "itemPrice": 250,
         "itemApparelStyle": "JACKET",
-        "itemSize": ["XS", "S", "M", "L", "XL", "XXL", "3XL", "4XL"],
+        "itemSize": ["S", "M", "L", "XL", "XXL", "3XL", "4XL"],
         "itemColor": "BLACK",
         "itemDesignedFor": "MEN",
         "isOnSale": false
@@ -190,7 +190,7 @@
         "itemName": "Bomber jacket with embroidery on the back",
         "itemPrice": 330,
         "itemApparelStyle": "JACKET",
-        "itemSize": ["XS", "S", "M", "L", "XL", "XXL", "3XL", "4XL"],
+        "itemSize": ["S", "M", "L", "XL", "XXL", "3XL", "4XL"],
         "itemColor": "NAVY",
         "itemDesignedFor": "MEN",
         "isOnSale": false
@@ -204,7 +204,7 @@
         "itemName": "Faded denim jacket",
         "itemPrice": 220,
         "itemApparelStyle": "JACKET",
-        "itemSize": ["XS", "S", "M", "L", "XL", "XXL", "3XL", "4XL"],
+        "itemSize": ["S", "M", "L", "XL", "XXL", "3XL", "4XL"],
         "itemColor": "BLACK",
         "itemDesignedFor": "MEN",
         "isOnSale": false
@@ -218,7 +218,7 @@
         "itemName": "Cargo joggers with Balmain Paris print",
         "itemPrice": 90,
         "itemApparelStyle": "TROUSERS",
-        "itemSize": ["XS", "S", "M", "L", "XL", "XXL", "3XL", "4XL"],
+        "itemSize": ["S", "M", "L", "XL", "XXL", "3XL", "4XL"],
         "itemColor": "GREEN",
         "itemDesignedFor": "MEN",
         "isOnSale": false
@@ -232,7 +232,7 @@
         "itemName": "Flocked Balmain Paris joggers",
         "itemPrice": 110,
         "itemApparelStyle": "TROUSERS",
-        "itemSize": ["XS", "S", "M", "L", "XL", "XXL", "3XL", "4XL"],
+        "itemSize": ["S", "M", "L", "XL", "XXL", "3XL", "4XL"],
         "itemColor": "BLACK",
         "itemDesignedFor": "MEN",
         "isOnSale": false
@@ -246,7 +246,7 @@
         "itemName": "Balmain Coin T-shirt",
         "itemPrice": 30,
         "itemApparelStyle": "SHIRT",
-        "itemSize": ["XS", "S", "M", "L", "XL", "XXL", "3XL", "4XL"],
+        "itemSize": ["S", "M", "L", "XL", "XXL", "3XL", "4XL"],
         "itemColor": "WHITE",
         "itemDesignedFor": "MEN",
         "isOnSale": false
@@ -260,7 +260,7 @@
         "itemName": "PB turtleneck",
         "itemPrice": 75,
         "itemApparelStyle": "SHIRT",
-        "itemSize": ["XS", "S", "M", "L", "XL", "XXL", "3XL", "4XL"],
+        "itemSize": ["S", "M", "L", "XL", "XXL", "3XL", "4XL"],
         "itemColor": "NAVY",
         "itemDesignedFor": "MEN",
         "isOnSale": false
@@ -274,7 +274,7 @@
         "itemName": "Vintage Balmain embroidered oversized sweatshirt",
         "itemPrice": 120,
         "itemApparelStyle": "SWEATSHIRT",
-        "itemSize": ["XS", "S", "M", "L", "XL", "XXL", "3XL", "4XL"],
+        "itemSize": ["XS", "S"],
         "itemColor": "BLACK",
         "itemDesignedFor": "MEN",
         "isOnSale": false
