@@ -4,7 +4,7 @@ import FilterSizeButton from "./FilterSizeButton/filter-size-button";
 import FilterPriceButton from "./FilterCheckboxButton/filter-checkbox-button";
 import FilterCheckboxButton from "./FilterCheckboxButton/filter-checkbox-button";
 
-export default function FilterMenu({filterOpen, setFilterOpen, filterColorPicked, setFilterColorPicked, filterSizePicked, setFilterSizePicked}) {
+export default function FilterMenu({filterOpen, setFilterOpen, filterColorPicked, setFilterColorPicked, filterSizePicked, setFilterSizePicked, filterPricePicked, setFilterPricePicked, filterApparelStylePicked, setFilterApparelStylePicked}) {
 
 
     return(
@@ -41,21 +41,20 @@ export default function FilterMenu({filterOpen, setFilterOpen, filterColorPicked
                     </div>
                 </FilterDetailsDropdown>
 
-                <FilterDetailsDropdown dropdownId={"PriceFilterDropdown"} dropdownTitle={"BY PRICE"}>
-                    <FilterCheckboxButton filterFieldName={"$19 - $30"} filterFieldId={"price-filter-19-31"}/>
-                    <FilterCheckboxButton filterFieldName={"$31 - $50"} filterFieldId={"price-filter-31-50"}/>
-                    <FilterCheckboxButton filterFieldName={"$51 - $100"} filterFieldId={"price-filter-51-100"}/>
-                    <FilterCheckboxButton filterFieldName={"$101 +"} filterFieldId={"price-filter-101"}/>
+                <FilterDetailsDropdown dropdownId={"PriceFilterDropdown"} dropdownTitle={"BY PRICE"} filterValue={filterPricePicked} filterChangeValue={setFilterPricePicked}>
+                    <FilterCheckboxButton filterFieldName={[19,30]} filterFieldId={"price-filter-19-31"} filterValue={filterPricePicked} filterChangeValue={setFilterPricePicked}/>
+                    <FilterCheckboxButton filterFieldName={[31, 50]} filterFieldId={"price-filter-31-50"} filterValue={filterPricePicked} filterChangeValue={setFilterPricePicked}/>
+                    <FilterCheckboxButton filterFieldName={[51, 100]} filterFieldId={"price-filter-51-100"} filterValue={filterPricePicked} filterChangeValue={setFilterPricePicked}/>
+                    <FilterCheckboxButton filterFieldName={[101, 300]} filterFieldId={"price-filter-101"} filterValue={filterPricePicked} filterChangeValue={setFilterPricePicked}/>
                 </FilterDetailsDropdown>
 
                 <FilterDetailsDropdown dropdownId={"ApparelStyleFilterDropdown"} dropdownTitle={"APPAREL STYLE"}>
-                    <FilterCheckboxButton filterFieldName={"Hoodies"} filterFieldId={"apparel-filter-hoodies"}/>
-                    <FilterCheckboxButton filterFieldName={"Jackets"} filterFieldId={"apparel-filter-jackets"}/>
-                    <FilterCheckboxButton filterFieldName={"Polos"} filterFieldId={"apparel-filter-polos"}/>
-                    <FilterCheckboxButton filterFieldName={"Shorts"} filterFieldId={"apparel-filter-shorts"}/>
-                    <FilterCheckboxButton filterFieldName={"Sweatshirts"} filterFieldId={"apparel-filter-sweatshirts"}/>
-                    <FilterCheckboxButton filterFieldName={"Tops"} filterFieldId={"apparel-filter-tops"}/>
-                    <FilterCheckboxButton filterFieldName={"Trousers"} filterFieldId={"apparel-filter-pants"}/>
+                    <FilterCheckboxButton filterFieldName={"HOODIE"} filterFieldId={"apparel-filter-hoodie"} filterValue={filterApparelStylePicked} filterChangeValue={setFilterApparelStylePicked}/>
+                    <FilterCheckboxButton filterFieldName={"JACKET"} filterFieldId={"apparel-filter-jacket"} filterValue={filterApparelStylePicked} filterChangeValue={setFilterApparelStylePicked}/>
+                    <FilterCheckboxButton filterFieldName={"POLOS"} filterFieldId={"apparel-filter-polos"} filterValue={filterApparelStylePicked} filterChangeValue={setFilterApparelStylePicked}/>
+                    <FilterCheckboxButton filterFieldName={"SHIRT"} filterFieldId={"apparel-filter-shirt"} filterValue={filterApparelStylePicked} filterChangeValue={setFilterApparelStylePicked}/>
+                    <FilterCheckboxButton filterFieldName={"SWEATSHIRT"} filterFieldId={"apparel-filter-sweatshirt"} filterValue={filterApparelStylePicked} filterChangeValue={setFilterApparelStylePicked}/>
+                    <FilterCheckboxButton filterFieldName={"TROUSERS"} filterFieldId={"apparel-filter-trousers"} filterValue={filterApparelStylePicked} filterChangeValue={setFilterApparelStylePicked}/>
                 </FilterDetailsDropdown>
 
                 <button className="w-full my-6 flex items-center justify-center bg-black text-white py-2 px-2 rounded rounded-md text-xs hover:bg-gray-800 md:mr-4 border border-black">

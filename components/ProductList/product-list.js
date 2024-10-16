@@ -23,7 +23,7 @@ export default function ProductList({categoryGiven}) {
         itemSize: filterSizePicked,
         itemPrice: filterPricePicked,
         itemApparelStyle: filterApparelStylePicked
-    }
+    };
 
     var categoryDB = categoryGiven != "SALE" ? checkData.filter((data) => data.itemDesignedFor === categoryGiven) : checkData.filter((data) => data.isOnSale === true);
     const [mappedItemsCount, setMappedItemsCount] = useState(categoryDB.length);
@@ -33,7 +33,18 @@ export default function ProductList({categoryGiven}) {
         <div className="bg-white min-w-screen flex flex-col md:flex-row items-start justify-center my-4">
             
             {/* Filter Menu section */}
-            <FilterMenu filterOpen={filterOpen} setFilterOpen={setFilterOpen} filterColorPicked={filterColorPicked} setFilterColorPicked={setFilterColorPicked} filterSizePicked={filterSizePicked} setFilterSizePicked={setFilterSizePicked}/>
+            <FilterMenu 
+            filterOpen={filterOpen} 
+            setFilterOpen={setFilterOpen} 
+            filterColorPicked={filterColorPicked} 
+            setFilterColorPicked={setFilterColorPicked} 
+            filterSizePicked={filterSizePicked} 
+            setFilterSizePicked={setFilterSizePicked} 
+            filterPricePicked={filterPricePicked} 
+            setFilterPricePicked={setFilterPricePicked} 
+            filterApparelStylePicked={filterApparelStylePicked} 
+            setFilterApparelStylePicked={setFilterApparelStylePicked}
+            />
 
             <div className={`w-full ${filterOpen ? "md:w-3/4" : null} flex flex-col items-center justify-center my-4`}>
                 <div className="w-11/12 flex my-4 flex-col gap-8">
@@ -80,6 +91,7 @@ export default function ProductList({categoryGiven}) {
 
                 </div>
                 <button onClick={() => console.log(filteredDB)}>CHECK DATA</button>
+                <button onClick={() => console.log(Object.values(filterList))}>CHECK OBJECT</button>
 
             </div>
 
