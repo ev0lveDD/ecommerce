@@ -42,10 +42,10 @@ export default function FilterMenu({filterOpen, setFilterOpen, filterColorPicked
                 </FilterDetailsDropdown>
 
                 <FilterDetailsDropdown dropdownId={"PriceFilterDropdown"} dropdownTitle={"BY PRICE"} filterValue={filterPricePicked} filterChangeValue={setFilterPricePicked}>
-                    <FilterCheckboxButton filterFieldName={[19,30]} filterFieldId={"price-filter-19-31"} filterValue={filterPricePicked} filterChangeValue={setFilterPricePicked}/>
+                    <FilterCheckboxButton filterFieldName={[19, 30]} filterFieldId={"price-filter-19-31"} filterValue={filterPricePicked} filterChangeValue={setFilterPricePicked}/>
                     <FilterCheckboxButton filterFieldName={[31, 50]} filterFieldId={"price-filter-31-50"} filterValue={filterPricePicked} filterChangeValue={setFilterPricePicked}/>
                     <FilterCheckboxButton filterFieldName={[51, 100]} filterFieldId={"price-filter-51-100"} filterValue={filterPricePicked} filterChangeValue={setFilterPricePicked}/>
-                    <FilterCheckboxButton filterFieldName={[101, 300]} filterFieldId={"price-filter-101"} filterValue={filterPricePicked} filterChangeValue={setFilterPricePicked}/>
+                    <FilterCheckboxButton filterFieldName={[101, 500]} filterFieldId={"price-filter-101"} filterValue={filterPricePicked} filterChangeValue={setFilterPricePicked}/>
                 </FilterDetailsDropdown>
 
                 <FilterDetailsDropdown dropdownId={"ApparelStyleFilterDropdown"} dropdownTitle={"APPAREL STYLE"}>

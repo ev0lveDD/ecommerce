@@ -1,5 +1,5 @@
 'use client';
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 import FilterMenu from "./FilterMenu/filter-menu";
 import ProductListItem from "./ProductListItem/product-list-item";
@@ -28,7 +28,14 @@ export default function ProductList({categoryGiven}) {
     var categoryDB = categoryGiven != "SALE" ? checkData.filter((data) => data.itemDesignedFor === categoryGiven) : checkData.filter((data) => data.isOnSale === true);
     const [mappedItemsCount, setMappedItemsCount] = useState(categoryDB.length);
 
-    const filteredDB = filterColorPicked ? categoryDB.filter((data) => data.itemColor === filterColorPicked) : categoryDB;
+    const filteredDB = filterList.itemColor !== "" ? (categoryDB.filter((data) => 
+        data.itemColor === filterList.itemColor && 
+        (data.itemSize.indexOf(filterList.itemSize) >= 0 ? data.itemSize : null) &&
+        (data.itemPrice >= filterList.itemPrice[0] && data.itemPrice <= filterList.itemPrice[1]) && 
+        data.itemApparelStyle === filterList.itemApparelStyle
+    )) : categoryDB;
+
+
     return(
         <div className="bg-white min-w-screen flex flex-col md:flex-row items-start justify-center my-4">
             
@@ -90,8 +97,9 @@ export default function ProductList({categoryGiven}) {
                     }
 
                 </div>
-                <button onClick={() => console.log(filteredDB)}>CHECK DATA</button>
-                <button onClick={() => console.log(Object.values(filterList))}>CHECK OBJECT</button>
+                <button onClick={() => console.log(filteredDB)}>CHECK BD</button>
+                <button onClick={() => console.log(Object.keys(filterList))}>CHECK OBJECT</button>
+                <button onClick={() => console.log(Object.values(filterList))}>CHECK OBJECT VALUES</button>
 
             </div>
 
