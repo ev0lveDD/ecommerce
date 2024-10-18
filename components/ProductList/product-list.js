@@ -28,12 +28,14 @@ export default function ProductList({categoryGiven}) {
     var categoryDB = categoryGiven != "SALE" ? checkData.filter((data) => data.itemDesignedFor === categoryGiven) : checkData.filter((data) => data.isOnSale === true);
     const [mappedItemsCount, setMappedItemsCount] = useState(categoryDB.length);
 
-    const filteredDB = filterList.itemColor !== "" ? (categoryDB.filter((data) => 
-        data.itemColor === filterList.itemColor && 
-        (data.itemSize.indexOf(filterList.itemSize) >= 0 ? data.itemSize : null) &&
-        (data.itemPrice >= filterList.itemPrice[0] && data.itemPrice <= filterList.itemPrice[1]) && 
-        data.itemApparelStyle === filterList.itemApparelStyle
-    )) : categoryDB;
+    const filterListText = (categoryDB.filter((data) => 
+        (filterList.itemColor === "" || data.itemColor === filterList.itemColor) && 
+        (filterList.itemSize === "" || (data.itemSize.indexOf(filterList.itemSize) >= 0 ? data.itemSize  : null)) &&
+        (filterList.itemPrice === "" || (data.itemPrice >= filterList.itemPrice[0] && data.itemPrice <= filterList.itemPrice[1])) && 
+        (filterList.itemApparelStyle === "" || data.itemApparelStyle === filterList.itemApparelStyle)
+    ));
+
+    const filteredDB = filterList.itemColor !== "" ? filterListText : filterList.itemSize !== "" ? filterListText : filterList.itemPrice !== "" ? filterListText : filterList.itemApparelStyle !== "" ? filterListText : categoryDB;
 
 
     return(
