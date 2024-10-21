@@ -1,56 +1,41 @@
+'use client';
+import { useState } from "react";
 
 import ProductListItem from "@/components/ProductList/ProductListItem/product-list-item";
-
 import checkData from "@/app/checkData.json";
 import BestSellersMenu from "./BestSellersMenu/best-sellers-menu";
 import SectionHeadline from "../SectionHeadline/section-headline";
 
 export default function BestSellersSection() {
+
+    const [buttonSelected, setButtonSelected] = useState("all-products");
+
     return(
         <div className="w-11/12 md:w-9/12 flex flex-col items-center justify-center gap-8 my-8">
             <SectionHeadline text={"Best Sellers"}/>
-            <BestSellersMenu />
+            <BestSellersMenu buttonSelected={buttonSelected} setButtonSelected={setButtonSelected}/>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-4 w-full lg:w-4/5">
-            <ProductListItem 
-                    itemImage1={checkData[0].itemImage1} 
-                    itemImage2={checkData[0].itemImage2} 
-                    itemName={checkData[0].itemName}
-                    itemPrice={checkData[0].itemPrice}
-                    isOnSale={checkData[0].isOnSale}
-                    categoryPath={checkData[0].itemDesignedFor === "MEN" ? "MenProductList" : checkData[0].itemDesignedFor === "WOMEN" ? "WomenProductList" : checkData[0].itemDesignedFor === "SALE" ? "SaleProductList" : null}
-                    path={checkData[0].itemId}
-                    singleData={checkData[0]}
-                    />
 
-                    <ProductListItem 
-                    itemImage1={checkData[1].itemImage1} 
-                    itemImage2={checkData[1].itemImage2} 
-                    itemName={checkData[1].itemName}
-                    itemPrice={checkData[1].itemPrice}
-                    isOnSale={checkData[1].isOnSale}
-                    categoryPath={checkData[1].itemDesignedFor === "MEN" ? "MenProductList" : checkData[1].itemDesignedFor === "WOMEN" ? "WomenProductList" : checkData[1].itemDesignedFor === "SALE" ? "SaleProductList" : null}
-                    path={checkData[1].itemId}
-                    singleData={checkData[1]}/>
+                {(buttonSelected === "all-products" ? checkData 
+                : buttonSelected === "t-shirts" ? checkData.filter((data) => data.itemApparelStyle === "SHIRT") 
+                : buttonSelected === "hoodies" ? checkData.filter((data) => data.itemApparelStyle === "HOODIE")  
+                : buttonSelected === "jackets" ? checkData.filter((data) => data.itemApparelStyle === "JACKET")  
+                : null)
+                .slice(0, 4).map((singleData) => {
+                    return(
+                        <ProductListItem 
+                        key={singleData.itemId}
+                        itemImage1={singleData.itemImage1} 
+                        itemImage2={singleData.itemImage2} 
+                        itemName={singleData.itemName}
+                        itemPrice={singleData.itemPrice}
+                        isOnSale={singleData.isOnSale}
+                        categoryPath={singleData.itemDesignedFor === "MEN" ? "MenProductList" : singleData.itemDesignedFor === "WOMEN" ? "WomenProductList" : singleData.itemDesignedFor === "SALE" ? "SaleProductList" : null}
+                        path={singleData.itemId}
+                        singleData={singleData}/>
+                    );
+                })}
 
-                    <ProductListItem 
-                    itemImage1={checkData[2].itemImage1} 
-                    itemImage2={checkData[2].itemImage2} 
-                    itemName={checkData[2].itemName}
-                    itemPrice={checkData[2].itemPrice}
-                    isOnSale={checkData[2].isOnSale}
-                    categoryPath={checkData[2].itemDesignedFor === "MEN" ? "MenProductList" : checkData[2].itemDesignedFor === "WOMEN" ? "WomenProductList" : checkData[2].itemDesignedFor === "SALE" ? "SaleProductList" : null}
-                    path={checkData[2].itemId}
-                    singleData={checkData[2]}/>
-
-                    <ProductListItem 
-                    itemImage1={checkData[3].itemImage1} 
-                    itemImage2={checkData[3].itemImage2} 
-                    itemName={checkData[3].itemName}
-                    itemPrice={checkData[3].itemPrice}
-                    isOnSale={checkData[3].isOnSale}
-                    categoryPath={checkData[3].itemDesignedFor === "MEN" ? "MenProductList" : checkData[3].itemDesignedFor === "WOMEN" ? "WomenProductList" : checkData[3].itemDesignedFor === "SALE" ? "SaleProductList" : null}
-                    path={checkData[3].itemId}
-                    singleData={checkData[3]}/>
             </div>
 
         </div>
