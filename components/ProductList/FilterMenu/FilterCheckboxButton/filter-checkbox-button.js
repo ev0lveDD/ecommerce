@@ -7,7 +7,7 @@ export default function FilterCheckboxButton({filterFieldName, filterFieldId, fi
 
     function setFilterValue() {
         if(filterValue===filterFieldName){
-            filterChangeValue(null);
+            filterChangeValue("");
         } else if (filterValue!==filterFieldName) {
             filterChangeValue(filterFieldName)
         } else {

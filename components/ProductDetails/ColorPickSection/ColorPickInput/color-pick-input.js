@@ -5,7 +5,7 @@ export default function ColorPickInput({colorName, colorPicked, setColorPicked, 
 
     function selectColorButton() {
         if(colorPicked===colorName){
-            setColorPicked(null);
+            setColorPicked("");
         } else if (colorPicked!==colorName) {
             setColorPicked(colorName)
         } else {

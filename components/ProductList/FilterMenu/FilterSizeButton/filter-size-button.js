@@ -5,7 +5,7 @@ export default function FilterSizeButton({sizeName, filterSizePicked, setFilterS
 
     function selectSizeButton() {
         if(filterSizePicked===sizeName){
-            setFilterSizePicked(null);
+            setFilterSizePicked("");
         } else if (filterSizePicked!==sizeName) {
             setFilterSizePicked(sizeName)
         } else {

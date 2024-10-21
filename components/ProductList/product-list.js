@@ -18,6 +18,8 @@ export default function ProductList({categoryGiven}) {
     const [filterPricePicked, setFilterPricePicked] = useState("");
     const [filterApparelStylePicked, setFilterApparelStylePicked] = useState("");
     
+    const [sortedBy, setSortedBy] = useState("");
+
     var filterList = {
         itemColor: filterColorPicked,
         itemSize: filterSizePicked,
@@ -36,7 +38,6 @@ export default function ProductList({categoryGiven}) {
     ));
 
     const filteredDB = filterList.itemColor !== "" ? filterListText : filterList.itemSize !== "" ? filterListText : filterList.itemPrice !== "" ? filterListText : filterList.itemApparelStyle !== "" ? filterListText : categoryDB;
-
 
     return(
         <div className="bg-white min-w-screen flex flex-col md:flex-row items-start justify-center my-4">
@@ -71,7 +72,7 @@ export default function ProductList({categoryGiven}) {
                         <FilterSection filterOpen={filterOpen} setFilterOpen={setFilterOpen}/>
 
                         {/* Sort button */}
-                        <SortByButton />
+                        <SortByButton sortedBy={sortedBy} setSortedBy={setSortedBy}/>
 
                     </div>
 
@@ -82,7 +83,13 @@ export default function ProductList({categoryGiven}) {
                 <div className={`w-11/12 grid grid-cols-2 ${filterOpen ? "md:grid-cols-4" : "md:grid-cols-5"} gap-x-6 gap-y-8 my-4`}>
 
                     {
-                        filteredDB.map(function(singleData) {
+                        (sortedBy === "" || sortedBy === null ? filteredDB 
+                        : sortedBy === "sort-price-lowest" ? (filteredDB.sort((a, b) => a.itemPrice - b.itemPrice)) 
+                        : sortedBy === "sort-price-highest" ? (filteredDB.sort((a, b) => b.itemPrice - a.itemPrice))  
+                        : sortedBy === "sort-latest" ? (filteredDB.sort((a, b) => b.itemId - a.itemId)) 
+                        : sortedBy === "sort-popular" ? (filteredDB.sort((a, b) => b.isOnSale - a.isOnSale)) 
+                        : categoryDB)
+                        .map(function(singleData) {
                             return(
                                 <ProductListItem
                                 key={singleData.itemId}
@@ -102,7 +109,8 @@ export default function ProductList({categoryGiven}) {
                 <button onClick={() => console.log(filteredDB)}>CHECK BD</button>
                 <button onClick={() => console.log(Object.keys(filterList))}>CHECK OBJECT</button>
                 <button onClick={() => console.log(Object.values(filterList))}>CHECK OBJECT VALUES</button>
-
+                <button onClick={() => console.log(filterList.itemPrice.length)}>CHECK ARRAY</button>
+                <button onClick={() => console.log(sortedBy)}>CHECK SORT HOOK</button>
             </div>
 
         </div>
