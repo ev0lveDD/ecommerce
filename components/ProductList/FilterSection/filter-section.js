@@ -1,4 +1,4 @@
-export default function FilterSection({filterOpen, setFilterOpen}) {
+export default function FilterSection({filterOpen, setFilterOpen, filterList}) {
     return(
     <div className="flex flex-col md:flex-row gap-4">
         {/* Filter Button section */}
@@ -13,19 +13,22 @@ export default function FilterSection({filterOpen, setFilterOpen}) {
 
         {/* Filter indicators section */}
         <div className="flex flex-col md:flex-row gap-4">
-            <button className="w-fit flex items-center justify-center gap-3 text-xs border border-black py-1.5 px-2 rounded rounded-md hover:border-gray-400 font-medium">
-                SIZE: L
-                <span>
-                    X
-                </span>
-            </button>
-
-            <button className="w-fit flex items-center justify-center gap-3 text-xs border border-black py-1.5 px-2 rounded rounded-md hover:border-gray-400 font-medium">
-                $300-$600
-                <span>
-                    X
-                </span>
-            </button>
+        {Object.entries(filterList).map((data, index) => {
+            return(
+                (data[1] !== "" ? 
+                    <button key={index} className="w-fit flex items-center justify-center gap-3 text-[10px] border border-black py-1.5 px-2 rounded rounded-md hover:border-gray-400 font-medium">
+                        {data[0] === "itemColor" ? "COLOR" 
+                        : data[0] === "itemSize" ? "SIZE" 
+                        : data[0] === "itemPrice" ? "PRICE" 
+                        : data[0] === "itemApparelStyle" ? "APPAREL" : null}
+                        : {Array.isArray(data[1]) ? ("$" + data[1][0] + "-$" + data[1][1]) : data[1]}
+                        <span>
+                            X
+                        </span>
+                    </button>
+                : null)
+            );
+        })}
         </div>
     </div>
     );

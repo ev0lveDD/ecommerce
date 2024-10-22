@@ -69,7 +69,7 @@ export default function ProductList({categoryGiven}) {
                     <div className="flex justify-between gap-4">
                         
                         {/* Filter buttons */}
-                        <FilterSection filterOpen={filterOpen} setFilterOpen={setFilterOpen}/>
+                        <FilterSection filterOpen={filterOpen} setFilterOpen={setFilterOpen} filterList={filterList}/>
 
                         {/* Sort button */}
                         <SortByButton sortedBy={sortedBy} setSortedBy={setSortedBy}/>
