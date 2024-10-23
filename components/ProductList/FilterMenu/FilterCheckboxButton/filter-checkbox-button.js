@@ -6,9 +6,9 @@ export default function FilterCheckboxButton({filterFieldName, filterFieldId, fi
     const [isCheckboxChecked, setIsCheckboxchecked] = useState(false);
 
     function setFilterValue() {
-        if(filterValue===filterFieldName){
+        if(filterValue === filterFieldName || JSON.stringify(filterValue) === JSON.stringify(filterFieldName)){
             filterChangeValue("");
-        } else if (filterValue!==filterFieldName) {
+        } else if (filterValue !== filterFieldName || JSON.stringify(filterValue) !== JSON.stringify(filterFieldName)) {
             filterChangeValue(filterFieldName)
         } else {
             null;

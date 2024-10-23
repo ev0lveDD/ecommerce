@@ -106,11 +106,9 @@ export default function ProductList({categoryGiven}) {
                     }
 
                 </div>
-                <button onClick={() => console.log(filteredDB)}>CHECK BD</button>
-                <button onClick={() => console.log(Object.keys(filterList))}>CHECK OBJECT</button>
                 <button onClick={() => console.log(Object.values(filterList))}>CHECK OBJECT VALUES</button>
-                <button onClick={() => console.log(filterList.itemPrice.length)}>CHECK ARRAY</button>
-                <button onClick={() => console.log(sortedBy)}>CHECK SORT HOOK</button>
+                <button onClick={() => console.log(filterList.itemPrice)}>CHECK ARRAY</button>
+                <button onClick={() => console.log(filterPricePicked)}>CHECK HOOK ARRAY</button>
             </div>
 
         </div>
