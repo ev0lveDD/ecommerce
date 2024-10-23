@@ -8,17 +8,22 @@ export default function FilterSection({filterOpen, setFilterOpen, filterList}) {
     
     useEffect(() => {
         var sumOfEntries = 0;
-        var sumOfEmpty = 0;
         Object.entries(filterList).map((entry) => {
             if (entry[1] !== "" && entry[1] !== null && entry[1].length !== 0) {
                 setFilterCounter(sumOfEntries+1);
                 sumOfEntries = sumOfEntries+1;
-                console.log(entry[1])
-            } 
-            else {
+                console.log(entry[1]);
+            } else {
                 null;
             }
-        })
+        });
+        
+        if (filterList.itemColor === "" && filterList.itemSize === "" && filterList.itemPrice === "" && filterList.itemApparelStyle === "") {
+            setFilterCounter(0);
+        } else {
+            null;
+        }
+
     },[filterList])
 
     return(

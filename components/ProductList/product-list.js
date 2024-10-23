@@ -30,6 +30,10 @@ export default function ProductList({categoryGiven}) {
     var categoryDB = categoryGiven != "SALE" ? checkData.filter((data) => data.itemDesignedFor === categoryGiven) : checkData.filter((data) => data.isOnSale === true);
     const [mappedItemsCount, setMappedItemsCount] = useState(categoryDB.length);
 
+    useEffect(() => {
+        filteredDB ? setMappedItemsCount(filteredDB.length) : null;
+    },[filterList])
+
     const filterListText = (categoryDB.filter((data) => 
         (filterList.itemColor === "" || data.itemColor === filterList.itemColor) && 
         (filterList.itemSize === "" || (data.itemSize.indexOf(filterList.itemSize) >= 0 ? data.itemSize  : null)) &&
@@ -107,8 +111,7 @@ export default function ProductList({categoryGiven}) {
 
                 </div>
                 <button onClick={() => console.log(Object.values(filterList))}>CHECK OBJECT VALUES</button>
-                <button onClick={() => console.log(filterList.itemPrice)}>CHECK ARRAY</button>
-                <button onClick={() => console.log(filterPricePicked)}>CHECK HOOK ARRAY</button>
+                <button onClick={() => console.log(filterList)}>CHECK object</button>
             </div>
 
         </div>
