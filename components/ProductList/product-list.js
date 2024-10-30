@@ -110,8 +110,6 @@ export default function ProductList({categoryGiven}) {
                     }
 
                 </div>
-                <button onClick={() => console.log(Object.values(filterList))}>CHECK OBJECT VALUES</button>
-                <button onClick={() => console.log(filterList)}>CHECK object</button>
             </div>
 
         </div>
