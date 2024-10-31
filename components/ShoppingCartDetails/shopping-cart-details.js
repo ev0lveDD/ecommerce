@@ -8,7 +8,16 @@ import data from "@/app/data.json";
 export default function ShoppingCartDetails() {
 
     const [subtotalValue, setSubtotalValue] = useState(0);
-    const taxValue = 21;
+    const [taxValue, setTaxValue] = useState(21);
+    
+    
+    useEffect(() => {
+        if (subtotalValue === null || subtotalValue === 0) {
+            setTaxValue(0);
+        } else (
+            setTaxValue(21)
+        )
+    },[subtotalValue]);
 
     useEffect(() => {
         if (shoppingList != null) {
@@ -53,7 +62,7 @@ export default function ShoppingCartDetails() {
             <div className="w-11/12 flex flex-col md:flex-row items-start justify-center gap-16 my-4">
                 <div className="w-full md:w-3/5 my-4 flex flex-col items-start justify-center gap-4">
                     <h1 className="text-3xl font-medium">YOUR CART</h1>
-                    { shoppingList != null ?
+                    { (shoppingList !== null && shoppingList.length !== null && shoppingList.length !== 0) ?
                         shoppingList.map(function(singleData, index) {
                             return(
                                 <ShoppingCartItem 
@@ -76,6 +85,7 @@ export default function ShoppingCartDetails() {
                     }
                 </div>
                 <SummarySection subtotalValue={subtotalValue} taxValue={taxValue} />
+                <button onClick={() => console.log(shoppingList.length)}>length</button>
             </div>
         </div>
     );

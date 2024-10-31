@@ -13,7 +13,7 @@ export default function SummarySection({ subtotalValue, taxValue }) {
                 </div>
                 <div className="w-full flex items-center justify-between">
                     <p className="text-sm font-medium">ESTIMATED TAXES</p>
-                    <p className="text-sm font-medium">$21,00</p>
+                    <p className="text-sm font-medium">${taxValue},00</p>
                 </div>
             </div>
             <div className="w-full flex flex-col items-center justify-center border-t border-grey-lighter mt-16">
