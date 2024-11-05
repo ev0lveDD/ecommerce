@@ -5,6 +5,7 @@ import SummarySection from "./SummarySection/summary-section";
 import { useState, useEffect } from "react";
 import data from "@/app/data.json";
 import YourCartSection from "./YourCartSection/your-cart-section";
+import DeliveryAddressSection from "./DeliveryAddressSection/delivery-address-section";
 
 export default function ShoppingCartDetails() {
 
@@ -58,14 +59,29 @@ export default function ShoppingCartDetails() {
         setShoppingList(newList);
     }
 
+    const [deliveryName, setDeliveryName] = useState("");
+    const [deliverySurname, setDeliverySurname] = useState("");
+    const [deliveryAddressOne, setDeliveryAddressOne] = useState("");
+    const [deliveryAddressTwo, setDeliveryAddressTWo] = useState("");
+    const [deliveryPostalCode, setDeliveryPostalCode] = useState("");
+    const [deliveryCity, setDeliveryCity] = useState("");
+    const [deliveryEmail, setDeliveryEmail] = useState("");
+    const [deliveryPhoneNumber, setDeliveryPhoneNumber] = useState("");
 
     return(
         <div className="bg-white min-w-screen flex items-center justify-center">
             <div className="w-11/12 flex flex-col md:flex-row items-start justify-center gap-16 my-4">
                 {isCheckout ? 
-                    <div className="w-full md:w-3/5 my-4 flex flex-col items-start justify-center gap-4">
-                        <h1 className="text-3xl font-medium">DELIVERY DETAILS</h1>
-                    </div>
+                    <DeliveryAddressSection 
+                    deliveryName={deliveryName} setDeliveryName={setDeliveryName}
+                    deliverySurname={deliverySurname} setDeliverySurname={setDeliverySurname}
+                    deliveryAddressOne={deliveryAddressOne} setDeliveryAddressOne={setDeliveryAddressOne}
+                    deliveryAddressTwo={deliveryAddressTwo} setDeliveryAddressTWo={setDeliveryAddressTWo}
+                    deliveryPostalCode={deliveryPostalCode} setDeliveryPostalCode={setDeliveryPostalCode}
+                    deliveryCity={deliveryCity} setDeliveryCity={setDeliveryCity}
+                    deliveryEmail={deliveryEmail} setDeliveryEmail={setDeliveryEmail}
+                    deliveryPhoneNumber={deliveryPhoneNumber} setDeliveryPhoneNumber={setDeliveryPhoneNumber}
+                    />
                 : 
                     <YourCartSection 
                         shoppingList={shoppingList} 
