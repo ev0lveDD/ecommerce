@@ -1,6 +1,6 @@
 export default function InputRow({inputLabel, inputPlaceholder, inputId, inputType, inputValue, inputFunction, isInputEmpty}){
     
-    const inputValid = "block w-full text-black text-sm md:text-xs p-2 font-semibold bg-white border border-gray-300 rounded-md focus:outline-none focus:border-violet-800 hover:border-violet-800 cursor-pointer";
+    const inputValid = "block w-full text-black text-sm md:text-xs p-2 font-semibold bg-white border border-gray-300 rounded-md focus:outline-none focus:border-black focus:border-2 hover:border-black cursor-pointer";
     const inputEmpty = "block w-full text-black text-sm md:text-xs p-2 font-semibold bg-white border border-red-500 rounded-md focus:outline-none focus:border-violet-800 hover:border-violet-800 cursor-pointer";
     
     return(
