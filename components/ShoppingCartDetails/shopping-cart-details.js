@@ -6,13 +6,14 @@ import { useState, useEffect } from "react";
 import data from "@/app/data.json";
 import YourCartSection from "./YourCartSection/your-cart-section";
 import DeliveryAddressSection from "./DeliveryAddressSection/delivery-address-section";
+import PaymentSection from "./PaymentSection/payment-section";
 
 export default function ShoppingCartDetails() {
 
     const [subtotalValue, setSubtotalValue] = useState(0);
     const [taxValue, setTaxValue] = useState(21);
     const [isCheckout, setIsCheckout] = useState(false);
-    
+    const [checkoutStep, setCheckoutStep] = useState(1);
     
     useEffect(() => {
         if (subtotalValue === null || subtotalValue === 0) {
@@ -72,7 +73,9 @@ export default function ShoppingCartDetails() {
         <div className="bg-white min-w-screen flex items-center justify-center">
             <div className="w-11/12 flex flex-col md:flex-row items-start justify-center gap-16 my-4">
                 {isCheckout ? 
-                    <DeliveryAddressSection 
+
+                    (checkoutStep === 2 ? <PaymentSection /> 
+                    : <DeliveryAddressSection 
                     deliveryName={deliveryName} setDeliveryName={setDeliveryName}
                     deliverySurname={deliverySurname} setDeliverySurname={setDeliverySurname}
                     deliveryAddressOne={deliveryAddressOne} setDeliveryAddressOne={setDeliveryAddressOne}
@@ -81,7 +84,9 @@ export default function ShoppingCartDetails() {
                     deliveryCity={deliveryCity} setDeliveryCity={setDeliveryCity}
                     deliveryEmail={deliveryEmail} setDeliveryEmail={setDeliveryEmail}
                     deliveryPhoneNumber={deliveryPhoneNumber} setDeliveryPhoneNumber={setDeliveryPhoneNumber}
-                    />
+                    setCheckoutStep={setCheckoutStep}
+                    />)
+
                 : 
                     <YourCartSection 
                         shoppingList={shoppingList} 
