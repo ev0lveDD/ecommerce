@@ -69,12 +69,24 @@ export default function ShoppingCartDetails() {
     const [deliveryEmail, setDeliveryEmail] = useState("");
     const [deliveryPhoneNumber, setDeliveryPhoneNumber] = useState("");
 
+    const [cardHolder, setCardHolder] = useState("");
+    const [cardNumber, setCardNumber] = useState("");
+    const [cardExpDateMonth, setCardExpDateMonth] = useState("");
+    const [cardExpDateYear, setCardExpDateYear] = useState("");
+    const [cardCVC, setCardCVC] = useState("");
+
     return(
         <div className="bg-white min-w-screen flex items-center justify-center">
             <div className="w-11/12 flex flex-col md:flex-row items-start justify-center gap-16 my-4">
                 {isCheckout ? 
 
-                    (checkoutStep === 2 ? <PaymentSection /> 
+                    (checkoutStep === 2 ? <PaymentSection 
+                        cardHolder={cardHolder} setCardHolder={setCardHolder}
+                        cardNumber={cardNumber} setCardNumber={setCardNumber}
+                        cardExpDateMonth={cardExpDateMonth} setCardExpDateMonth={setCardExpDateMonth}
+                        cardExpDateYear={cardExpDateYear} setCardExpDateYear={setCardExpDateYear}
+                        cardCVC={cardCVC} setCardCVC={setCardCVC}
+                        /> 
                     : <DeliveryAddressSection 
                     deliveryName={deliveryName} setDeliveryName={setDeliveryName}
                     deliverySurname={deliverySurname} setDeliverySurname={setDeliverySurname}
@@ -87,7 +99,7 @@ export default function ShoppingCartDetails() {
                     setCheckoutStep={setCheckoutStep}
                     />)
 
-                : 
+                :
                     <YourCartSection 
                         shoppingList={shoppingList} 
                         checkFinalValue={checkFinalValue} 
