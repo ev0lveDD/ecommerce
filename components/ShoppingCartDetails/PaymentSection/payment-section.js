@@ -13,6 +13,9 @@ export default function PaymentSection({ cardHolder, setCardHolder, cardNumber, 
             cardExpDateMonth={cardExpDateMonth} setCardExpDateMonth={setCardExpDateMonth}
             cardExpDateYear={cardExpDateYear} setCardExpDateYear={setCardExpDateYear}
             cardCVC={cardCVC} setCardCVC={setCardCVC}/>
+            <button onClick={() => setCheckoutStep(2)} className="bg-black w-full text-white py-4 px-3 rounded rounded-md text-sm hover:bg-gray-800">
+                BUY NOW
+            </button>
         </div>
     );
 }

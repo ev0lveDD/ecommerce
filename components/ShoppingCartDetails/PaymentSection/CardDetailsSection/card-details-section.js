@@ -13,7 +13,7 @@ export default function CardDetailsSection({ cardHolder, setCardHolder, cardNumb
     const [isCardCVCEmpty, setIsCardCVCEmpty] = useState(false);
 
     return(
-        <div className="w-full flex items-center justify-center">
+        <div className="w-full flex items-center justify-start">
                 <div className="flex flex-col gap-4 w-full md:w-2/3">
                     <InputRow 
                         inputLabel={"Cardholder Name"} 

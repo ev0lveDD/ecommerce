@@ -9,7 +9,7 @@ export default function CardView({ cardHolder, cardNumber, cardExpDateMonth, car
         <div className="flex flex-col gap-4 items-center justify-center w-full">
             <div className="w-[350px] h-[200px] relative">
                 <div className="w-2/3 h-1/2 z-20 relative flex items-center ml-8">
-                    <div className="w-14 h-8 absolute">
+                    <div className="w-12 h-6 absolute">
                         <Image src={cardLogo} fill alt={"Card logo"} />
                     </div>
                 </div>
@@ -23,8 +23,13 @@ export default function CardView({ cardHolder, cardNumber, cardExpDateMonth, car
                 <Image src={cardFront} fill alt={"Card Front Image"} className="z-10"/>
             </div>
 
-            <div className="ml-28 w-[350px] h-[200px] relative">
-                <Image src={cardBack} fill alt={"Card Back Image"}/>
+            <div className="ml-0 md:ml-28 w-[350px] h-[200px] relative">
+                <div className="w-4/5 h-full z-20 relative flex items-center justify-center ml-8">
+                    <div className="w-full h-6 mb-1 flex items-center justify-end">
+                        <p className="text-white font-medium text-sm tracking-widest">{cardCVC}</p>
+                    </div>
+                </div>
+                <Image src={cardBack} fill alt={"Card Back Image"} className="z-10"/>
             </div>
         </div>
     );
