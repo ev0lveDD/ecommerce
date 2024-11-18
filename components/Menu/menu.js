@@ -37,7 +37,9 @@ export default function Menu() {
         <nav className="min-w-screen flex items-center justify-center bg-white border-b border-grey-lighter">
             <div className="flex justify-between items-center w-11/12 my-6 md:my-4">
                 <Link href={'/'}>
-                    <Image alt="Website Logo" width={65} height={50} src={balmainLogo} className="cursor-pointer z-50"/>
+                    <div className="w-[65px] h-[50px] cursor-pointer z-50 relative">
+                        <Image alt="Website Logo" fill src={balmainLogo} />
+                    </div>
                 </Link>
                 <button className="flex flex-col justify-center items-center md:hidden order-first z-50" onClick={handleClick}>
                     <span className={`bg-slate-200 block h-0.5 w-6 rounded-sm transition-all duration-300 ease-out  ${isOpen ? 'rotate-45 translate-y-1' : '-translate-y-0.5'}`}></span>

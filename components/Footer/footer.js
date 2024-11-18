@@ -13,7 +13,9 @@ export default function Footer(){
             <div className="flex flex-col-reverse gap-4 md:flex-row justify-between items-center w-11/12 my-4">
 
                 <div className="flex flex-col items-center md:items-start gap-4 w-full md:w-1/3 my-4">
-                    <Image alt="Website Logo" width={65} height={50} src={balmainLogo} className="cursor-pointer z-50"/>
+                    <div className="w-[65px] h-[50px] cursor-pointer z-50 relative">
+                        <Image alt="Website Logo" fill src={balmainLogo} />
+                    </div>
                     <p className="text-xs text-gray-600 text-center md:text-left">
                         Online brand clothing store founded in 2013 in Rome.
                         Balmain focuses on selling only quality and branded items, limited edition

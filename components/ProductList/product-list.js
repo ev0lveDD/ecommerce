@@ -84,7 +84,7 @@ export default function ProductList({categoryGiven}) {
 
 
                 {/* Product List items */}
-                <div className={`w-11/12 grid grid-cols-2 ${filterOpen ? "md:grid-cols-4" : "md:grid-cols-5"} gap-x-6 gap-y-8 my-4`}>
+                <div className={`w-11/12 grid grid-cols-2 ${filterOpen ? "md:grid-cols-3" : "md:grid-cols-4"} gap-x-6 gap-y-8 my-4`}>
 
                     {
                         (sortedBy === "" || sortedBy === null ? filteredDB 

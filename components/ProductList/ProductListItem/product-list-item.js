@@ -4,8 +4,6 @@ import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 
-import imagee1 from "@/public/perrebalmainhoodie1.avif";
-
 export default function ProductListItem({itemImage1, itemImage2, itemName, itemPrice, isOnSale, categoryPath, path}) {
 
     const [isHovering, setIsHovering] = useState(false);
@@ -17,10 +15,10 @@ export default function ProductListItem({itemImage1, itemImage2, itemName, itemP
             <div className="flex flex-col gap-2 justify-center items-start cursor-pointer relative" onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave}>
                 {isHovering ? 
                 <div className="w-full h-64 md:h-72 xl:h-80 relative">
-                    <Image className="w-full h-full object-cover" alt="product image" src={itemImage1} fill={true}/>
+                    <Image className="w-full h-full object-cover" alt="product image" src={itemImage1} fill/>
                 </div> : 
                 <div className="w-full h-64 md:h-72 xl:h-80 relative">
-                    <Image className="w-full h-full object-cover" alt="product image" src={itemImage2} fill={true}/>
+                    <Image className="w-full h-full object-cover" alt="product image" src={itemImage2} fill/>
                 </div>
                 }
                 <div className="flex flex-col justify-center items-start gap-2">
