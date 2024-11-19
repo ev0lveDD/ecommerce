@@ -34,9 +34,9 @@ export default function Menu() {
 
 
     return(
-        <nav className="min-w-screen flex h-16 items-center justify-center bg-white border-b border-grey-lighter z-50">
-            <div className="flex justify-center w-full h-16 fixed items-center w-11/12 my-6 md:my-4 z-50 bg-white">
-                <div className="flex justify-between h-16 fixed items-center w-11/12 my-6 md:my-4 z-50 bg-white">
+        <nav className="min-w-screen flex h-20 items-center justify-center bg-white border-b border-grey-lighter z-50">
+            <div className="flex justify-center w-full h-20 fixed items-center w-11/12 my-6 md:my-4 z-50 bg-white">
+                <div className="flex justify-between h-20 fixed items-center w-11/12 my-6 md:my-4 z-50 bg-white">
                     <Link href={'/'}>
                         <div className="w-[65px] h-[50px] cursor-pointer z-50 relative">
                             <Image alt="Website Logo" fill src={balmainLogo} />
@@ -50,7 +50,7 @@ export default function Menu() {
 
                     {/* Mobile menu */}
                     {isOpen ? 
-                        <div className="flex items-center justify-center fixed m-auto left-0 right-0 top-0 w-full h-full bg-white z-40">
+                        <div className="flex items-center justify-center fixed m-auto left-0 right-0 top-0 w-full h-full bg-white z-40 overflow-hidden">
                                 <ul className="flex flex-col justify-start items-start gap-6 md:hidden w-4/5 h-96">
                                     <Link href={'/MenProductList'} onClick={handleClick}>
                                         <li className="text-md font-medium cursor-pointer group transition duration-300">MEN
