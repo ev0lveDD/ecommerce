@@ -14,7 +14,7 @@ export default function CardDetailsSection({ cardHolder, setCardHolder, cardNumb
 
     return(
         <div className="w-full flex items-center justify-start">
-                <div className="flex flex-col gap-4 w-full md:w-2/3">
+                <div className="flex flex-col gap-4 w-full">
                     <InputRow 
                         inputLabel={"Cardholder Name"} 
                         inputPlaceholder={"e.g. Jane Doe"}
@@ -35,7 +35,7 @@ export default function CardDetailsSection({ cardHolder, setCardHolder, cardNumb
                         isInputEmpty={isCardNumberEmpty}
                     />
 
-                    <div className="flex flex-col md:flex-row gap-4">
+                    <div className="flex flex-col md:flex-row gap-4 w-full">
                         <div className="flex flex-col md:flex-row gap-4">
                             <InputRow 
                                 inputLabel={"Exp. Date MM"} 

@@ -53,19 +53,19 @@ export default function Menu() {
                         <div className="flex items-center justify-center fixed m-auto left-0 right-0 top-0 w-full h-full bg-white z-40 overflow-hidden">
                                 <ul className="flex flex-col justify-start items-start gap-6 md:hidden w-4/5 h-96">
                                     <Link href={'/MenProductList'} onClick={handleClick}>
-                                        <li className="text-md font-medium cursor-pointer group transition duration-300">MEN
+                                        <li className="text-md font-medium cursor-pointer group transition duration-300 border-l-2 border-black pl-2">MEN
                                             <span className="block max-w-0 group-hover:max-w-full transition-all duration-300 h-0.5 bg-black"></span>
                                         </li>
                                     </Link>
 
                                     <Link href={'/WomenProductList'} onClick={handleClick}>
-                                        <li className="text-md font-medium cursor-pointer group transition duration-300">WOMEN
+                                        <li className="text-md font-medium cursor-pointer group transition duration-300 border-l-2 border-black pl-2">WOMEN
                                             <span className="block max-w-0 group-hover:max-w-full transition-all duration-300 h-0.5 bg-black"></span>
                                         </li>
                                     </Link>
 
                                     <Link href={'/SaleProductList'} onClick={handleClick}>
-                                        <li className="text-md font-medium cursor-pointer group transition duration-300">SALE
+                                        <li className="text-md font-medium cursor-pointer group transition duration-300 border-l-2 border-black pl-2">SALE
                                             <span className="block max-w-0 group-hover:max-w-full transition-all duration-300 h-0.5 bg-black"></span>
                                         </li>
                                     </Link>

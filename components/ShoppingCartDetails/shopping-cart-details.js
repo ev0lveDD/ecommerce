@@ -86,6 +86,7 @@ export default function ShoppingCartDetails() {
                         cardExpDateMonth={cardExpDateMonth} setCardExpDateMonth={setCardExpDateMonth}
                         cardExpDateYear={cardExpDateYear} setCardExpDateYear={setCardExpDateYear}
                         cardCVC={cardCVC} setCardCVC={setCardCVC}
+                        setCheckoutStep={setCheckoutStep}
                         /> 
                     : <DeliveryAddressSection 
                     deliveryName={deliveryName} setDeliveryName={setDeliveryName}

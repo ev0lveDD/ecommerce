@@ -6,7 +6,7 @@ import Image from "next/image";
 
 export default function CardView({ cardHolder, cardNumber, cardExpDateMonth, cardExpDateYear, cardCVC }) {
     return(
-        <div className="flex flex-col gap-4 items-center justify-center w-full">
+        <div className="flex flex-col gap-4 items-center md:items-start justify-center w-full">
             <div className="w-[350px] h-[200px] relative">
                 <div className="w-2/3 h-1/2 z-20 relative flex items-center ml-8">
                     <div className="w-12 h-6 absolute">
@@ -23,7 +23,7 @@ export default function CardView({ cardHolder, cardNumber, cardExpDateMonth, car
                 <Image src={cardFront} fill alt={"Card Front Image"} className="z-10"/>
             </div>
 
-            <div className="ml-0 md:ml-28 w-[350px] h-[200px] relative">
+            <div className="w-[350px] h-[200px] relative">
                 <div className="w-4/5 h-full z-20 relative flex items-center justify-center ml-8">
                     <div className="w-full h-6 mb-1 flex items-center justify-end">
                         <p className="text-white font-medium text-sm tracking-widest">{cardCVC}</p>

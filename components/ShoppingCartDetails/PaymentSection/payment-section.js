@@ -2,7 +2,7 @@ import StepHeader from "../StepHeader/step-header";
 import CardDetailsSection from "./CardDetailsSection/card-details-section";
 import CardView from "./CardView/card-view";
 
-export default function PaymentSection({ cardHolder, setCardHolder, cardNumber, setCardNumber, cardExpDateMonth, setCardExpDateMonth, cardExpDateYear, setCardExpDateYear, cardCVC, setCardCVC }) {
+export default function PaymentSection({ cardHolder, setCardHolder, cardNumber, setCardNumber, cardExpDateMonth, setCardExpDateMonth, cardExpDateYear, setCardExpDateYear, cardCVC, setCardCVC, setCheckoutStep }) {
     return(
         <div className="w-full md:w-3/5 my-4 flex flex-col items-start justify-center gap-6">
             <StepHeader headerName="PAYMENT DETAILS" />
