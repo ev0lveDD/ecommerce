@@ -17,12 +17,14 @@ import ProductDescription from "./ProductDescription/product-description";
 import AddToCartButton from "./AddToCartButton/add-to-cart-button";
 
 import checkData from "@/app/checkData.json";
+import AddedToCart from "./AddedToCart/added-to-cart";
 
 export default function ProductDetails({productId}) {
     
     const [sizePicked, setSizePicked] = useState(null);
     const [colorPicked, setColorPicked] = useState(null);
     const [hookCheckData, setHookCheckData] = useState("");
+    const [isAdded, setIsAdded] = useState(true);
 
     const dataReceived = checkData.filter((data) => data.itemId == productId);
     const singleData = dataReceived[0];
@@ -35,6 +37,10 @@ export default function ProductDetails({productId}) {
     }, []);
 
     return(
+        <>
+            {isAdded ?
+                <AddedToCart setIsAdded={setIsAdded}/>
+            : null}
         <div className="bg-white min-w-screen flex flex-col items-center justify-center">
             <div className="w-11/12 grid grid-cols-1 md:grid-cols-2 gap-4">
 
@@ -57,7 +63,7 @@ export default function ProductDetails({productId}) {
                     <SizePickSection sizePicked={sizePicked} setSizePicked={setSizePicked}/>
 
                     {/* Add to cart button */}
-                    <AddToCartButton singleData={singleData} colorPicked={colorPicked} sizePicked={sizePicked}/>
+                    <AddToCartButton singleData={singleData} colorPicked={colorPicked} sizePicked={sizePicked} setIsAdded={setIsAdded}/>
 
                     {/* Product details dropdown */}
                     <DetailsDropdownSection />
@@ -72,5 +78,6 @@ export default function ProductDetails({productId}) {
             <button onClick={() => console.log(localStorage.getItem('localShoppingCart'))}>CHECK</button>
             <button onClick={() => console.log(hookCheckData)}>CHECK HOOK</button>
         </div>
+        </>
     );
 }

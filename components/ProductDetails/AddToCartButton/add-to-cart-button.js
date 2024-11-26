@@ -2,7 +2,7 @@
 
 import {useState, useEffect} from "react";
 
-export default function AddToCartButton( {colorPicked, singleData, sizePicked} ) {
+export default function AddToCartButton( {colorPicked, singleData, sizePicked, setIsAdded} ) {
 
     const itemToStorage = {
         cartItemQuantity: 1,
@@ -42,7 +42,8 @@ export default function AddToCartButton( {colorPicked, singleData, sizePicked} )
         } else if ((colorPicked !== null && colorPicked !== "") && (sizePicked !== null && sizePicked !== "")) {
             setIsEmpty(false),
             storageArray.push(itemToStorage),
-            localStorage.setItem('localShoppingCart', JSON.stringify(storageArray))
+            localStorage.setItem('localShoppingCart', JSON.stringify(storageArray)),
+            setIsAdded(true);
         } else (
             null
         )
