@@ -24,7 +24,7 @@ export default function ProductDetails({productId}) {
     const [sizePicked, setSizePicked] = useState(null);
     const [colorPicked, setColorPicked] = useState(null);
     const [hookCheckData, setHookCheckData] = useState("");
-    const [isAdded, setIsAdded] = useState(true);
+    const [isAdded, setIsAdded] = useState(false);
 
     const dataReceived = checkData.filter((data) => data.itemId == productId);
     const singleData = dataReceived[0];

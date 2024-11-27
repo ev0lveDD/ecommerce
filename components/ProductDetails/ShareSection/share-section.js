@@ -10,16 +10,16 @@ export default function ShareSection() {
         <div className="w-full flex flex-col gap-2">
             <p className="font-medium">SHARE</p>
             <div className="flex flex-row justify-start items-center gap-2">
-                <div className="flex items-center justify-center rounded-full cursor-pointer z-50">
+                <div className="flex items-center justify-center rounded-full cursor-pointer z-30">
                     <Image alt="Facebook icon" width={36} height={36} src={facebookIcon} className=""/>
                 </div>
-                <div className="flex items-center justify-center rounded-full cursor-pointer z-50">
+                <div className="flex items-center justify-center rounded-full cursor-pointer z-30">
                     <Image alt="Instagram icon" width={36} height={36} src={instagramIcon} className=""/>
                 </div>
-                <div className="flex items-center justify-center rounded-full cursor-pointer z-50">
+                <div className="flex items-center justify-center rounded-full cursor-pointer z-30">
                     <Image alt="Twitter icon" width={31}height={31} src={twitterIcon} className=""/>
                 </div> 
-                <div className="flex items-center justify-center rounded-full cursor-pointer z-50">
+                <div className="flex items-center justify-center rounded-full cursor-pointer z-30">
                     <Image alt="Messenger icon" width={36}height={36} src={messengerIcon} className=""/>
                 </div> 
             </div>
