@@ -3,11 +3,19 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useState, useEffect } from "react";
+import { usePathname } from "next/navigation";
 
 import balmainLogo from "@/public/Balmain_logo.svg"
 import ShoppingCart from "./ShoppingCart/shopping-cart";
 
 export default function Menu() {
+
+    const isActive = "block max-w-full transition-all duration-300 h-0.5 bg-black";
+    const isNotActive ="block max-w-0 group-hover:max-w-full transition-all duration-300 h-0.5 bg-black";
+
+    const isMobileActive = "text-md font-medium cursor-pointer group transition duration-300 border-l-2 border-black pl-2";
+    const isMobileNotActive = "text-md font-medium cursor-pointer group transition duration-300 border-l-2 text-gray-400 border-gray-400 pl-2";
+    const pathName = usePathname();
 
     const [cartCounter, setCartCounter] = useState(() => {
         if(typeof window !== 'undefined') {
@@ -59,19 +67,19 @@ export default function Menu() {
                         <div className="flex items-center justify-center fixed m-auto left-0 right-0 top-0 w-full h-full bg-white z-40 overflow-hidden">
                                 <ul className="flex flex-col justify-start items-start gap-6 md:hidden w-4/5 h-96">
                                     <Link href={'/MenProductList'} onClick={handleClick}>
-                                        <li className="text-md font-medium cursor-pointer group transition duration-300 border-l-2 border-black pl-2">MEN
+                                        <li className={isMobileActive}>MEN
                                             <span className="block max-w-0 group-hover:max-w-full transition-all duration-300 h-0.5 bg-black"></span>
                                         </li>
                                     </Link>
 
                                     <Link href={'/WomenProductList'} onClick={handleClick}>
-                                        <li className="text-md font-medium cursor-pointer group transition duration-300 border-l-2 border-black pl-2">WOMEN
+                                        <li className={isMobileNotActive}>WOMEN
                                             <span className="block max-w-0 group-hover:max-w-full transition-all duration-300 h-0.5 bg-black"></span>
                                         </li>
                                     </Link>
 
                                     <Link href={'/SaleProductList'} onClick={handleClick}>
-                                        <li className="text-md font-medium cursor-pointer group transition duration-300 border-l-2 border-black pl-2">SALE
+                                        <li className={isMobileNotActive}>SALE
                                             <span className="block max-w-0 group-hover:max-w-full transition-all duration-300 h-0.5 bg-black"></span>
                                         </li>
                                     </Link>
@@ -84,19 +92,19 @@ export default function Menu() {
                         <ul className="flex justify-center items-center gap-6">
                             <Link href={'/MenProductList'}>
                                 <li className="text-sm font-regular cursor-pointer group transition duration-300">MEN
-                                    <span className="block max-w-0 group-hover:max-w-full transition-all duration-300 h-0.5 bg-black"></span>
+                                    <span className={pathName === "/MenProductList" ? isActive : isNotActive}></span>
                                 </li>
                             </Link>
 
                             <Link href={'/WomenProductList'}>
                                 <li className="text-sm font-regular cursor-pointer group transition duration-300">WOMEN
-                                    <span className="block max-w-0 group-hover:max-w-full transition-all duration-300 h-0.5 bg-black"></span>
+                                    <span className={pathName === "/WomenProductList" ? isActive : isNotActive}></span>
                                 </li>
                             </Link>
 
                             <Link href={'/SaleProductList'}>
                                 <li className="text-sm font-regular cursor-pointer group transition duration-300">SALE
-                                    <span className="block max-w-0 group-hover:max-w-full transition-all duration-300 h-0.5 bg-black"></span>
+                                    <span className={pathName === "/SaleProductList" ? isActive : isNotActive}></span>
                                 </li>
                             </Link>
                         </ul>
@@ -109,7 +117,6 @@ export default function Menu() {
                     : 
                     <div className="relative flex items-center justify-center rounded-full border border-2 border-transparent z-50">
                     </div>}
-                    
                 </div>
             </div>
         </nav>

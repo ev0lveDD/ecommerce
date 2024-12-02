@@ -14,6 +14,11 @@ export default function ShoppingCartDetails() {
     const [taxValue, setTaxValue] = useState(21);
     const [isCheckout, setIsCheckout] = useState(false);
     const [checkoutStep, setCheckoutStep] = useState(1);
+    const [isMounted, setIsMounted] = useState(false);
+
+    useEffect(() => {
+        setIsMounted(true);
+    },[]);
     
     useEffect(() => {
         if (subtotalValue === null || subtotalValue === 0) {
@@ -77,45 +82,47 @@ export default function ShoppingCartDetails() {
 
     return(
         <div className="bg-white min-w-screen flex items-center justify-center">
-            <div className="w-11/12 flex flex-col md:flex-row items-start justify-center gap-16 my-4">
-                {isCheckout ? 
-
-                    (checkoutStep === 2 ? <PaymentSection 
-                        cardHolder={cardHolder} setCardHolder={setCardHolder}
-                        cardNumber={cardNumber} setCardNumber={setCardNumber}
-                        cardExpDateMonth={cardExpDateMonth} setCardExpDateMonth={setCardExpDateMonth}
-                        cardExpDateYear={cardExpDateYear} setCardExpDateYear={setCardExpDateYear}
-                        cardCVC={cardCVC} setCardCVC={setCardCVC}
-                        setCheckoutStep={setCheckoutStep}
-                        /> 
-                    : <DeliveryAddressSection 
-                    deliveryName={deliveryName} setDeliveryName={setDeliveryName}
-                    deliverySurname={deliverySurname} setDeliverySurname={setDeliverySurname}
-                    deliveryAddressOne={deliveryAddressOne} setDeliveryAddressOne={setDeliveryAddressOne}
-                    deliveryAddressTwo={deliveryAddressTwo} setDeliveryAddressTWo={setDeliveryAddressTWo}
-                    deliveryPostalCode={deliveryPostalCode} setDeliveryPostalCode={setDeliveryPostalCode}
-                    deliveryCity={deliveryCity} setDeliveryCity={setDeliveryCity}
-                    deliveryEmail={deliveryEmail} setDeliveryEmail={setDeliveryEmail}
-                    deliveryPhoneNumber={deliveryPhoneNumber} setDeliveryPhoneNumber={setDeliveryPhoneNumber}
-                    setCheckoutStep={setCheckoutStep}
-                    />)
-
-                :
-                    <YourCartSection 
-                        shoppingList={shoppingList} 
-                        checkFinalValue={checkFinalValue} 
-                        deleteItem={deleteItem}
-                    />
-                }
-
-                <SummarySection 
-                    shoppingList={shoppingList} 
-                    subtotalValue={subtotalValue} 
-                    taxValue={taxValue} 
-                    isCheckout={isCheckout} 
-                    setIsCheckout={setIsCheckout}
-                />
-            </div>
+            {isMounted ? 
+                        <div className="w-11/12 flex flex-col md:flex-row items-start justify-center gap-16 my-4">
+                        {isCheckout ? 
+        
+                            (checkoutStep === 2 ? <PaymentSection 
+                                cardHolder={cardHolder} setCardHolder={setCardHolder}
+                                cardNumber={cardNumber} setCardNumber={setCardNumber}
+                                cardExpDateMonth={cardExpDateMonth} setCardExpDateMonth={setCardExpDateMonth}
+                                cardExpDateYear={cardExpDateYear} setCardExpDateYear={setCardExpDateYear}
+                                cardCVC={cardCVC} setCardCVC={setCardCVC}
+                                setCheckoutStep={setCheckoutStep}
+                                /> 
+                            : <DeliveryAddressSection 
+                            deliveryName={deliveryName} setDeliveryName={setDeliveryName}
+                            deliverySurname={deliverySurname} setDeliverySurname={setDeliverySurname}
+                            deliveryAddressOne={deliveryAddressOne} setDeliveryAddressOne={setDeliveryAddressOne}
+                            deliveryAddressTwo={deliveryAddressTwo} setDeliveryAddressTWo={setDeliveryAddressTWo}
+                            deliveryPostalCode={deliveryPostalCode} setDeliveryPostalCode={setDeliveryPostalCode}
+                            deliveryCity={deliveryCity} setDeliveryCity={setDeliveryCity}
+                            deliveryEmail={deliveryEmail} setDeliveryEmail={setDeliveryEmail}
+                            deliveryPhoneNumber={deliveryPhoneNumber} setDeliveryPhoneNumber={setDeliveryPhoneNumber}
+                            setCheckoutStep={setCheckoutStep}
+                            />)
+        
+                        :
+                            <YourCartSection 
+                                shoppingList={shoppingList} 
+                                checkFinalValue={checkFinalValue} 
+                                deleteItem={deleteItem}
+                            />
+                        }
+        
+                        <SummarySection 
+                            shoppingList={shoppingList} 
+                            subtotalValue={subtotalValue} 
+                            taxValue={taxValue} 
+                            isCheckout={isCheckout} 
+                            setIsCheckout={setIsCheckout}
+                        />
+                    </div>
+                : null}
         </div>
     );
 }
