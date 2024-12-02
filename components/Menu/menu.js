@@ -19,6 +19,7 @@ export default function Menu() {
     });
 
     const [itemsInShoppingCart, setItemsInShoppingCart] = useState("");
+    const [isMounted, setIsMounted] = useState(false);
     const [isOpen, setIsOpen] = useState(false);
     function handleClick(){
         setIsOpen(!isOpen);
@@ -31,6 +32,11 @@ export default function Menu() {
             setCartCounter((JSON.parse(localData)).length)
         }
     }, []);
+
+    useEffect(() => {
+        setIsMounted(true);
+    }, []);
+
 
 
     return(
@@ -96,9 +102,14 @@ export default function Menu() {
                         </ul>
                     </div>
 
-                    <Link href={'/UserShoppingCart'}>
-                        <ShoppingCart cartCounter={cartCounter}/>
-                    </Link>
+                    {isMounted ? 
+                        <Link href={'/UserShoppingCart'}>
+                            <ShoppingCart cartCounter={cartCounter}/>
+                        </Link> 
+                    : 
+                    <div className="relative flex items-center justify-center rounded-full border border-2 border-transparent z-50">
+                    </div>}
+                    
                 </div>
             </div>
         </nav>

@@ -7,7 +7,7 @@ export default function ShoppingCart({cartCounter}) {
                 <div className="h-[30px] w-[27px] m-1.5 relative">
                     <Image src={cartIcon} alt="Shopping Cart icon" fill/>
                 </div>
-                {cartCounter>0 ? 
+                {cartCounter > 0 ? 
                 <div className="absolute right-1.5 top-1 flex items-center justify-center rounded-full bg-rose-700 w-3 h-3">
                     <p className="text-[10px] font-bold">{cartCounter}</p>
                 </div>
