@@ -75,8 +75,6 @@ export default function ProductDetails({productId}) {
 
             {/* Complete Look Section */}
             <CompleteLookSection />
-            <button onClick={() => console.log(localStorage.getItem('localShoppingCart'))}>CHECK</button>
-            <button onClick={() => console.log(hookCheckData)}>CHECK HOOK</button>
         </div>
         </>
     );

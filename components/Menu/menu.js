@@ -11,7 +11,9 @@ import ShoppingCart from "./ShoppingCart/shopping-cart";
 export default function Menu() {
 
     const isActive = "block max-w-full transition-all duration-300 h-0.5 bg-black";
-    const isNotActive ="block max-w-0 group-hover:max-w-full transition-all duration-300 h-0.5 bg-black";
+    const isNotActive ="block max-w-0 group-hover:max-w-full transition-all duration-300 h-0.5 bg-gray-600";
+    const isDesktopActive = "text-sm font-regular cursor-pointer group transition duration-300 text-black";
+    const isDesktopNotActive = "text-sm font-regular cursor-pointer group transition duration-300 text-gray-400 hover:text-gray-600";
 
     const isMobileActive = "text-md font-medium cursor-pointer group transition duration-300 border-l-2 border-black pl-2";
     const isMobileNotActive = "text-md font-medium cursor-pointer group transition duration-300 border-l-2 text-gray-400 border-gray-400 pl-2";
@@ -67,19 +69,19 @@ export default function Menu() {
                         <div className="flex items-center justify-center fixed m-auto left-0 right-0 top-0 w-full h-full bg-white z-40 overflow-hidden">
                                 <ul className="flex flex-col justify-start items-start gap-6 md:hidden w-4/5 h-96">
                                     <Link href={'/MenProductList'} onClick={handleClick}>
-                                        <li className={isMobileActive}>MEN
+                                        <li className={pathName === "/MenProductList" ? isMobileActive : isMobileNotActive}>MEN
                                             <span className="block max-w-0 group-hover:max-w-full transition-all duration-300 h-0.5 bg-black"></span>
                                         </li>
                                     </Link>
 
                                     <Link href={'/WomenProductList'} onClick={handleClick}>
-                                        <li className={isMobileNotActive}>WOMEN
+                                        <li className={pathName === "/WomenProductList" ? isMobileActive : isMobileNotActive}>WOMEN
                                             <span className="block max-w-0 group-hover:max-w-full transition-all duration-300 h-0.5 bg-black"></span>
                                         </li>
                                     </Link>
 
                                     <Link href={'/SaleProductList'} onClick={handleClick}>
-                                        <li className={isMobileNotActive}>SALE
+                                        <li className={pathName === "/SaleProductList" ? isMobileActive : isMobileNotActive}>SALE
                                             <span className="block max-w-0 group-hover:max-w-full transition-all duration-300 h-0.5 bg-black"></span>
                                         </li>
                                     </Link>
@@ -91,19 +93,19 @@ export default function Menu() {
                     <div className="hidden md:flex">
                         <ul className="flex justify-center items-center gap-6">
                             <Link href={'/MenProductList'}>
-                                <li className="text-sm font-regular cursor-pointer group transition duration-300">MEN
+                                <li className={pathName === "/MenProductList" ? isDesktopActive : isDesktopNotActive}>MEN
                                     <span className={pathName === "/MenProductList" ? isActive : isNotActive}></span>
                                 </li>
                             </Link>
 
                             <Link href={'/WomenProductList'}>
-                                <li className="text-sm font-regular cursor-pointer group transition duration-300">WOMEN
+                                <li className={pathName === "/WomenProductList" ? isDesktopActive : isDesktopNotActive}>WOMEN
                                     <span className={pathName === "/WomenProductList" ? isActive : isNotActive}></span>
                                 </li>
                             </Link>
 
                             <Link href={'/SaleProductList'}>
-                                <li className="text-sm font-regular cursor-pointer group transition duration-300">SALE
+                                <li className={pathName === "/SaleProductList" ? isDesktopActive : isDesktopNotActive}>SALE
                                     <span className={pathName === "/SaleProductList" ? isActive : isNotActive}></span>
                                 </li>
                             </Link>

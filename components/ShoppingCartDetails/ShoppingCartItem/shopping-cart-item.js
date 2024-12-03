@@ -72,9 +72,9 @@ export default function ShoppingCartItem({index, dataOfItem, itemImage1, itemNam
                     <div className="flex items-center justify-center gap-2">
 
                         {itemQuantity===1 ? 
-                            <button disabled className="bg-white text-gray-300 font-black p-0.5 text-md rounded rounded-full border border-2 border-gray-300 text-xs hover:text-gray-500 hover:border-gray-500 flex items-center justify-center" onClick={subtractQuantity}><p className="w-4 h-4">-</p></button> 
+                            <button disabled className="cursor-pointer bg-white text-gray-300 font-black p-0.5 text-md rounded rounded-full border border-2 border-gray-300 text-xs hover:text-gray-500 hover:border-gray-500 flex items-center justify-center" onClick={subtractQuantity}><p className="w-4 h-4">-</p></button> 
                         :
-                            <button className="bg-white text-black font-black text-md p-0.5 rounded rounded-full border border-2 border-black text-xs hover:text-gray-600 hover:border-gray-600 flex items-center justify-center" onClick={subtractQuantity}><p className="w-4 h-4">-</p></button>
+                            <button className="cursor-pointer bg-white text-black font-black text-md p-0.5 rounded rounded-full border border-2 border-black text-xs hover:text-gray-600 hover:border-gray-600 flex items-center justify-center" onClick={subtractQuantity}><p className="w-4 h-4">-</p></button>
                         }
 
                         <p className="text-black font-bold text-md">{itemQuantity}</p>
