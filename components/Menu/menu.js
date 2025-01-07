@@ -16,7 +16,7 @@ export default function Menu() {
     const isDesktopNotActive = "text-sm font-regular cursor-pointer group transition duration-300 text-gray-600 hover:text-gray-800 hover:font-medium";
 
     const isMobileActive = "text-md font-medium cursor-pointer group transition duration-300 border-l-2 border-black pl-2";
-    const isMobileNotActive = "text-md font-medium cursor-pointer group transition duration-300 border-l-2 text-gray-400 border-gray-400 pl-2";
+    const isMobileNotActive = "text-md font-regular cursor-pointer group transition duration-300 border-l-2 text-gray-600 border-gray-600 pl-2 hover:text-gray-800 hover:font-medium hover:border-gray-800";
     const pathName = usePathname();
 
     const [cartCounter, setCartCounter] = useState(() => {
@@ -59,9 +59,9 @@ export default function Menu() {
                         </div>
                     </Link>
                     <button className="flex flex-col justify-center items-center md:hidden order-first z-50" onClick={handleClick}>
-                        <span className={`bg-slate-200 block h-0.5 w-6 rounded-sm transition-all duration-300 ease-out  ${isOpen ? 'rotate-45 translate-y-1' : '-translate-y-0.5'}`}></span>
-                        <span className={`bg-slate-200 block h-0.5 w-6 rounded-sm my-0.5 transition-all duration-300 ease-out  ${isOpen ? 'opacity-0' : 'opacity-100'}`}></span>
-                        <span className={`bg-slate-200 block h-0.5 w-6 rounded-sm transition-all duration-300 ease-out  ${isOpen ? '-rotate-45 -translate-y-1' : 'translate-y-0.5'}`}></span>
+                        <span className={`bg-gray-800 block h-0.5 w-6 rounded-sm transition-all duration-300 ease-out  ${isOpen ? 'rotate-45 translate-y-1' : '-translate-y-0.5'}`}></span>
+                        <span className={`bg-gray-800 block h-0.5 w-6 rounded-sm my-0.5 transition-all duration-300 ease-out  ${isOpen ? 'opacity-0' : 'opacity-100'}`}></span>
+                        <span className={`bg-gray-800 block h-0.5 w-6 rounded-sm transition-all duration-300 ease-out  ${isOpen ? '-rotate-45 -translate-y-1' : 'translate-y-0.5'}`}></span>
                     </button>
 
                     {/* Mobile menu */}
