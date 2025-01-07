@@ -11,9 +11,9 @@ import ShoppingCart from "./ShoppingCart/shopping-cart";
 export default function Menu() {
 
     const isActive = "block max-w-full transition-all duration-300 h-0.5 bg-black";
-    const isNotActive ="block max-w-0 group-hover:max-w-full transition-all duration-300 h-0.5 bg-gray-600";
-    const isDesktopActive = "text-sm font-regular cursor-pointer group transition duration-300 text-black";
-    const isDesktopNotActive = "text-sm font-regular cursor-pointer group transition duration-300 text-gray-400 hover:text-gray-600";
+    const isNotActive ="block max-w-0 group-hover:max-w-full transition-all duration-300 h-0.5 bg-gray-900";
+    const isDesktopActive = "text-sm font-medium cursor-pointer group transition duration-300 text-black";
+    const isDesktopNotActive = "text-sm font-regular cursor-pointer group transition duration-300 text-gray-600 hover:text-gray-800 hover:font-medium";
 
     const isMobileActive = "text-md font-medium cursor-pointer group transition duration-300 border-l-2 border-black pl-2";
     const isMobileNotActive = "text-md font-medium cursor-pointer group transition duration-300 border-l-2 text-gray-400 border-gray-400 pl-2";
