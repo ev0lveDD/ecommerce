@@ -1,6 +1,7 @@
 import ShoppingCartSmallList from "../ShoppingCartSmallList/shopping-cart-small-list";
 
 export default function SummarySection({ shoppingList, subtotalValue, taxValue, isCheckout, setIsCheckout, checkFinalValue, deleteItem }) {
+    const isBrowser = () => typeof window !== 'undefined';
     return(
         <div className="w-full md:w-2/5 flex flex-col items-start justify-center gap-4 my-8">
             <h1 className="text-3xl font-medium">SUMMARY</h1>
@@ -33,7 +34,7 @@ export default function SummarySection({ shoppingList, subtotalValue, taxValue, 
                     null}
 
                 {!isCheckout ? 
-                    <button onClick={() => setIsCheckout(true)} className="bg-black w-full text-white py-3 px-3 rounded rounded-md text-sm hover:bg-gray-800">
+                    <button onClick={() => {setIsCheckout(true); if (!isBrowser()) return; window.scrollTo({top: 0, behavior: 'smooth'})}} className="bg-black w-full text-white py-3 px-3 rounded rounded-md text-sm hover:bg-gray-800">
                         CHECKOUT NOW
                     </button>
                 :
