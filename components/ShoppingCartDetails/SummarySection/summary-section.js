@@ -34,7 +34,7 @@ export default function SummarySection({ shoppingList, subtotalValue, taxValue, 
                     null}
 
                 {!isCheckout ? 
-                    <button onClick={() => {setIsCheckout(true); if (!isBrowser()) return; window.scrollTo({top: 0, behavior: 'smooth'})}} className="bg-black w-full text-white py-3 px-3 rounded rounded-md text-sm hover:bg-gray-800">
+                    <button onClick={() => {setIsCheckout(true); if (!isBrowser()) return; window.scrollTo(0,1,{behavior: 'smooth'})}} className="bg-black w-full text-white py-3 px-3 rounded rounded-md text-sm hover:bg-gray-800">
                         CHECKOUT NOW
                     </button>
                 :
