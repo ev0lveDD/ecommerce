@@ -8,6 +8,10 @@ import { usePathname } from "next/navigation";
 import balmainLogo from "@/public/Balmain_logo.svg"
 import ShoppingCart from "./ShoppingCart/shopping-cart";
 
+import { useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
+import { counterActions } from "@/app/store/counterSlice";
+
 export default function Menu() {
 
     const isActive = "block max-w-full transition-all duration-300 h-0.5 bg-black";
@@ -19,14 +23,12 @@ export default function Menu() {
     const isMobileNotActive = "text-md font-regular cursor-pointer group transition duration-300 border-l-2 text-gray-600 border-gray-600 pl-2 hover:text-gray-800 hover:font-medium hover:border-gray-800";
     const pathName = usePathname();
 
-    const [cartCounter, setCartCounter] = useState(() => {
-        if(typeof window !== 'undefined') {
-            const localData = localStorage.getItem('localShoppingCart');
-            if (localData !== null) {
-                return((JSON.parse(localData)).length);
-            }
-        }
-    });
+    const dispatch = useDispatch();
+    const cartCounter = useSelector(state => state.counter.counter)
+
+    function handleCartCounterUpdate(ammount) {
+        dispatch(counterActions.set(ammount))
+    }
 
     const [itemsInShoppingCart, setItemsInShoppingCart] = useState("");
     const [isMounted, setIsMounted] = useState(false);
@@ -39,7 +41,7 @@ export default function Menu() {
         const localData = localStorage.getItem('localShoppingCart');
         if (localData !== null) {
             setItemsInShoppingCart(JSON.parse(localData));
-            setCartCounter((JSON.parse(localData)).length)
+            handleCartCounterUpdate(JSON.parse(localData).length);
         }
     }, []);
 

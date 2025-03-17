@@ -5,10 +5,19 @@ import { useState, useEffect } from "react";
 
 import deleteIcon from "@/public/delete-icon.svg";
 
+
+import { useDispatch } from "react-redux";
+import { counterActions } from "@/app/store/counterSlice";
+
 export default function ShoppingCartItem({index, dataOfItem, itemImage1, itemName, cartItemQuantity, itemPrice, itemApparelStyle, itemSize, itemColor, checkFinalValue, deleteItem}) {
 
     const [itemQuantity, setItemQuantity] = useState(cartItemQuantity);
     const [itemTotalValue, setItemTotalValue] = useState(0);
+
+    const dispatch = useDispatch();
+    function handleDecrement() {
+        dispatch(counterActions.decrement());
+    }
     
     function addQuantity() {
         setItemQuantity(dataOfItem.cartItemQuantity+=1);
@@ -29,6 +38,7 @@ export default function ShoppingCartItem({index, dataOfItem, itemImage1, itemNam
         setItemQuantity(dataOfItem.cartItemQuantity-=1);
         checkFinalValue();
         deleteItem(dataOfItem.itemId);
+        handleDecrement();
         deleteItemFromLocalStorage();
     }
 

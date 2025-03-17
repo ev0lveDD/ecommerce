@@ -8,6 +8,7 @@ import YourCartSection from "./YourCartSection/your-cart-section";
 import DeliveryAddressSection from "./DeliveryAddressSection/delivery-address-section";
 import PaymentSection from "./PaymentSection/payment-section";
 
+
 export default function ShoppingCartDetails() {
 
     const [subtotalValue, setSubtotalValue] = useState(0);

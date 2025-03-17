@@ -1,8 +1,15 @@
 'use client';
 
 import {useState, useEffect} from "react";
+import { useDispatch } from "react-redux";
+import { counterActions } from "@/app/store/counterSlice";
 
 export default function AddToCartButton( {colorPicked, singleData, sizePicked, setIsAdded} ) {
+
+    const dispatch = useDispatch();
+    function handleIncrement() {
+        dispatch(counterActions.increment());
+    }
 
     const itemToStorage = {
         cartItemQuantity: 1,
@@ -41,6 +48,7 @@ export default function AddToCartButton( {colorPicked, singleData, sizePicked, s
             setIsEmpty(true);
         } else if ((colorPicked !== null && colorPicked !== "") && (sizePicked !== null && sizePicked !== "")) {
             setIsEmpty(false),
+            handleIncrement(),
             storageArray.push(itemToStorage),
             localStorage.setItem('localShoppingCart', JSON.stringify(storageArray)),
             setIsAdded(true);
