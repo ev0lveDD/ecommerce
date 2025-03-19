@@ -1,3 +1,4 @@
+import React from "react";
 import brand1 from "@/public/brands/brand-1.svg";
 import brand2 from "@/public/brands/brand-2.svg";
 import brand3 from "@/public/brands/brand-3.svg";

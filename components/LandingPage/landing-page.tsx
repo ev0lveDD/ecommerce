@@ -1,3 +1,4 @@
+import React from "react";
 import BestSellersSection from "./BestSellersSection/best-sellers-section";
 import BrandsSection from "./BrandsSection/brands-section";
 import CollectionSection from "./CollectionSection/collection-sections";
