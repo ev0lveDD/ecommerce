@@ -23,8 +23,12 @@ export default function Menu() {
     const isMobileNotActive = "text-md font-regular cursor-pointer group transition duration-300 border-l-2 text-gray-600 border-gray-600 pl-2 hover:text-gray-800 hover:font-medium hover:border-gray-800";
     const pathName = usePathname();
 
+    const dispatch = useDispatch();
     const cartCounter = useSelector(state => state.counter.counter)
 
+    function handleCartCounterUpdate(ammount) {
+        dispatch(counterActions.set(ammount))
+    }
 
     const [itemsInShoppingCart, setItemsInShoppingCart] = useState("");
     const [isMounted, setIsMounted] = useState(false);
