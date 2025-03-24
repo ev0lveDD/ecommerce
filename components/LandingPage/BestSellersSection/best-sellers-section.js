@@ -1,6 +1,7 @@
 'use client';
 import { useState } from "react";
 
+import React from "react";
 import ProductListItem from "@/components/ProductList/ProductListItem/product-list-item";
 import checkData from "@/app/checkData.json";
 import BestSellersMenu from "./BestSellersMenu/best-sellers-menu";
