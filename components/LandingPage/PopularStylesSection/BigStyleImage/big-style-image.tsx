@@ -12,10 +12,15 @@ interface BiStyleImageProps {
 
 export default function BigStyleImage({bigImageData}: BiStyleImageProps) {
 
-    const [styleIsHovering, setStyleIsHovering] = useState(false);
+    const [styleIsHovering, setStyleIsHovering] = useState<boolean>(false);
 
-    const onMouseEnter = () => setStyleIsHovering(true);
-    const onMouseLeave = () => setStyleIsHovering(false);
+    function onMouseEnter(): void {
+        setStyleIsHovering(true);
+    }
+    
+    function onMouseLeave(): void {
+        setStyleIsHovering(false);
+    }
 
     return(
         <div className="col-span-2 row-span-2 w-full h-full cursor-pointer relative overflow-hidden" onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave}>

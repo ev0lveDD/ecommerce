@@ -17,10 +17,15 @@ interface SmallImageProps {
 
 export default function SmallStyleImage({smallImageData}: SmallImageProps) {
 
-    const [styleIsHovering, setStyleIsHovering] = useState(false);
+    const [styleIsHovering, setStyleIsHovering] = useState<boolean>(false);
 
-    const onMouseEnter = () => setStyleIsHovering(true);
-    const onMouseLeave = () => setStyleIsHovering(false);
+    function onMouseEnter(): void {
+        setStyleIsHovering(true);
+    }
+    
+    function onMouseLeave(): void {
+        setStyleIsHovering(false);
+    }
 
     return(
         <div className={`${smallImageData.gridPosition} w-full h-full cursor-pointer relative`} onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave}>
