@@ -7,13 +7,14 @@ import checkData from "@/app/checkData.json";
 import BestSellersMenu from "./BestSellersMenu/best-sellers-menu";
 import SectionHeadline from "../SectionHeadline/section-headline";
 
+
 export default function BestSellersSection() {
 
-    const [buttonSelected, setButtonSelected] = useState("all-products");
+    const [buttonSelected, setButtonSelected] = useState<string>("all-products");
 
     return(
         <div className="w-11/12 md:w-9/12 flex flex-col items-center justify-center gap-8 my-8">
-            <SectionHeadline text={"Best Sellers"}/>
+            <SectionHeadline headlineData={{headlineText: "Best Sellers"}} />
             <BestSellersMenu buttonSelected={buttonSelected} setButtonSelected={setButtonSelected}/>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-4 w-full lg:w-4/5">
 
